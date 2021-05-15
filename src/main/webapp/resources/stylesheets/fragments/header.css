@@ -1,0 +1,42 @@
+#header {
+    font-weight: 400;
+    width: 100%;
+    height: 110px;
+    background-color: rgb(255, 255, 255) ;
+    position: fixed;
+    z-index: 2;
+    margin-top: -110px;
+}
+
+.header-contents {
+    width: 100%;
+    padding: 30px 20px;
+    height: 100%;
+    line-height: 50px;
+
+}
+
+.header-contents #logo {
+    height: 100%;
+    float: left;
+}
+
+.header-contents a{
+    text-decoration: none;
+}
+
+.header-contents #logo{
+    padding-right: 70px;
+}
+
+.header-contents #logo i{
+    font-size: 41px;
+    display: inline-block;
+    color: #FF4A52;
+}
+
+.header-contents #logo .logo-slogan{
+    display: inline-block;
+    font-size: 25px;
+    color: #000;
+}
