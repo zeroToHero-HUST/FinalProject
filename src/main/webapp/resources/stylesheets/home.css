@@ -9,7 +9,7 @@
 html {
     background-color: #f7fafd;
     /* background-color: aquamarine; */
-    height: 5000px;
+    /*height: 5000px;*/
     font-weight: 400;
     font-size: 16px;
 }
@@ -416,4 +416,166 @@ html {
 
 }
 
+/*---------------------------------------------------------------*/
+/* Reset CSS */
+/** {*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
 
+/* Common */
+
+html {
+    scroll-behavior: smooth;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+.clear {
+    clear: both;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.row {
+    margin-left: 88px;
+    margin-right: 88px;
+}
+
+.col {
+    float: left;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-half-third {
+    width: 16.666667%;
+}
+
+.col-fourth {
+    width: 25%;
+}
+
+.col-2 {
+    columns: 2;
+    width: 100%;
+}
+
+.col-3 {
+    columns: 3;
+}
+
+/* Main */
+
+/* Travel-variation */
+#content .travel-variation {
+    margin-top: 154px;
+}
+
+#content .travel-variation-item p {
+
+}
+
+#content .travel-variation-item h3 {
+    margin: 41px 0px 10px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #040e27;
+}
+
+#content .travel-variation-item
+.travel-variation-des {
+    margin-top: 16px;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6e6e6e;
+}
+
+/* Feedback */
+
+#content .feedback {
+    margin-top: 148px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 130px;
+    background: #f7fafd;
+}
+#content .feedback-item {
+    margin-left: 240px;
+    margin-right: 240px;
+}
+
+#content .feedback-img {
+    padding-top: 50px;
+}
+
+#content .feedback-text {
+    margin-top: 36px;
+    color: #040e27;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+#content .feedback-author {
+    margin-top: 16px;
+    color: #7a838b;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Blog */
+
+#content .blog {
+    margin-top: 154px;
+    padding-bottom: 140px;
+}
+
+#content .blog-title {
+    font-size: 38px;
+    font-weight: 400;
+    color: #040e27;
+}
+
+#content .blog-list {
+    margin-top: 66px;
+}
+
+#content .blog-item img {
+    border-radius: 5px;
+}
+
+#content .blog-item .blog-date {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #7a838b;
+    display: block;
+}
+
+#content .blog-item .blog-text {
+    margin-top: 16px;
+    color: #040e27;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+#content .blog-item a {
+    text-decoration: none;
+    color: #040e27;
+}
+
+#content .blog-item a:hover {
+    color: #ff0000;
+}

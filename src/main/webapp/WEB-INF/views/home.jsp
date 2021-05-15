@@ -201,6 +201,129 @@
     </div>
 </div>
 
+<div id="content">
+
+    <!-- Travel-variation section -->
+    <div class="travel-variation">
+        <div class="row travel-variation-list">
+
+            <div class="col col-third travel-variation-item text-align">
+                <div class="travel-variation-icon">
+                    <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/1.svg" alt="">
+                </div>
+                <h3 class="travel-variation-title">Comfortable Journey</h3>
+                <p class="travel-variation-des">
+                    A wonderful serenity has taken to the possession of my entire soul.
+                </p>
+            </div>
+            <div class="col col-third travel-variation-item text-align">
+                <div class="travel-variation-icon">
+                    <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/2.svg" alt="">
+                </div>
+                <h3 class="travel-variation-title">Comfortable Journey</h3>
+                <p class="travel-variation-des">
+                    A wonderful serenity has taken to the possession of my entire soul.
+                </p>
+            </div>
+            <div class="col col-third travel-variation-item text-align">
+                <div class="travel-variation-icon">
+                    <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/3.svg" alt="">
+                </div>
+                <h3 class="travel-variation-title">Comfortable Journey</h3>
+                <p class="travel-variation-des">
+                    A wonderful serenity has taken to the possession of my entire soul.
+                </p>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-- Feedback section -->
+    <div class="feedback text-align">
+        <div class="feedback-list">
+
+            <!-- <input type="radio" name="bottom" id="bottom_1" checked>
+            <input type="radio" name="bottom" id="bottom_2">
+            <input type="radio" name="bottom" id="bottom_3"> -->
+
+
+            <div class="feedback-item">
+                <div class="feedback-img">
+                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
+                </div>
+                <div class="feedback-text">
+                    <p>
+                        "Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."
+                    </p>
+                </div>
+                <div class="feedback-author">
+                    <p>- Micky Mouse</p>
+                </div>
+            </div>
+
+<%--            <div class="feedback-item">--%>
+<%--                <div class="feedback-img">--%>
+<%--                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">--%>
+<%--                </div>--%>
+<%--                <div class="feedback-text">--%>
+<%--                    <p>--%>
+<%--                        "Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."--%>
+<%--                    </p>--%>
+<%--                </div>--%>
+<%--                <div class="feedback-author">--%>
+<%--                    <p>- Micky Mouse</p>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+
+<%--            <div class="feedback-item">--%>
+<%--                <div class="feedback-img">--%>
+<%--                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">--%>
+<%--                </div>--%>
+<%--                <div class="feedback-text">--%>
+<%--                    <p>--%>
+<%--                        "Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."--%>
+<%--                    </p>--%>
+<%--                </div>--%>
+<%--                <div class="feedback-author">--%>
+<%--                    <p>- Micky Mouse</p>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+        </div>
+
+        <!-- <div class="navigation">
+            <label for="bottom_1" class="bar"></label>
+            <label for="bottom_2" class="bar"></label>
+            <label for="bottom_3" class="bar"></label>
+        </div> -->
+    </div>
+    <!-- Blog section -->
+    <div class="blog">
+        <h3 class="blog-title text-align">Recent Trips</h3>
+
+        <div class="row blog-list">
+            <div class="col col-third blog-item">
+                <img src="https://preview.colorlib.com/theme/travelo/img/trip/1.png" alt="">
+                <div class="blog-date">Oct 12, 2019</div>
+                <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
+            </div>
+            <div class="col col-third blog-item">
+                <img src="https://preview.colorlib.com/theme/travelo/img/trip/2.png" alt="">
+                <div class="blog-date">Oct 12, 2019</div>
+                <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
+            </div>
+            <div class="col col-third blog-item">
+                <img src="https://preview.colorlib.com/theme/travelo/img/trip/3.png" alt="">
+                <div class="blog-date">Oct 12, 2019</div>
+                <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</div>
+
 <%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
 
 </body>
