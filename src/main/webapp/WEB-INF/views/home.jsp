@@ -3,56 +3,14 @@
 <html>
 <head>
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="resources/stylesheets/home.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/home.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
 <%--    <script src="resources/javascripts/index.js"></script>--%>
 </head>
 <body>
 
-<div id="header">
-    <div class="header-contents">
-
-        <a href="#">
-            <div id="logo">
-                <i class="ti-world"></i>
-                <div class="logo-slogan">Travello</div>
-            </div>
-        </a>
-
-        <!-- begin: main menu  -->
-        <div id="main-menu">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Destination</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </div>
-        <!-- end: main menu  -->
-        <!-- begin: contact -->
-        <div id="contact">
-            <div class="phone-number">
-                <p><i class="phone-number-icon ti-mobile"></i>10(256)-928 256</p>
-            </div>
-            <div class="social-links">
-                <ul>
-                    <li><a href=""><i class="ti-instagram"></i></a></li>
-                    <li><a href=""><i class="ti-linkedin"></i></a></li>
-                    <li><a href=""><i class="ti-facebook"></i></a></li>
-                    <li><a href=""><i class="ti-google"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- end: contact -->
-        <!-- begin: search-header -->
-        <div id="search-header">
-            <a href=""><i class="search-icon ti-search"></i></a>
-        </div>
-        <!-- end: search-header -->
-
-    </div>
-</div>
+<%@ include file="/WEB-INF/views/fragments/header.jspf" %>
 
 <!-- begin: slide -->
 <div id="slider">
@@ -242,6 +200,8 @@
         </div>
     </div>
 </div>
+
+<%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
 
 </body>
 </html>
