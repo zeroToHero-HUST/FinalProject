@@ -201,6 +201,11 @@
     </div>
 </div>
 
+<<<<<<< HEAD:src/main/webapp/WEB-INF/views/home.jsp
+=======
+<%-- ------------------------------------------------------------------------------- --%>
+
+>>>>>>> ad39793dcd20374ad87b8dc9ee6c162c06ca04e8:src/main/webapp/home.jsp
 <div id="content">
 
     <!-- Travel-variation section -->
