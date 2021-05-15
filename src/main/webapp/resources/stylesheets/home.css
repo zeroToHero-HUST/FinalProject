@@ -9,7 +9,7 @@
 html {
     background-color: #f7fafd;
     /* background-color: aquamarine; */
-    height: 5000px;
+    /*height: 5000px;*/
     font-weight: 400;
     font-size: 16px;
 }
@@ -458,5 +458,281 @@ html {
     transition: 0.3s;
 
 }
+
+/*---------------------------------------------------------------*/
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Common */
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.row {
+    margin-left: 88px;
+    margin-right: 88px;
+}
+
+.col {
+    float: left;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-half-third {
+    width: 16.666667%;
+}
+
+.col-fourth {
+    width: 25%;
+}
+
+.col-2 {
+    columns: 2;
+    width: 100%;
+}
+
+.col-3 {
+    columns: 3;
+}
+
+/* Main */
+
+/* Travel-variation */
+#content .travel-variation {
+    margin-top: 154px;
+}
+
+#content .travel-variation-item p {
+
+}
+
+#content .travel-variation-item h3 {
+    margin: 41px 0px 10px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #040e27;
+}
+
+#content .travel-variation-item
+.travel-variation-des {
+    margin-top: 16px;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6e6e6e;
+}
+
+/* Feedback */
+
+#content .feedback {
+    margin-top: 148px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 130px;
+    background: #f7fafd;
+}
+#content .feedback-item {
+    margin-left: 240px;
+    margin-right: 240px;
+}
+
+#content .feedback-img {
+    padding-top: 50px;
+}
+
+#content .feedback-text {
+    margin-top: 36px;
+    color: #040e27;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+#content .feedback-author {
+    margin-top: 16px;
+    color: #7a838b;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Blog */
+
+#content .blog {
+    margin-top: 154px;
+    padding-bottom: 140px;
+}
+
+#content .blog-title {
+    font-size: 38px;
+    font-weight: 400;
+    color: #040e27;
+}
+
+#content .blog-list {
+    margin-top: 66px;
+}
+
+#content .blog-item img {
+    border-radius: 5px;
+}
+
+#content .blog-item .blog-date {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #7a838b;
+    display: block;
+}
+
+#content .blog-item .blog-text {
+    margin-top: 16px;
+    color: #040e27;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+#content .blog-item a {
+    text-decoration: none;
+    color: #040e27;
+}
+
+#content .blog-item a:hover {
+    color: #ff0000;
+}
+
+
+/* Footer section */
+
+#footer {
+    height: auto;
+    background-color: #040e27;
+    overflow: hidden;
+}
+
+#footer .footer-top {
+    color: #fff;
+    padding-top: 120px;
+}
+
+.footer-top .footer-widget {
+    float: left;
+    display: inline-block;
+}
+
+.footer-top .footer-widget-info {
+
+}
+
+.footer-top p {
+    margin-top: 32px;
+    line-height: 26px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #AAB1B7;
+}
+
+.footer-top .footer-widget .footer-title {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer-logo img {
+    width: 20%;
+}
+
+
+.footer-top .social-links {
+    margin-top: 20px;
+}
+
+.footer-top .social-links li {
+    padding-right: 20px;
+    list-style: none;
+    display: inline;
+}
+
+.footer-top .footer-widget a:hover,
+.footer-top .social-links li :hover {
+    color: #ff0000;
+}
+
+.footer-top .footer-des {
+    padding-right: 0px;
+}
+
+.footer-top .footer-links {
+    display: block;
+}
+
+.footer-top .footer-widget a {
+    text-decoration: none;
+    color: #AAB1B7;
+}
+
+.footer-top .footer-widget ul {
+    float:left;
+    margin-top: 32px;
+}
+
+.footer-top .footer-widget ul li {
+    line-height: 36px;
+    font-size: 14px;
+}
+
+.footer-top .footer-links li {
+    list-style: none;
+}
+
+.footer-top .insta-place li {
+    list-style: none;
+    padding-bottom: 16px;
+}
+
+.footer-top .insta-place img {
+    display: block;
+    border-radius: 5px;
+    width: 74px;
+    height: 74px;
+}
+
+#footer .border-copyright {
+    margin-top: 130px;
+    border-top: 1px solid #363E52;
+}
+
+#footer .copyright {
+    margin-top: 34px;
+    margin-bottom: 34px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+    color: #AAB1B7;
+}
+
 
 
