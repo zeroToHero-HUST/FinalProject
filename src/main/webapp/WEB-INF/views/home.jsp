@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/home.css" />
@@ -15,7 +16,7 @@
 <!-- begin: slide -->
 <div id="slider">
     <div class="slider-contents fade">
-        <h3>Indonesia</h3>
+        <h3>Việt Nam</h3>
         <p>Pixel perfect design with awesome contents</p>
         <a href="">Explore Now</a>
     </div>
@@ -201,11 +202,6 @@
     </div>
 </div>
 
-<<<<<<< HEAD:src/main/webapp/WEB-INF/views/home.jsp
-=======
-<%-- ------------------------------------------------------------------------------- --%>
-
->>>>>>> ad39793dcd20374ad87b8dc9ee6c162c06ca04e8:src/main/webapp/home.jsp
 <div id="content">
 
     <!-- Travel-variation section -->
