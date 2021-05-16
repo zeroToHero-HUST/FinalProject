@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: vietthai2512
-  Date: 15/05/2021
-  Time: 23:42
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page pageEncoding="UTF-8" %>
 <div id="header">
     <div class="header-contents">
 
