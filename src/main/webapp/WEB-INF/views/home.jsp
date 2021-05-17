@@ -16,21 +16,24 @@
 
 <!-- begin: slide -->
 <div id="slider">
+    <i class="left ti-angle-left" onclick="ChangeLeft();"></i>
+    <i class="right ti-angle-right" onclick="ChangeRight();"></i>
     <div class="slider-contents fade">
         <h3>Việt Nam</h3>
         <p>Pixel perfect design with awesome contents</p>
         <a href="">Explore Now</a>
     </div>
-    <!-- <div class="slider-contents fade">
-        <h3>Iabc</h3>
+    </div>
+    <div class="slider-contents slider-2 fade" style="display: none;" >
+        <h3>Miền Trung</h3>
         <p>Pixel perfect design with awesome contents</p>
         <a href="">Explore Now</a>
     </div>
-    <div class="slider-contents fade">
-        <h3>efg</h3>
+    <div class="slider-contents slider-3 fade" style="display: none;">
+        <h3>Miền Nam</h3>
         <p>Pixel perfect design with awesome contents</p>
         <a href="">Explore Now</a>
-    </div> -->
+    </div>
 </div>
 <!-- end: slide -->
 
