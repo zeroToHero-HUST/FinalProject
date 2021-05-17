@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/home.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
+
 <%--    <script src="resources/javascripts/index.js"></script>--%>
 </head>
 <body>
