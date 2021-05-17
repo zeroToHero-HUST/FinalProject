@@ -65,3 +65,27 @@ function ChangeLeft() {
 }
 
 // end: slider-bac-trung-nam
+
+//begin: script slideshow feed back
+var slide = 1;
+showDivs(slide);
+
+function currentDiv(n) {
+    showDivs(slide = n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("feedback-slide");
+    var dots = document.getElementsByClassName("dot");
+    if (n > x.length) {slide = 1}
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" dot-active", "");
+    }
+    x[slide-1].style.display = "block";
+    dots[slide-1].className += " dot-active";
+}
+//end: script slideshow feedback

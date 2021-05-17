@@ -248,12 +248,7 @@
     <div class="feedback text-align">
         <div class="feedback-list">
 
-            <!-- <input type="radio" name="bottom" id="bottom_1" checked>
-            <input type="radio" name="bottom" id="bottom_2">
-            <input type="radio" name="bottom" id="bottom_3"> -->
-
-
-            <div class="feedback-item">
+            <div class="feedback-item feedback-slide">
                 <div class="feedback-img">
                     <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
                 </div>
@@ -267,40 +262,41 @@
                 </div>
             </div>
 
-<%--            <div class="feedback-item">--%>
-<%--                <div class="feedback-img">--%>
-<%--                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">--%>
-<%--                </div>--%>
-<%--                <div class="feedback-text">--%>
-<%--                    <p>--%>
-<%--                        "Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."--%>
-<%--                    </p>--%>
-<%--                </div>--%>
-<%--                <div class="feedback-author">--%>
-<%--                    <p>- Micky Mouse</p>--%>
-<%--                </div>--%>
-<%--            </div>--%>
+            <div class="feedback-item feedback-slide">
+                <div class="feedback-img">
+                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
+                </div>
+                <div class="feedback-text">
+                    <p>
+                        " with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."
+                    </p>
+                </div>
+                <div class="feedback-author">
+                    <p>- Micky Mouse2</p>
+                </div>
+            </div>
 
-<%--            <div class="feedback-item">--%>
-<%--                <div class="feedback-img">--%>
-<%--                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">--%>
-<%--                </div>--%>
-<%--                <div class="feedback-text">--%>
-<%--                    <p>--%>
-<%--                        "Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."--%>
-<%--                    </p>--%>
-<%--                </div>--%>
-<%--                <div class="feedback-author">--%>
-<%--                    <p>- Micky Mouse</p>--%>
-<%--                </div>--%>
-<%--            </div>--%>
+            <div class="feedback-item feedback-slide">
+                <div class="feedback-img">
+                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
+                </div>
+                <div class="feedback-text">
+                    <p>
+                        "Witarian aid agencies, we have supported programmes to help alleviate human suffering."
+                    </p>
+                </div>
+                <div class="feedback-author">
+                    <p>- Micky Mouse3</p>
+                </div>
+            </div>
         </div>
 
-        <!-- <div class="navigation">
-            <label for="bottom_1" class="bar"></label>
-            <label for="bottom_2" class="bar"></label>
-            <label for="bottom_3" class="bar"></label>
-        </div> -->
+        <div class="dots">
+            <span class="dot" onclick="currentDiv(1)"></span>
+            <span class="dot" onclick="currentDiv(2)"></span>
+            <span class="dot" onclick="currentDiv(3)"></span>
+        </div>
+
     </div>
     <!-- Blog section -->
     <div class="blog">
