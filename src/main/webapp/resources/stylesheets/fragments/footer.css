@@ -50,7 +50,8 @@
 
 .footer-top .footer-widget a:hover,
 .footer-top .social-links li :hover {
-    color: #ff0000;
+    color: #FF4A52;
+    transition: 0.3s;
 }
 
 .footer-top .footer-des {

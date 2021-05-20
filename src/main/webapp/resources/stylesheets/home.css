@@ -117,7 +117,7 @@ html {
     margin-top: 110px;
     width: 100%;
     height: 495px;
-    background-image: url(../images/slide2.jpg);
+    background-image: url('../images/slider/slide2.jpg');
     background-repeat: no-repeat;
     background-size: 100% auto;
     position: relative;
@@ -460,15 +460,29 @@ html {
     text-align: center;
 }
 
+.pull-right {
+    float: right !important;
+}
+
 .row {
     margin-left: 88px;
     margin-right: 88px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .col {
     float: left;
     padding-left: 45px;
     padding-right: 45px;
+}
+
+.col-full {
+    width: 100%;
 }
 
 .col-half {
@@ -532,6 +546,7 @@ html {
     padding-bottom: 130px;
     background: #f7fafd;
 }
+
 #content .feedback-item {
     margin-left: 240px;
     margin-right: 240px;
@@ -554,6 +569,23 @@ html {
     color: #7a838b;
     font-size: 16px;
     font-weight: 400;
+}
+
+.dots {
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #aab1b7;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.dot-active {
+    background: #ff4a52;
 }
 
 /* Blog */
@@ -598,5 +630,6 @@ html {
 }
 
 #content .blog-item a:hover {
-    color: #ff0000;
+    color: #ff4a52;
+    transition: 0.3s;
 }
