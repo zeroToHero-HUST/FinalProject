@@ -15,20 +15,20 @@ function ChangeRight() {
     switch (temp){
         case 1:
             slide1.style.display = "block";
-            slider.style.backgroundImage = "url(../images/slide1.jpg)";
+            slider.style.backgroundImage = "url(./resources/images/slider/slide1.jpg)";
             slide2.style.display = "none";
             slide3.style.display = "none";
             break;
         case 2:
 
             slide2.style.display = "block";
-            slider.style.backgroundImage = "url(../images/slide2.jpg)";
+            slider.style.backgroundImage = "url(./resources/images/slider/slide2.jpg)";
             slide1.style.display = "none";
             slide3.style.display = "none";
             break;
         case 3:
             slide3.style.display = "block";
-            slider.style.backgroundImage = "url(../images/slide3.jpg)";
+            slider.style.backgroundImage = "url(./resources/images/slider/slide3.jpg)";
             slide2.style.display = "none";
             slide1.style.display = "none";
             break;
@@ -42,21 +42,21 @@ function ChangeLeft() {
     switch (temp){
         case 1:
             slide1.style.display = "block";
-            slider.style.backgroundImage = "url('../images/slide1.jpg')";
+            slider.style.backgroundImage = "url('./resources/images/slider/slide1.jpg')";
             slide2.style.display = "none";
             slide3.style.display = "none";
             break;
         case 2:
 
             slide2.style.display = "block";
-            slider.style.backgroundImage = "url('../images/slide2.jpg')";
+            slider.style.backgroundImage = "url('./resources/images/slider/slide2.jpg')";
 
             slide1.style.display = "none";
             slide3.style.display = "none";
             break;
         case 3:
             slide3.style.display = "block";
-            slider.style.backgroundImage = "url('../images/slide3.jpg')";
+            slider.style.backgroundImage = "url('./resources/images/slider/slide3.jpg')";
             slide2.style.display = "none";
             slide1.style.display = "none";
             break;
