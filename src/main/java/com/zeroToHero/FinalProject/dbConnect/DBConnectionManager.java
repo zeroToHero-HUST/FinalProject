@@ -7,13 +7,12 @@ import java.sql.SQLException;
 
 public class DBConnectionManager {
     private Connection connection;
-    public DBConnectionManager(String dbURL, String user, String pwd) throws ClassNotFoundException, SQLException{
-        this.connection = DriverManager.getConnection(dbURL,user,pwd);
 
+    public DBConnectionManager(String dbURL, String user, String password) throws SQLException {
+        this.connection = DriverManager.getConnection(dbURL, user, password);
     }
-    public Connection getConnection(){
+
+    public Connection getConnection() {
         return this.connection;
-
     }
-
 }
