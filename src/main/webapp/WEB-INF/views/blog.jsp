@@ -8,6 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/blog.css" />
+    <script src="${pageContext.request.contextPath}/resources/javascripts/blog.js" defer></script>
 </head>
 <body>
 <!-- begin: slide -->

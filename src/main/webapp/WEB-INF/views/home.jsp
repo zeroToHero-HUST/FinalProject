@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
 
     <script src="${pageContext.request.contextPath}/resources/javascripts/home.js" defer></script>
-  
 </head>
 <body>
 
@@ -328,6 +327,6 @@
 </div>
 
 <%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
-<script src="resources/javascripts/home.js"></script>
+
 </body>
 </html>
