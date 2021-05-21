@@ -1,41 +1,34 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: phamtuanson
+  Date: 19/05/2021
+  Time: 21:04
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/home.css" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
-
-    <script src="${pageContext.request.contextPath}/resources/javascripts/home.js" defer></script>
+    <title>Title</title>
 </head>
 <body>
-
-<%@ include file="/WEB-INF/views/fragments/header.jspf" %>
-
 <!-- begin: slide -->
 <div id="slider">
-    <i class="left ti-angle-left" onclick="ChangeLeft();"></i>
-    <i class="right ti-angle-right" onclick="ChangeRight();"></i>
-    <div class="slider-contents slider-1 fade">
-        <h3>Miền Bắc</h3>
+    <div class="slider-contents fade">
+        <h3>Indonesia</h3>
         <p>Pixel perfect design with awesome contents</p>
         <a href="">Explore Now</a>
     </div>
-    <div class="slider-contents slider-2 fade" style="display: none;" >
-        <h3>Miền Trung</h3>
+    <!-- <div class="slider-contents fade">
+        <h3>Iabc</h3>
         <p>Pixel perfect design with awesome contents</p>
         <a href="">Explore Now</a>
     </div>
-    <div class="slider-contents slider-3 fade" style="display: none;">
-        <h3>Miền Nam</h3>
+    <div class="slider-contents fade">
+        <h3>efg</h3>
         <p>Pixel perfect design with awesome contents</p>
         <a href="">Explore Now</a>
-    </div>
+    </div> -->
 </div>
-
 <!-- end: slide -->
 
 <!-- begin: where to go area -->
@@ -69,14 +62,57 @@
     </div>
 </div>
 <!-- end: where to go area -->
-
-
-<!-- begin: popular destinations area -->
-<div class="popular-destinations-area">
+<!-- begin: places-area  -->
+<div class="places-area">
     <div class="container">
-        <div class="description">
-            <h3>Popular Destinations</h3>
-            <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
+        <div class="filter-result-wrap">
+            <h3>Filter Result</h3>
+            <div class="filter-bordered">
+                <div class="filter-inner">
+                    <div class="single-select">
+                        <select name="" id="" style="display:inline-block;">
+                            <option data-display="Country">Country</option>
+                            <option value="1">Africa</option>
+                            <option value="2">canada</option>
+                            <option value="3">USA</option>
+                        </select>
+                        <!-- <div class="nice-select">
+                            <span class="current">Country</span>
+                            <ul class="list">
+                                <li data-value="Country" data-display="Country" class="option">Country</li>
+                                <li data-value="1" class="option">Africa</li>
+                                <li data-value="2" class="option">canada</li>
+                                <li data-value="3" class="option">USA</li>
+                            </ul>
+                        </div> -->
+                    </div>
+                    <div class="single-select">
+                        <select name="" id="" style="display: inline-block;">
+                            <option data-display="Travel type">Travel type</option>
+                            <option value="1">advanve</option>
+                            <option value="2">advance</option>
+                            <option value="3">premium</option>
+                        </select>
+                        <!-- <div class="nice-select">
+                            <span class="current"></span>
+                            <ul class="list">
+                                <li data-value="Travel type" data-display="Travel type" class="option">Country</li>
+                                <li data-value="1" class="option">advanve</li>
+                                <li data-value="2" class="option">advance</li>
+                                <li data-value="3" class="option">premium</li>
+                            </ul>
+                        </div> -->
+                    </div>
+                    <div class="range-price">
+                        <span>Price range</span>
+                        <div class="range-slider">
+                            <input type="range" min="1" max="100" value="50" class="slider">
+                        </div>
+                        <p>$0 -> $<span onclick="setValue();">0</span></p>
+                    </div>
+                </div>
+                <div class="search-btn"><button>Search</button></div>
+            </div>
         </div>
         <div class="detail">
             <div class="single-destination">
@@ -199,134 +235,38 @@
                     </div>
                 </div>
             </div>
-
-        </div>
-        <div class="more-places">
-            <a href="">More Places</a>
+            <div class="more-places">
+                <a href="">More Places</a>
+            </div>
         </div>
     </div>
 </div>
+<script src="./destination.js"></script>
+<!-- end: places-area  -->
 
-<div id="content">
+<!-- begin: blog-section  -->
+<div class="blog">
+    <h3 class="blog-title text-align">Recent Trips</h3>
 
-    <!-- Travel-variation section -->
-    <div class="travel-variation">
-        <div class="row travel-variation-list">
-
-            <div class="col col-third travel-variation-item text-align">
-                <div class="travel-variation-icon">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/1.svg" alt="">
-                </div>
-                <h3 class="travel-variation-title">Comfortable Journey</h3>
-                <p class="travel-variation-des">
-                    A wonderful serenity has taken to the possession of my entire soul.
-                </p>
-            </div>
-            <div class="col col-third travel-variation-item text-align">
-                <div class="travel-variation-icon">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/2.svg" alt="">
-                </div>
-                <h3 class="travel-variation-title">Comfortable Journey</h3>
-                <p class="travel-variation-des">
-                    A wonderful serenity has taken to the possession of my entire soul.
-                </p>
-            </div>
-            <div class="col col-third travel-variation-item text-align">
-                <div class="travel-variation-icon">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/3.svg" alt="">
-                </div>
-                <h3 class="travel-variation-title">Comfortable Journey</h3>
-                <p class="travel-variation-des">
-                    A wonderful serenity has taken to the possession of my entire soul.
-                </p>
-            </div>
-
-            <div class="clear"></div>
+    <div class="row blog-list">
+        <div class="col col-third blog-item">
+            <img src="https://preview.colorlib.com/theme/travelo/img/trip/1.png" alt="">
+            <div class="blog-date">Oct 12, 2019</div>
+            <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
         </div>
+        <div class="col col-third blog-item">
+            <img src="https://preview.colorlib.com/theme/travelo/img/trip/2.png" alt="">
+            <div class="blog-date">Oct 12, 2019</div>
+            <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
+        </div>
+        <div class="col col-third blog-item">
+            <img src="https://preview.colorlib.com/theme/travelo/img/trip/3.png" alt="">
+            <div class="blog-date">Oct 12, 2019</div>
+            <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
+        </div>
+
+        <div class="clear"></div>
     </div>
-
-    <!-- Feedback section -->
-    <div class="feedback text-align">
-        <div class="feedback-list">
-
-            <div class="feedback-item feedback-slide">
-                <div class="feedback-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
-                </div>
-                <div class="feedback-text">
-                    <p>
-                        "Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."
-                    </p>
-                </div>
-                <div class="feedback-author">
-                    <p>- Micky Mouse</p>
-                </div>
-            </div>
-
-            <div class="feedback-item feedback-slide">
-                <div class="feedback-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
-                </div>
-                <div class="feedback-text">
-                    <p>
-                        " with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."
-                    </p>
-                </div>
-                <div class="feedback-author">
-                    <p>- Micky Mouse2</p>
-                </div>
-            </div>
-
-            <div class="feedback-item feedback-slide">
-                <div class="feedback-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
-                </div>
-                <div class="feedback-text">
-                    <p>
-                        "Witarian aid agencies, we have supported programmes to help alleviate human suffering."
-                    </p>
-                </div>
-                <div class="feedback-author">
-                    <p>- Micky Mouse3</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="dots">
-            <span class="dot" onclick="currentDiv(1)"></span>
-            <span class="dot" onclick="currentDiv(2)"></span>
-            <span class="dot" onclick="currentDiv(3)"></span>
-        </div>
-
-    </div>
-    <!-- Blog section -->
-    <div class="blog">
-        <h3 class="blog-title text-align">Recent Trips</h3>
-
-        <div class="row blog-list">
-            <div class="col col-third blog-item">
-                <img src="https://preview.colorlib.com/theme/travelo/img/trip/1.png" alt="">
-                <div class="blog-date">Oct 12, 2019</div>
-                <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
-            </div>
-            <div class="col col-third blog-item">
-                <img src="https://preview.colorlib.com/theme/travelo/img/trip/2.png" alt="">
-                <div class="blog-date">Oct 12, 2019</div>
-                <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
-            </div>
-            <div class="col col-third blog-item">
-                <img src="https://preview.colorlib.com/theme/travelo/img/trip/3.png" alt="">
-                <div class="blog-date">Oct 12, 2019</div>
-                <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
-            </div>
-
-            <div class="clear"></div>
-        </div>
-    </div>
-
 </div>
-
-<%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
-
 </body>
 </html>
