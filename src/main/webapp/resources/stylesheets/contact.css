@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+html {
+    background-color: #f7fafd;
+    /* background-color: aquamarine; */
+    /*height: 5000px;*/
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#slider{
+    margin-top: 110px;
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-image: url(https://preview.colorlib.com/theme/travelo/img/banner/xbradcam4.png.pagespeed.ic.7Sr4ATOVqB.jpg);
+    /* background-size: 100% auto; */
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    /* display: none; */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+/* @-webkit-keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -728px;}
+    50% {margin-left: -728px;}
+    60% {margin-left: -1456px;}
+    80% {margin-left: -1456px;}
+  } */
+
+#slider .slider-contents{
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 85px;
+}
+
+.slider-contents h3 {
+    margin-top: 84px;
+    font-size: 80px;
+    font-family: cursive;
+    font-weight: 400;
+    color: #fff;
+}
+
+.slider-contents p {
+    margin: 4px 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+/*---------------------------------------------------------------*/
+/* Reset CSS */
+/** {*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/* Common */
+
+html {
+    scroll-behavior: smooth;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+.clear {
+    clear: both;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: calc(100%/3);
+}
+
+.col-two-third {
+    width: calc(100%/3*2);
+}
+
+.col-sixth {
+    width: 16.66667%;
+}
+
+.col-five-sixth{
+    width: 83.33333%;
+}
+
+.col-quater {
+    width: 25%;
+}
+
+.col-three-quater {
+    width: 75%;
+}
+
+.col-2 {
+    columns: 2;
+    width: 100%;
+}
+
+.col-3 {
+    columns: 3;
+}
+
+/* Main */
+
+/* Contact section */
+
+/* contact form */
+#content .contact-section {
+    width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 64px;
+}
+
+#content .contact-title {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+#content .contact-content {
+    margin-top: 32px;
+}
+
+#content .contact-form {
+}
+
+.contact-form textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #e5e6e9;
+    border-radius: 0;
+    padding: 6px 12px 6px 18px;
+    font-size: 13px;
+    background: transparent;
+    overflow: auto;
+    resize: vertical;
+}
+
+.contact-form input {
+    width: 100%;
+    border: 1px solid #e5e6e9;
+    border-radius: 0;
+    height: 48px;
+    margin-top: 32px;
+    padding: 6px 12px 6px 18px;
+    font-size: 13px;
+    background: transparent;
+}
+
+.contact-form textarea:focus,
+.contact-form input:focus {
+    border: 1px solid #e5e6e9;
+    outline: none;
+}
+
+.contact-form input[type="submit"] {
+    width: 18%;
+    margin-top: 46px;
+    background: #1ec6b6;
+    display: inline-block;
+    padding: 14px 44px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #1ec6b6;
+    text-align: center;
+    color: #fff!important;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background: #ff4a52;
+    color: #fff!important;
+    border: 1px solid #ff4a52;
+}
+
+/* contact info */
+
+#content .contact-info {
+    display: block;
+}
+
+.contact-info .info-item {
+    margin-bottom: 26px;
+}
+
+.contact-info .info-icon {
+    margin-right: 5px;
+}
+
+.contact-info i {
+    color: #8f9195;
+    font-size: 27px;
+    line-height: 1.2;
+}
+
+.contact-info h3 {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #2a2a2a;
+}
+
+.contact-info p {
+    color: #8a8a8a;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    font-family: "Rubik",sans-serif;
+}
+
