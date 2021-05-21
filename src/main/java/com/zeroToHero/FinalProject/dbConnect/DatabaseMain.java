@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class DatabaseMain implements SQLQuery
+public class DatabaseMain implements SQLQuery, PopulateQuery
 {
     public Properties loadPropertiesFile(String filePath)
     {
@@ -45,12 +45,12 @@ public class DatabaseMain implements SQLQuery
                 new DBTablesDrop(dbUrl, user, password, SQLQuery.dropTables).drop();
                 break;
             case "populate-tables":
-                System.out.println("populate tables");
+                new DBPopulate(dbUrl, user, password, PopulateQuery.insertAll.toString()).populate();
                 break;
             case "setup-database":
                 new DBTablesDrop(dbUrl, user, password, SQLQuery.dropTables).drop();
                 new DBTablesCreate(dbUrl, user, password, SQLQuery.createAll.toString()).create();
-                // TODO: populate
+                new DBPopulate(dbUrl, user, password, PopulateQuery.insertAll.toString()).populate();
                 break;
             default:
                 System.out.println("Usage: mvn exec:java -P {profile}");

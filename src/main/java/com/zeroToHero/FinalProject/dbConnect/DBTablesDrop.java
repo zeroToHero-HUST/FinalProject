@@ -13,5 +13,6 @@ public class DBTablesDrop extends DBPreparation
 
     public void drop() throws SQLException {
         run(query);
+        System.out.println("Drop all tables successfully");
     }
 }

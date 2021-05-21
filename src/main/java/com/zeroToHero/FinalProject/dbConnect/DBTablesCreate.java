@@ -14,5 +14,6 @@ public class DBTablesCreate extends DBPreparation
 
     public void create() throws SQLException {
         run(query);
+        System.out.println("Create all tables successfully");
     }
 }

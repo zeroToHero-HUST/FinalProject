@@ -15,5 +15,6 @@ public class DBDrop extends DBPreparation {
 
     public void drop() throws SQLException {
         run(query);
+        System.out.println("Drop database successfully");
     }
 }

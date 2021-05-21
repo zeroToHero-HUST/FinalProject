@@ -15,5 +15,6 @@ public class DBCreate extends DBPreparation {
 
     public void create() throws SQLException {
         run(query);
+        System.out.println("Create database successfully");
     }
 }
