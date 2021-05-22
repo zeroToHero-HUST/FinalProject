@@ -1,0 +1,127 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Common */
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main */
+
+/* sign up link */
+
+#sign_up-link {
+    padding: 8px 24px;
+}
+
+#sign_up-link p {
+    text-align: right;
+    font-size: 13px;
+    padding-right: 5px;
+    color: rgb(76, 76, 76);
+}
+
+#sign_up-link .sign_up-btn {
+    margin-left: 4px;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 14px;
+    padding: 6px 12px 6px;
+    color: rgb(38, 38, 39);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+#sign_up-link .need-help {
+    margin-left: 4px;
+    font-size: 13px;
+    line-height: 20px;
+    text-decoration: underline;
+    color: rgb(38, 38, 39);
+}
+
+/* content*/
+
+#content {
+    width: 386px;
+    margin: 20px auto;
+}
+#content h2 {
+    text-align: center;
+    font-size: 26px;
+}
+
+#content .form-control {
+    width: 386px;
+    margin-top: 32px;
+}
+
+.form-control .form-lastname {
+    margin-top: 16px;
+}
+
+.form-control .form-email {
+    margin-top: 16px;
+}
+
+.form-control .form-password {
+    margin-top: 16px;
+}
+
+.form-control label {
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(38, 38, 39);
+}
+
+.form-control input {
+    display: block;
+    font-size: 16px;
+    width: 386px;
+    height: 40px;
+    margin: 3px 0px;
+    border-radius: 3px;
+    padding: 0px 14px;
+    color: rgb(76, 76, 76);
+    border: 1px solid rgb(196, 196, 196);
+    transition: 0.3s;
+}
+
+.form-control input:focus {
+    border: 1px solid rgb(196, 196, 196);
+    outline: none;
+}
+
+::placeholder {
+    font-size: 15px;
+    color: rgb(196, 196, 196);
+}
+
+
+.form-control input[type="submit"] {
+    margin-top: 24px;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    line-height: 28px;
+    height: 40px;
+    padding: 3px 16px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(38, 38, 39);
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+
