@@ -1,6 +1,6 @@
-package com.zeroToHero.FinalProject.dbConnect;
+package com.zeroToHero.FinalProject.database.queries;
 
-public interface SQLQuery {
+public interface CreateQuery {
     StringBuilder createType = new StringBuilder(
         "CREATE TYPE \"role_type\" AS ENUM (\n" +
             "  'admin',\n" +
@@ -141,16 +141,4 @@ public interface SQLQuery {
         .append(createTBBookings)
         .append(createTBDestinations)
         .append(createRelations);
-
-    String dropTables =
-            "DROP TABLE IF EXISTS destinations;\n" +
-            "DROP TABLE IF EXISTS cities;\n" +
-            "DROP TABLE IF EXISTS comments;\n" +
-            "DROP TABLE IF EXISTS blogs;\n" +
-            "DROP TABLE IF EXISTS reviews;\n" +
-            "DROP TABLE IF EXISTS bookings;\n" +
-            "DROP TABLE IF EXISTS tours;\n" +
-            "DROP TABLE IF EXISTS users;\n" +
-            "DROP TABLE IF EXISTS countries;\n" +
-            "DROP TYPE role_type;";
 }
