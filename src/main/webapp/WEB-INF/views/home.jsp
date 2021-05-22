@@ -6,10 +6,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/home.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
+
     <script src="${pageContext.request.contextPath}/resources/javascripts/home.js" defer></script>
-<%--    <script src="resources/javascripts/index.js"></script>--%>
 </head>
 <body>
 
@@ -19,11 +20,10 @@
 <div id="slider">
     <i class="left ti-angle-left" onclick="ChangeLeft();"></i>
     <i class="right ti-angle-right" onclick="ChangeRight();"></i>
-    <div class="slider-contents fade">
-        <h3>Việt Nam</h3>
+    <div class="slider-contents slider-1 fade">
+        <h3>Miền Bắc</h3>
         <p>Pixel perfect design with awesome contents</p>
         <a href="">Explore Now</a>
-    </div>
     </div>
     <div class="slider-contents slider-2 fade" style="display: none;" >
         <h3>Miền Trung</h3>
@@ -36,6 +36,7 @@
         <a href="">Explore Now</a>
     </div>
 </div>
+
 <!-- end: slide -->
 
 <!-- begin: where to go area -->
