@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,7 +79,29 @@
             <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
         </div>
         <div class="detail">
-            <div class="single-destination">
+            <c:forEach var="destination" items="${result}">
+                <div class="single-destination">
+                    <div class="thumb">
+                        <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
+                        <a href="">${destination.price}</a>
+                    </div>
+                    <div class="destination-infor">
+                        <a href=""><h3>${destination.title}</h3></a>
+                        <p>United State of America</p>
+                        <div class="rate">
+                            <span>
+                                <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
+                                <a href="">(20 Review)</a>
+                            </span>
+                            <div class="days">
+                                <i class="ti-alarm-clock"></i>
+                                <a href="">${destination.duration} Days</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </c:forEach>
+            <%--<div class="single-destination">
                 <div class="thumb">
                     <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
                     <a href="">$500</a>
@@ -197,7 +220,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>--%>
 
         </div>
         <div class="more-places">
