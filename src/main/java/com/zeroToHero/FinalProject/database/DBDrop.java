@@ -1,8 +1,6 @@
-package com.zeroToHero.FinalProject.dbConnect;
+package com.zeroToHero.FinalProject.database;
 
-import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class DBDrop extends DBPreparation {
     private String query;

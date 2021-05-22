@@ -1,4 +1,4 @@
-package com.zeroToHero.FinalProject.dbConnect;
+package com.zeroToHero.FinalProject.database.queries;
 
 public interface PopulateQuery {
     StringBuilder insertCountries = new StringBuilder(

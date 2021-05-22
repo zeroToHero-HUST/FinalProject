@@ -1,11 +1,15 @@
-package com.zeroToHero.FinalProject.dbConnect;
+package com.zeroToHero.FinalProject.database;
+
+import com.zeroToHero.FinalProject.database.queries.CreateQuery;
+import com.zeroToHero.FinalProject.database.queries.DropQuery;
+import com.zeroToHero.FinalProject.database.queries.PopulateQuery;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class DatabaseMain implements SQLQuery, PopulateQuery
+public class DatabaseMain implements CreateQuery, PopulateQuery
 {
     public Properties loadPropertiesFile(String filePath)
     {
@@ -39,17 +43,17 @@ public class DatabaseMain implements SQLQuery, PopulateQuery
                 new DBDrop(newDBUrl, user, password, prop.getProperty("DB.DBNAME")).drop();
                 break;
             case "create-tables":
-                new DBTablesCreate(dbUrl, user, password, SQLQuery.createAll.toString()).create();
+                new DBTablesCreate(dbUrl, user, password, CreateQuery.createAll.toString()).create();
                 break;
             case "drop-tables":
-                new DBTablesDrop(dbUrl, user, password, SQLQuery.dropTables).drop();
+                new DBTablesDrop(dbUrl, user, password, DropQuery.dropTables).drop();
                 break;
             case "populate-tables":
                 new DBPopulate(dbUrl, user, password, PopulateQuery.insertAll.toString()).populate();
                 break;
             case "setup-database":
-                new DBTablesDrop(dbUrl, user, password, SQLQuery.dropTables).drop();
-                new DBTablesCreate(dbUrl, user, password, SQLQuery.createAll.toString()).create();
+                new DBTablesDrop(dbUrl, user, password, DropQuery.dropTables).drop();
+                new DBTablesCreate(dbUrl, user, password, CreateQuery.createAll.toString()).create();
                 new DBPopulate(dbUrl, user, password, PopulateQuery.insertAll.toString()).populate();
                 break;
             default:

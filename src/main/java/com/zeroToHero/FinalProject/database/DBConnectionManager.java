@@ -1,4 +1,4 @@
-package com.zeroToHero.FinalProject.dbConnect;
+package com.zeroToHero.FinalProject.database;
 
 import java.sql.Connection;
 import  java.sql.DriverManager;
