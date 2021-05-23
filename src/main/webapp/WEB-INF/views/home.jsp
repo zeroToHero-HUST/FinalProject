@@ -80,7 +80,7 @@
             <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
         </div>
         <div class="detail">
-            <c:forEach var="destination" items="${result}">
+            <c:forEach var="destination" items="${popTours}">
                 <div class="single-destination">
                     <div class="thumb">
                         <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
@@ -88,7 +88,7 @@
                     </div>
                     <div class="destination-infor">
                         <a href=""><h3>${destination.title}</h3></a>
-                        <p>United State of America</p>
+                        <p>${destination.countryName}</p>
                         <div class="rate">
                             <span>
                                 <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>

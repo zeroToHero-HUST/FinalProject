@@ -1,13 +1,12 @@
-package com.zeroToHero.FinalProject.database;
+package com.zeroToHero.FinalProject.database.dbPrep;
 
 import java.sql.SQLException;
 
-public class DBPopulate extends DBPreparation
+public class DBTablesPopulate extends DBPrep
 {
     private String query;
 
-    public DBPopulate(String url, String username, String password, String query) {
-        super(url, username, password);
+    public DBTablesPopulate(String query) {
         this.query = query;
     }
 

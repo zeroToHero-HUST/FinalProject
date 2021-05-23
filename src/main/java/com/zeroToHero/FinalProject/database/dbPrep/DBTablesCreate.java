@@ -1,14 +1,13 @@
-package com.zeroToHero.FinalProject.database;
+package com.zeroToHero.FinalProject.database.dbPrep;
 
 import java.sql.SQLException;
 
-public class DBTablesCreate extends DBPreparation
+public class DBTablesCreate extends DBPrep
 {
     private String query;
 
-    public DBTablesCreate(String url, String user, String password, String query)
+    public DBTablesCreate(String query)
     {
-        super(url, user, password);
         this.query = query;
     }
 
