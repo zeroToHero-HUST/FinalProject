@@ -8,8 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Content</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/contact.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
 </head>
 <body>
+
+<%@ include file="/WEB-INF/views/fragments/header.jspf" %>
+
 <!-- begin: slide -->
 <div id="slider">
     <div class="slider-contents fade">
@@ -80,5 +89,7 @@
 
 </div>
 <!-- End: content -->
+
+<%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
 </body>
 </html>

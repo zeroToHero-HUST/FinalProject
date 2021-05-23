@@ -6,10 +6,10 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "AboutServlet", value = "/about_us")
-public class AboutServlet extends HttpServlet {
+@WebServlet(name = "ContactServlet", value = "/contact")
+public class ContactServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/views/about_us.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/views/contact.jsp").forward(request, response);
     }
 }
