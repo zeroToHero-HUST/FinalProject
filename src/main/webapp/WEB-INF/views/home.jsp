@@ -46,12 +46,12 @@
             <h3>Where you want to go?</h3>
         </div>
         <div class="form-search">
-            <form action="" method="get">
-                <div class="input-field">
-                    <input type="text" placeholder="Where to go?">
+            <form id ="newForm" onsubmit="return false">
+                <div class="input-field" >
+                    <input type="search" placeholder="Where to go?" id = "search-text">
                 </div>
                 <div class="input-field date">
-                    <input type="date" placeholder="Date">
+                    <input type="search" placeholder="Date">
 
                 </div>
                 <div class="input-field">
@@ -62,7 +62,7 @@
                     </select>
                 </div>
                 <div class="search-btn">
-                    <button type="submit">Search</button>
+                    <button onclick="searchBar()">Search</button>
                 </div>
             </form>
         </div>
@@ -79,28 +79,33 @@
             <h3>Popular Destinations</h3>
             <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
         </div>
-        <div class="detail">
-            <c:forEach var="destination" items="${result}">
-                <div class="single-destination">
-                    <div class="thumb">
-                        <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                        <a href="">${destination.price}</a>
-                    </div>
-                    <div class="destination-infor">
-                        <a href=""><h3>${destination.title}</h3></a>
-                        <p>United State of America</p>
-                        <div class="rate">
-                            <span>
-                                <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                                <a href="">(20 Review)</a>
-                            </span>
-                            <div class="days">
-                                <i class="ti-alarm-clock"></i>
-                                <a href="">${destination.duration} Days</a>
+        <div class="detail" id = "des-detail">
+            <c:forEach var="destination" items="${result}" >
+                <c:choose>
+                    <c:when test="${destination.tourId le 4}">
+                    <div class="single-destination" id = "des${destination.tourId}">
+                        <div class="thumb">
+                            <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
+                            <a href="">${destination.price}</a>
+                        </div>
+                        <div class="destination-infor">
+                            <a href=""><h3 class="title-des">${destination.title}</h3></a>
+                            <p>United State of America</p>
+                            <div class="rate">
+                                <span>
+                                    <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
+                                    <a href="">(20 Review)</a>
+                                </span>
+                                <div class="days">
+                                    <i class="ti-alarm-clock"></i>
+                                    <a href="">${destination.duration} Days</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    </c:when>
+
+                </c:choose>
             </c:forEach>
             <%--<div class="single-destination">
                 <div class="thumb">
@@ -350,6 +355,24 @@
 </div>
 
 <%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
+<script>
+    function searchBar() {
+        var input,filter, ul, li, a, i, txtValue;
+        input = document.getElementById("search-text");
+        filter = input.value.toUpperCase();
+        ul = document.getElementsByClassName("single-destination");
+        li = document.getElementsByClassName("title-des");
+        for (i = 0; i < li.length; i++){
+            txtValue = li[i].textContent || li[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1){
+                ul[i].style.display = "";
+            }
+            else{
+                ul[i].style.display= "none";
+            }
+        }
 
+    }
+</script>
 </body>
 </html>

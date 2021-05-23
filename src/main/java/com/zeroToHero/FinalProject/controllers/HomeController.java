@@ -12,7 +12,8 @@ import java.util.List;
 
 public class HomeController {
     public List<Tours> getPopularDestinations() throws SQLException {
-        Connection conn = new DBConnectionManager("jdbc:postgresql://localhost:5432/zerotohero-hust", "vietthai2512", "251200").getConnection();
+
+        Connection conn = new DBConnectionManager("jdbc:postgresql://localhost:5432/postgres", "postgres", "123456").getConnection();
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("SELECT tour_id, title, duration, price FROM tours;");
         List<Tours> result = new ArrayList<>();

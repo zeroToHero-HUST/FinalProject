@@ -18,11 +18,14 @@ public class HomeServlet extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ArrayList<Tours> temp = null;
+        String error = "1";
         try {
             temp = (ArrayList<Tours>) new HomeController().getPopularDestinations();
         } catch (SQLException throwable) {
+            error = throwable.getMessage();
             throwable.printStackTrace();
         }
+        req.setAttribute("error",error);
         req.setAttribute("result", temp);
         req.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(req, resp);
     }
