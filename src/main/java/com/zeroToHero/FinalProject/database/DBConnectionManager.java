@@ -1,18 +1,48 @@
 package com.zeroToHero.FinalProject.database;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 import java.sql.Connection;
-import  java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 
 public class DBConnectionManager {
-    private Connection connection;
+    public static Connection getConnection() throws NamingException, SQLException {
+        Context ctx = new InitialContext();
+        DataSource ds = (DataSource) ctx.lookup("java:/comp/env/jdbc/postgres");
 
-    public DBConnectionManager(String dbURL, String user, String password) throws SQLException {
-        this.connection = DriverManager.getConnection(dbURL, user, password);
+        return ds.getConnection();
     }
 
-    public Connection getConnection() {
-        return this.connection;
+    public static void closeConnection(Connection conn) {
+        try {
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("DBConnectionManager closeConnection " + e.getMessage());
+        }
+    }
+
+    public static void closeConnection(Connection conn, Statement st, ResultSet rs) {
+        try {
+            if (rs != null) {
+                rs.close();
+            }
+
+            if (st != null) {
+                st.close();
+            }
+
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("DBConnectionManager closeConnection " + e.getMessage());
+        }
     }
 }

@@ -53,66 +53,38 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.1</version>
+                <configuration>
+                    <webResources>
+                        <resource>
+                            <directory>src/main/webapp/META-INF</directory>
+                            <targetPath>META-INF</targetPath>
+                            <filtering>true</filtering>
+                        </resource>
+                    </webResources>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-help-plugin</artifactId>
                 <version>3.2.0</version>
-                <executions>
-                    <execution>
-                        <id>show-profiles</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>active-profiles</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.0.0</version>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.2.0</version>
+            </plugin>
         </plugins>
+        <filters>
+            <filter>src/main/resources/config.properties</filter>
+        </filters>
     </build>
 
     <profiles>
-        <profile>
-            <id>create-database</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>exec-maven-plugin</artifactId>
-                        <version>3.0.0</version>
-                        <configuration>
-                            <mainClass>com.zeroToHero.FinalProject.database.DatabaseMain</mainClass>
-                            <arguments>
-                                <argument>create-database</argument>
-                            </arguments>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>drop-database</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>exec-maven-plugin</artifactId>
-                        <version>3.0.0</version>
-                        <configuration>
-                            <mainClass>com.zeroToHero.FinalProject.database.DatabaseMain</mainClass>
-                            <arguments>
-                                <argument>drop-database</argument>
-                            </arguments>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
         <profile>
             <id>create-tables</id>
             <build>
@@ -122,7 +94,7 @@
                         <artifactId>exec-maven-plugin</artifactId>
                         <version>3.0.0</version>
                         <configuration>
-                            <mainClass>com.zeroToHero.FinalProject.database.DatabaseMain</mainClass>
+                            <mainClass>com.zeroToHero.FinalProject.database.dbPrep.DBPrepMain</mainClass>
                             <arguments>
                                 <argument>create-tables</argument>
                             </arguments>
@@ -140,7 +112,7 @@
                         <artifactId>exec-maven-plugin</artifactId>
                         <version>3.0.0</version>
                         <configuration>
-                            <mainClass>com.zeroToHero.FinalProject.database.DatabaseMain</mainClass>
+                            <mainClass>com.zeroToHero.FinalProject.database.dbPrep.DBPrepMain</mainClass>
                             <arguments>
                                 <argument>drop-tables</argument>
                             </arguments>
@@ -158,7 +130,7 @@
                         <artifactId>exec-maven-plugin</artifactId>
                         <version>3.0.0</version>
                         <configuration>
-                            <mainClass>com.zeroToHero.FinalProject.database.DatabaseMain</mainClass>
+                            <mainClass>com.zeroToHero.FinalProject.database.dbPrep.DBPrepMain</mainClass>
                             <arguments>
                                 <argument>populate-tables</argument>
                             </arguments>
@@ -176,7 +148,7 @@
                         <artifactId>exec-maven-plugin</artifactId>
                         <version>3.0.0</version>
                         <configuration>
-                            <mainClass>com.zeroToHero.FinalProject.database.DatabaseMain</mainClass>
+                            <mainClass>com.zeroToHero.FinalProject.database.dbPrep.DBPrepMain</mainClass>
                             <arguments>
                                 <argument>setup-database</argument>
                             </arguments>

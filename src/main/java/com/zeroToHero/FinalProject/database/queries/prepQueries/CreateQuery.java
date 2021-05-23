@@ -1,4 +1,4 @@
-package com.zeroToHero.FinalProject.database.queries;
+package com.zeroToHero.FinalProject.database.queries.prepQueries;
 
 public interface CreateQuery {
     StringBuilder createType = new StringBuilder(

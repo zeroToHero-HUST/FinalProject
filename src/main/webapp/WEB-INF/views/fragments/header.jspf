@@ -12,12 +12,12 @@
         <!-- begin: main menu  -->
         <div id="main-menu">
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="${pageContext.request.contextPath}/">Home</a></li>
                 <li><a href="${pageContext.request.contextPath}/about_us">About</a></li>
-                <li><a href="">Destination</a></li>
-                <li><a href="">Tour</a></li>
+                <li><a href="${pageContext.request.contextPath}/destination">Destination</a></li>
+                <li><a href="${pageContext.request.contextPath}/tour">Tour</a></li>
                 <li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
             </ul>
         </div>
         <!-- end: main menu  -->
