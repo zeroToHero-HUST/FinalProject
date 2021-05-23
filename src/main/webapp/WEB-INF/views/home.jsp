@@ -62,7 +62,7 @@
                     </select>
                 </div>
                 <div class="search-btn">
-                    <button onclick="searchBar()">Search</button>
+                    <button onclick="searchBar();">Search</button>
                 </div>
             </form>
         </div>
@@ -79,8 +79,7 @@
             <h3>Popular Destinations</h3>
             <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
         </div>
-        
-        <div class="detail">
+        <div class="detail" id="des-detail">
             <c:forEach var="destination" items="${popTours}">
                 <div class="single-destination">
                     <div class="thumb">
@@ -88,19 +87,20 @@
                         <a href="">${destination.price}</a>
                     </div>
                     <div class="destination-infor">
-                        <a href=""><h3>${destination.title}</h3></a>
+                        <a href=""><h3 class="title-des">${destination.title}</h3></a>
                         <p>${destination.countryName}</p>
                         <div class="rate">
-                            <span>
-                                <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                                <a href="">(20 Review)</a>
-                            </span>
+                                <span>
+                                    <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
+                                    <a href="">(20 Review)</a>
+                                </span>
                             <div class="days">
                                 <i class="ti-alarm-clock"></i>
                                 <a href="">${destination.duration} Days</a>
                             </div>
                         </div>
                     </div>
+                </div>
             </c:forEach>
             <%--<div class="single-destination">
                 <div class="thumb">
@@ -350,24 +350,6 @@
 </div>
 
 <%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
-<script>
-    function searchBar() {
-        var input,filter, ul, li, a, i, txtValue;
-        input = document.getElementById("search-text");
-        filter = input.value.toUpperCase();
-        ul = document.getElementsByClassName("single-destination");
-        li = document.getElementsByClassName("title-des");
-        for (i = 0; i < li.length; i++){
-            txtValue = li[i].textContent || li[i].innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1){
-                ul[i].style.display = "";
-            }
-            else{
-                ul[i].style.display= "none";
-            }
-        }
 
-    }
-</script>
 </body>
 </html>

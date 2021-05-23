@@ -88,3 +88,25 @@ function showDivs(n) {
     dots[slide-1].className += " dot-active";
 }
 //end: script slideshow feedback
+
+// Search where to go
+function searchBar()
+{
+    var input,filter, ul, li, a, i, txtValue;
+    input = document.getElementById("search-text");
+    filter = input.value.toUpperCase();
+    ul = document.getElementsByClassName("single-destination");
+    li = document.getElementsByClassName("title-des");
+    for (i = 0; i < li.length; i++)
+    {
+        txtValue = li[i].textContent || li[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1)
+        {
+            ul[i].style.display = "";
+        }
+        else
+        {
+            ul[i].style.display= "none";
+        }
+    }
+}
