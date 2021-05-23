@@ -1,13 +1,12 @@
-package com.zeroToHero.FinalProject.database;
+package com.zeroToHero.FinalProject.database.dbPrep;
 
 import java.sql.SQLException;
 
-public class DBTablesDrop extends DBPreparation
+public class DBTablesDrop extends DBPrep
 {
     private String query;
 
-    public DBTablesDrop(String url, String user, String password, String query) {
-        super(url, user, password);
+    public DBTablesDrop(String query) {
         this.query = query;
     }
 

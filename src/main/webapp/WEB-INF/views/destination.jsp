@@ -9,8 +9,15 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/destination.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
 </head>
 <body>
+
+<%@ include file="/WEB-INF/views/fragments/header.jspf" %>
+
 <!-- begin: slide -->
 <div id="slider">
     <div class="slider-contents fade">
@@ -268,5 +275,6 @@
         <div class="clear"></div>
     </div>
 </div>
+<%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
 </body>
 </html>
