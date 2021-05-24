@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/home.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
 
-    <script src="${pageContext.request.contextPath}/resources/javascripts/home.js" defer></script>
 </head>
 <body>
 
@@ -87,7 +86,7 @@
                         <a href="">${destination.price}</a>
                     </div>
                     <div class="destination-infor">
-                        <a href=""><h3 class="title-des">${destination.title}</h3></a>
+                        <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"><h3 class="title-des">${destination.title}</h3></a>
                         <p>${destination.countryName}</p>
                         <div class="rate">
                                 <span>
@@ -348,6 +347,7 @@
     </div>
 
 </div>
+<script src="${pageContext.request.contextPath}/resources/javascripts/home.js" ></script>
 
 <%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
 
