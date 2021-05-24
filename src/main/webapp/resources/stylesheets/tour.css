@@ -2,64 +2,26 @@
     transition: background-image 0.5s ;
     margin-top: 110px;
     width: 100%;
-    height: 500px;
-    background-image: url(../images/slider/slide2.jpg);
+    height: 800px;
+    background-image: url('../images/slider/slide-tour-demo.jpg');
     background-repeat: no-repeat;
     background-size: 100% auto;
     position: relative;
+    /* display: none; */
 }
 
 
 
 
-#slider .left {
-    position: absolute;
-    float: left;
-    top: 40%;
-    color: #fff;
-    padding: 50px 15px;
-    background-color:rgba(255, 255, 255, 0.2)
-}
-
-#slider .left:hover, #slider .right:hover {
-    background-color: #fff;
-    color: #000;
-    transition: 0.3s;
-}
-
-#slider .right {
-    position: absolute;
-    /* float: right; */
-    top: 40%;
-    right: 0;
-    color: #fff;
-    padding: 50px 15px;
-    background-color:rgba(255, 255, 255, 0.2)
-}
 #slider .slider-contents{
     display: inline-block;
     text-align: center;
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    margin-top: 85px;
+    transform: translate(-50%,-60%);
 }
 
-#slider .slider-1 {
-    transition: display 2s;
-    display: block;
-}
-
-
-#slider .slider-2 {
-    transition: display 2s;
-    display: none;
-}
-
-#slider .slider-3 {
-    transition: display 2s;
-    display: none;
-}
 
 
 
@@ -90,125 +52,167 @@
     transition: 0.3s;
 }
 
-.where-to-go-area {
-    width: 100%;
-    /* height: 50px; */
-    padding: 50px 0;
-    background-color: rgb(4, 14, 39);
-    color: #fff;
-    text-align: center;
+.tour {
+    /* background-color: #fff; */
+}
+.tour .container{
+    width: 730px;
+    height: auto;
+    padding: 70px 0px 150px 0px;
+    margin: auto;
+
+
+
 }
 
-.where-to-go-area .container {
-    height: 50px;
-    line-height: 50px;
+
+
+.tour .tour-description {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.144);
+    border-radius: 10px;
+
 }
 
-.where-to-go-area .where-you-want-to-go {
+.tour-description .contents {
     display: inline-block;
+    padding: 24px;
+}
+
+.tour-description h3 {
+
+    margin-bottom: 25px;
+    color: rgb(0, 29, 56);
     font-size: 24px;
-    padding: 0 15px;
+    font-weight: 500;
 
 }
 
-.where-to-go-area .where-you-want-to-go h3 {
+.tour-description p {
+    color: rgb(122, 131, 139);
+    font-size: 16px;
     font-weight: 400;
 }
 
-
-
-
-.where-to-go-area .form-search {
-    display: inline-block;
-    padding: 0 15px;
+.tour-description .single-tour-description {
 
 }
 
-.form-search .input-field {
-    display: inline-block;
-    padding-right: 5px;
-}
-
-.form-search .input-field input, .form-search .input-field select{
-    width: 200px;
-    height: 50px;
-    background: transparent;
-    padding-left: 15px;
-    border: 1px solid #363e52 ;
-    border-radius: 5px;
-    color:#a8adb9;
-    padding-right: 50px;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.form-search .input-field input::placeholder {
-    color: #a8adb9;
-    font-size: 16px;
-    font-weight: 300;
+.tour-description .single-tour-description h4 {
+    margin-top: 20px;
+    margin-bottom: 8px;
 
 }
-.form-search .input-field input:focus, .form-search .input-field select:focus {
-    outline: none;
+
+.tour .tour-summary {
+    background-color: #fff;
+    height: 100px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.144);
+    border-radius: 10px;
+
 }
 
-.form-search .search-btn {
-    display: inline-block;
+.tour .tour-summary:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.411);
+    transition: 1s;
 }
 
-.form-search .search-btn button {
-    padding: 16px 39px;
-    background-color: rgb(255, 74, 82);
-    border-radius: 5px;
-    border: none;
-    color: #fff;
-    font-size: 16px;
+.tour .tour-summary:hover.tour-summary span{
+    color: #FF4A52;
+    font-size: 17px;
     font-weight: 600;
+    transition: 1s;
+}
+
+.tour .tour-summary:hover.tour-summary p {
+    color: rgb(153, 153, 153);
+    font-size: 14px;
+    font-weight: 300;
+    transition: 1s;
+}
+
+.tour .tour-summary:hover.tour-summary i{
+    color: rgb(30, 198, 182);
+    transition: 1s;
+}
+
+
+.tour .tour-summary p{
+    padding: 24px 0px 8px 24px;
+    font-weight: 700;
+    color: #FF4A52;
 
 }
 
-.form-search .search-btn button:hover {
-    cursor: pointer;
-    transition: 0.3s;
-    background-color: #1ec6b6;
-}
-
-.popular-destinations-area {
-    padding: 142px 0 150px 0;
-}
-
-.popular-destinations-area .container {
-    text-align: center;
-    margin: 0 142px;
+.tour .tour-summary i{
+    padding: 24px 0px 8px 24px;
+    color: rgb(177, 181, 184);
+    font-size: 14px;
 
 }
+.tour .tour-summary span{
+    color: rgb(122, 131, 139);
+    font-size: 14px;
+}
 
-.popular-destinations-area .description {
+
+.tour .tour-summary .destination {
     display: inline-block;
-    width: 540px;
-    margin-bottom: 62px;
+    width: 24%;
+    height: 100%;
+    border-right: 1px solid rgb(153, 153, 153);
+}
+.tour .tour-summary .check-in{
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid rgb(153, 153, 153);
+
+}
+.tour .tour-summary .check-out{
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid rgb(153, 153, 153);
+
+}
+.tour .tour-summary .price{
+    display: inline-block;
+    width: 24%;
 
 }
 
-.popular-destinations-area .description h3 {
+.tour button {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #FF4A52;
+    color: #fff;
+    border: 0;
+    margin-top: 50px;
+    padding: 13px 0px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+.more-tours {
+    margin: 0px 0px 150px 0px;
+    width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.more-tours .title h3 {
+    text-align: center;
+    height: 115px;
     font-size: 38px;
     font-weight: 400;
-    padding-bottom: 7px;
-    margin-bottom: 10px;
+    color: #040e27;
 }
 
-.popular-destinations-area .description p {
-    font-size: 16px;
-    color: #7a838b;
-    font-weight: 400;
-    /* width: 540px; */
-}
-
-.popular-destinations-area .detail {
-
-}
-
-.popular-destinations-area .single-destination {
+.detail .single-destination {
     display: inline-block;
     width: 350px;
     height: 333px;
@@ -219,17 +223,17 @@
 
 
 }
-.popular-destinations-area .single-destination:hover {
-    box-shadow: 0 10px 20px rgb(0, 0, 0);
+.detail .single-destination:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0,0.5);
     transition: 0.3s;
 }
 
-.popular-destinations-area .single-destination:hover.single-destination .thumb a{
+.detail .single-destination:hover.single-destination .thumb a{
     transition: 0.3s;
     background-color:#FF4A52;
 }
 
-.popular-destinations-area .single-destination:hover.single-destination .destination-infor a h3{
+.detail .single-destination:hover.single-destination .destination-infor a h3{
     transition: 0.3s;
     color:#FF4A52;
 }
@@ -316,25 +320,4 @@
 .destination-infor .rate .days a{
     color: rgb(122, 131, 139);
 }
-
-.popular-destinations-area .more-places {
-    margin-top: 53px;
-}
-
-.popular-destinations-area .more-places a {
-    text-decoration: none;
-    color: #fff;
-    padding: 13px 39px;
-    background-color: #FF4A52;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-.popular-destinations-area .more-places a:hover {
-    background-color: #1ec6b6;
-    transition: 0.3s;
-
-}
-
 
