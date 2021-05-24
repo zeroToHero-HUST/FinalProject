@@ -1,9 +1,16 @@
 /* Footer section */
 
 #footer {
+    margin-top: 140px;
     height: auto;
     background-color: #040e27;
     overflow: hidden;
+}
+
+#footer .footer-section {
+    width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #footer .footer-top {
@@ -50,7 +57,7 @@
 
 .footer-top .footer-widget a:hover,
 .footer-top .social-links li :hover {
-    color: #FF4A52;
+    color: #ff4a52;
     transition: 0.3s;
 }
 
