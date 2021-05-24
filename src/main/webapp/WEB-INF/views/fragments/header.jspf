@@ -21,26 +21,31 @@
             </ul>
         </div>
         <!-- end: main menu  -->
-        <!-- begin: contact -->
         <div id="contact">
             <div class="phone-number">
-                <p><i class="phone-number-icon ti-mobile"></i>10(256)-928 256</p>
+                <p><a href="tel:10(256)-928 256"><i class="phone-number-icon ti-mobile"></i>10(256)-928 256</a></p>
             </div>
-            <div class="social-links">
+            <!-- <div class="social-links">
                 <ul>
                     <li><a href=""><i class="ti-instagram"></i></a></li>
                     <li><a href=""><i class="ti-linkedin"></i></a></li>
                     <li><a href=""><i class="ti-facebook"></i></a></li>
                     <li><a href=""><i class="ti-google"></i></a></li>
                 </ul>
+            </div> -->
+            <div class="user">
+                <a href="">
+                    <div class="log-in">
+                        Log in
+                    </div>
+                </a>
+                <a href="">
+                    <div class="sign-up">
+                        Sign up
+                    </div>
+                </a>
             </div>
         </div>
-        <!-- end: contact -->
-        <!-- begin: search-header -->
-        <div id="search-header">
-            <a href=""><i class="search-icon ti-search"></i></a>
-        </div>
-        <!-- end: search-header -->
 
     </div>
 </div>
