@@ -4,10 +4,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 
 public class DBConnectionManager {
@@ -36,6 +33,24 @@ public class DBConnectionManager {
 
             if (st != null) {
                 st.close();
+            }
+
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("DBConnectionManager closeConnection " + e.getMessage());
+        }
+    }
+
+    public static void closeConnection(Connection conn, PreparedStatement pst, ResultSet rs) {
+        try {
+            if (rs != null) {
+                rs.close();
+            }
+
+            if (pst != null) {
+                pst.close();
             }
 
             if (conn != null) {
