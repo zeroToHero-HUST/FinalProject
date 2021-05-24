@@ -264,7 +264,6 @@
                 </p>
             </div>
 
-            <div class="clear"></div>
         </div>
     </div>
 
@@ -343,7 +342,6 @@
                 <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
             </div>
 
-            <div class="clear"></div>
         </div>
     </div>
 
