@@ -62,13 +62,13 @@
             </div>
             <div class="check-in">
                 <p>Check-in</p>
-                <i class="ti-calendar"></i>
-                <span>1-3-2021</span>
+<%--                <i class="ti-calendar"></i>--%>
+                <span><input type="date"></span>
             </div>
             <div class="check-out">
                 <p>Check-out</p>
-                <i class="ti-calendar"></i>
-                <span>1-5-2021</span>
+<%--                <i class="ti-calendar"></i>--%>
+                <span><input type="date"></span>
             </div>
             <div class="price">
                 <p>Price</p>
