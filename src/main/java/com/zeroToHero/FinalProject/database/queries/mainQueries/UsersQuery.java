@@ -6,4 +6,7 @@ public interface UsersQuery {
 
     String insertNewUser =
         "INSERT INTO users (email, password, first_name, last_name, country_id) VALUES (?, ?, ?, ?, ?);";
+
+    String getUserByEmail =
+        "SELECT * FROM users WHERE users.email = ?";
 }

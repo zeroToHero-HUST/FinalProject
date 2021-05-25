@@ -27,22 +27,22 @@
         <form action="sign-up" method="post">
             <div class="form-fistname">
                 <label for="firstname">First Name</label>
-                <input type="text" placeholder="Bruce" name="firstName" id="firstname">
+                <input type="text" placeholder="Bruce" name="firstName" id="firstname" maxlength="99" required>
             </div>
             <div class="form-lastname">
                 <label for="lastname">Last Name</label>
-                <input type="text" placeholder="Wayne" name="lastName" id="lastname">
+                <input type="text" placeholder="Wayne" name="lastName" id="lastname" maxlength="99" required>
             </div>
             <div class="form-email">
                 <label for="email">Email</label>
-                <input type="email" placeholder="bruce@wayne.com" name="email" id="email">
+                <input type="email" placeholder="bruce@wayne.com" name="email" id="email" required>
             </div>
             <div class="form-password">
                 <label for="password">Password</label>
-                <input type="password" placeholder="At least 8 charecters" name="password" id="password">
+                <input type="password" placeholder="At least 6 charecters" name="password" id="password" minlength="6" maxlength="25" required>
             </div>
 
-            <c:if test="${emailAvailable == false}">
+            <c:if test="${error}">
                 <p>Địa chỉ email này đã được sử dung. Vui lòng chọn địa chỉ khác.</p>
             </c:if>
 
