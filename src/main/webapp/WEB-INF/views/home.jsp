@@ -237,7 +237,7 @@
     <div class="travel-variation">
         <div class="row travel-variation-list">
 
-            <div class="col col-third travel-variation-item text-align">
+            <div class="col col-third travel-variation-item m-col-half s-col-full text-align">
                 <div class="travel-variation-icon">
                     <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/1.svg" alt="">
                 </div>
@@ -246,7 +246,7 @@
                     A wonderful serenity has taken to the possession of my entire soul.
                 </p>
             </div>
-            <div class="col col-third travel-variation-item text-align">
+            <div class="col col-third travel-variation-item m-col-half s-col-full text-align">
                 <div class="travel-variation-icon">
                     <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/2.svg" alt="">
                 </div>
@@ -255,7 +255,7 @@
                     A wonderful serenity has taken to the possession of my entire soul.
                 </p>
             </div>
-            <div class="col col-third travel-variation-item text-align">
+            <div class="col col-third travel-variation-item m-col-half s-col-full text-align">
                 <div class="travel-variation-icon">
                     <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/3.svg" alt="">
                 </div>
@@ -270,74 +270,77 @@
 
     <!-- Feedback section -->
     <div class="feedback text-align">
-        <div class="feedback-list">
+        <div class="feedback-section">
 
-            <div class="feedback-item feedback-slide">
-                <div class="feedback-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
+            <div class="row feedback-list">
+
+                <div class="feedback-item feedback-slide">
+                    <div class="feedback-img">
+                        <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
+                    </div>
+                    <div class="feedback-text">
+                        <p>
+                            "Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."
+                        </p>
+                    </div>
+                    <div class="feedback-author">
+                        <p>- Micky Mouse</p>
+                    </div>
                 </div>
-                <div class="feedback-text">
-                    <p>
-                        "Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."
-                    </p>
+
+                <div class="feedback-item feedback-slide">
+                    <div class="feedback-img">
+                        <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
+                    </div>
+                    <div class="feedback-text">
+                        <p>
+                            " with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."
+                        </p>
+                    </div>
+                    <div class="feedback-author">
+                        <p>- Micky Mouse2</p>
+                    </div>
                 </div>
-                <div class="feedback-author">
-                    <p>- Micky Mouse</p>
+
+                <div class="feedback-item feedback-slide">
+                    <div class="feedback-img">
+                        <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
+                    </div>
+                    <div class="feedback-text">
+                        <p>
+                            "Witarian aid agencies, we have supported programmes to help alleviate human suffering."
+                        </p>
+                    </div>
+                    <div class="feedback-author">
+                        <p>- Micky Mouse3</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="feedback-item feedback-slide">
-                <div class="feedback-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
-                </div>
-                <div class="feedback-text">
-                    <p>
-                        " with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."
-                    </p>
-                </div>
-                <div class="feedback-author">
-                    <p>- Micky Mouse2</p>
-                </div>
+            <div class="dots">
+                <span class="dot" onclick="currentDiv(1)"></span>
+                <span class="dot" onclick="currentDiv(2)"></span>
+                <span class="dot" onclick="currentDiv(3)"></span>
             </div>
 
-            <div class="feedback-item feedback-slide">
-                <div class="feedback-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/testmonial/author.png" alt="">
-                </div>
-                <div class="feedback-text">
-                    <p>
-                        "Witarian aid agencies, we have supported programmes to help alleviate human suffering."
-                    </p>
-                </div>
-                <div class="feedback-author">
-                    <p>- Micky Mouse3</p>
-                </div>
-            </div>
         </div>
-
-        <div class="dots">
-            <span class="dot" onclick="currentDiv(1)"></span>
-            <span class="dot" onclick="currentDiv(2)"></span>
-            <span class="dot" onclick="currentDiv(3)"></span>
-        </div>
-
     </div>
     <!-- Blog section -->
     <div class="blog">
         <h3 class="blog-title text-align">Recent Trips</h3>
 
         <div class="row blog-list">
-            <div class="col col-third blog-item">
+            <div class="col col-third blog-item m-col-half s-col-full">
                 <img src="https://preview.colorlib.com/theme/travelo/img/trip/1.png" alt="">
                 <div class="blog-date">Oct 12, 2019</div>
                 <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
             </div>
-            <div class="col col-third blog-item">
+            <div class="col col-third blog-item m-col-half s-col-full">
                 <img src="https://preview.colorlib.com/theme/travelo/img/trip/2.png" alt="">
                 <div class="blog-date">Oct 12, 2019</div>
                 <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
             </div>
-            <div class="col col-third blog-item">
+            <div class="col col-third blog-item m-col-half s-col-full">
                 <img src="https://preview.colorlib.com/theme/travelo/img/trip/3.png" alt="">
                 <div class="blog-date">Oct 12, 2019</div>
                 <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
