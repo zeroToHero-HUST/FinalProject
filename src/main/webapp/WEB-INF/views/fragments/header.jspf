@@ -35,6 +35,7 @@
                 </ul>
             </div> -->
             <div class="user">
+
                 <c:choose>
                     <c:when test="${login}">
                         <a href="">
@@ -49,6 +50,14 @@
                                 Log out
                             </button>
                         </form>
+
+                        <c:if test="${admin}">
+                            <a href="">
+                                <div class="sign-up">
+                                    Admin Page
+                                </div>
+                            </a>
+                        </c:if>
                     </c:when>
                     <c:otherwise>
                         <a href="${pageContext.request.contextPath}/log-in">

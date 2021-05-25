@@ -21,7 +21,7 @@ public class AuthFilter implements Filter {
 
         Cookie[] cookies = request1.getCookies();
         Map<String, String> cookieMap = new HashMap<>();
-        String token = null;
+        String token;
 
         if (cookies != null)
         {
@@ -35,6 +35,8 @@ public class AuthFilter implements Filter {
 
                 if (user != null)
                 {
+                    if (user.getRole().equals("admin"))
+                        request.setAttribute("admin", true);
                     request.setAttribute("login", true);
                     request.setAttribute("user", user);
                 }
