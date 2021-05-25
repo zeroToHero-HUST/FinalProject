@@ -23,9 +23,9 @@ public interface PopulateQuery {
 
     StringBuilder insertUsers = new StringBuilder(
         "INSERT INTO users (email, password, first_name, last_name, role, country_id) VALUES\n" +
-        "('admin@gmail.com', '123456', 'James', 'Gunn', 'admin', 1),\n" +
-        "('blogger@gmail.com', '123456', 'Lionel', 'Messi', 'blogger', 1),\n" +
-        "('user@gmail.com', '123456', 'Tom', 'Cruise', 'user', 2);"
+        "('admin@gmail.com', '$argon2id$v=19$m=10240,t=10,p=1$/pEVVohYlbfpp0ovJK/Jfg$CCn2jEEuA1avc1qixDM1FO/obzpYo52RCtwZZTgTRo0', 'James', 'Gunn', 'admin', 1),\n" +
+        "('blogger@gmail.com', '$argon2id$v=19$m=10240,t=10,p=1$26BAOiCFKKdwjXamfmwHSQ$9hBWcItrpiA5P4Xw49OHO2vs8cFjgJVhEezUvJMI7/0', 'Lionel', 'Messi', 'blogger', 1),\n" +
+        "('user@gmail.com', '$argon2id$v=19$m=10240,t=10,p=1$bofJtOhTKi9TpH6Cu5VOsQ$n11evQNpLZ9QlXoQ+2nwYFe2WIm7sNiUrtvm1SYJwdY', 'Tom', 'Cruise', 'user', 2);"
     );
 
     StringBuilder insertTours = new StringBuilder(
