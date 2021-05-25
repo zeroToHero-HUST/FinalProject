@@ -102,7 +102,8 @@ public class MoreTousDAO {
         }
         return tour;
     }
-    public ArrayList<Tours> AllTours(){
+
+  public ArrayList<Tours> AllTours(){
         ArrayList<Tours> allTours = new ArrayList<>();
         Statement st = null;
         ResultSet rs = null;
@@ -141,5 +142,4 @@ public class MoreTousDAO {
         }
         return allTours;
     }
-
 }
