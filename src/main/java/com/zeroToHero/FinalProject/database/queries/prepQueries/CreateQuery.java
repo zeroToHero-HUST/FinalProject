@@ -13,13 +13,13 @@ public interface CreateQuery {
         "CREATE TABLE \"users\" (\n" +
             "\t\"user_id\" uuid PRIMARY KEY DEFAULT (gen_random_uuid()),\n" +
             "\t\"email\" varchar(320) UNIQUE NOT NULL,\n" +
-            "\t\"password\" varchar(25) NOT NULL,\n" +
-            "\t\"first_name\" varchar(50) NOT NULL,\n" +
-            "\t\"last_name\" varchar(50) NOT NULL,\n" +
+            "\t\"password\" varchar(150) NOT NULL,\n" +
+            "\t\"first_name\" varchar(100) NOT NULL,\n" +
+            "\t\"last_name\" varchar(100) NOT NULL,\n" +
             "\t\"profile_image\" text,\n" +
             "\t\"created_at\" timestamp NOT NULL DEFAULT (now()),\n" +
             "\t\"role\" role_type NOT NULL DEFAULT 'user',\n" +
-            "\t\"country_id\" int NOT NULL\n" +
+            "\t\"country_id\" int NOT NULL DEFAULT 1\n" +
         ");"
     );
 

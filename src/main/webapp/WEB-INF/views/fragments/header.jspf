@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page pageEncoding="UTF-8" %>
 <div id="header">
     <div class="header-contents">
@@ -34,16 +35,44 @@
                 </ul>
             </div> -->
             <div class="user">
-                <a href="">
-                    <div class="log-in">
-                        Log in
-                    </div>
-                </a>
-                <a href="">
-                    <div class="sign-up">
-                        Sign up
-                    </div>
-                </a>
+
+                <c:choose>
+                    <c:when test="${login}">
+                        <a href="">
+                            <div class="log-in">
+                                Hello ${user.firstName}
+                            </div>
+                        </a>
+
+                        <form method="post" action="log-out" class="inline">
+                            <input type="hidden" name="extra_submit_param" value="extra_submit_value">
+                            <button type="submit" name="submit_param" value="submit_value" class="link-button">
+                                Log out
+                            </button>
+                        </form>
+
+                        <c:if test="${admin}">
+                            <a href="">
+                                <div class="sign-up">
+                                    Admin Page
+                                </div>
+                            </a>
+                        </c:if>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="${pageContext.request.contextPath}/log-in">
+                            <div class="log-in">
+                                Log in
+                            </div>
+                        </a>
+                        <a href="${pageContext.request.contextPath}/sign-up">
+                            <div class="sign-up">
+                                Sign up
+                            </div>
+                        </a>
+                    </c:otherwise>
+                </c:choose>
+
             </div>
         </div>
 
