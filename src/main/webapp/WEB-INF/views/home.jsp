@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/home.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
 
-    <script src="${pageContext.request.contextPath}/resources/javascripts/home.js" defer></script>
 </head>
 <body>
 
@@ -84,19 +83,19 @@
                 <div class="single-destination">
                     <div class="thumb">
                         <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                        <a href="">${destination.price}</a>
+                        <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.price}</a>
                     </div>
                     <div class="destination-infor">
-                        <a href=""><h3 class="title-des">${destination.title}</h3></a>
+                        <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"><h3 class="title-des">${destination.title}</h3></a>
                         <p>${destination.countryName}</p>
                         <div class="rate">
                                 <span>
                                     <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                                    <a href="">(20 Review)</a>
+                                    <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">(20 Review)</a>
                                 </span>
                             <div class="days">
                                 <i class="ti-alarm-clock"></i>
-                                <a href="">${destination.duration} Days</a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.duration} Days</a>
                             </div>
                         </div>
                     </div>
@@ -264,7 +263,6 @@
                 </p>
             </div>
 
-            <div class="clear"></div>
         </div>
     </div>
 
@@ -343,11 +341,11 @@
                 <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
             </div>
 
-            <div class="clear"></div>
         </div>
     </div>
 
 </div>
+<script src="${pageContext.request.contextPath}/resources/javascripts/home.js" ></script>
 
 <%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
 

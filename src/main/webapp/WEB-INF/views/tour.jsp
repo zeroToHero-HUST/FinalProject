@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: phamtuanson
@@ -37,7 +38,7 @@
         <div class="tour-description">
             <div class="contents">
                 <h3>Description</h3>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
+                <p>${thisTour.description}</p>
                 <div class="single-tour-description">
                     <h4>Day-01</h4>
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
@@ -58,22 +59,23 @@
             <div class="destination">
                 <p>Tour</p>
                 <i class="ti-map"></i>
-                <span>Mien bac</span>
+                <span>${thisTour.title}</span>
             </div>
-            <div class="check-in">
+            <div class="check-in" >
                 <p>Check-in</p>
-                <i class="ti-calendar"></i>
-                <span>1-3-2021</span>
+
+<%--                <i class="ti-calendar"></i>--%>
+                <span><input type="date" id = "check-in-date" ></span>
             </div>
             <div class="check-out">
                 <p>Check-out</p>
-                <i class="ti-calendar"></i>
-                <span>1-5-2021</span>
+<%--                <i class="ti-calendar"></i>--%>
+                <span><input type="date" id = "check-out-date"></span>
             </div>
             <div class="price">
                 <p>Price</p>
                 <i class="ti-credit-card"></i>
-                <span>$5000</span>
+                <span>${thisTour.price}</span>
             </div>
         </div>
         <button>Submit</button>
@@ -84,70 +86,45 @@
 <div class="more-tours">
     <div class="title"><h3>More Tours</h3></div>
     <div class="detail">
+        <c:forEach var = "destination" items="${moreTours}">
         <div class="single-destination">
             <div class="thumb">
                 <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                <a href="">$500</a>
+                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.price}</a>
             </div>
             <div class="destination-infor">
-                <a href=""><h3>California</h3></a>
-                <p>United State of America</p>
+                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"><h3>${destination.title}</h3></a>
+                <p>${destination.countryName}</p>
                 <div class="rate">
                         <span>
                             <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                            <a href="">(20 Review)</a>
+                            <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">(20 Review)</a>
                         </span>
                     <div class="days">
                         <i class="ti-alarm-clock"></i>
-                        <a href="">5 Days</a>
+                        <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.duration} </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="single-destination">
-            <div class="thumb">
-                <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                <a href="">$500</a>
-            </div>
-            <div class="destination-infor">
-                <a href=""><h3>California</h3></a>
-                <p>United State of America</p>
-                <div class="rate">
-                        <span>
-                            <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                            <a href="">(20 Review)</a>
-                        </span>
-                    <div class="days">
-                        <i class="ti-alarm-clock"></i>
-                        <a href="">5 Days</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="single-destination">
-            <div class="thumb">
-                <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                <a href="">$500</a>
-            </div>
-            <div class="destination-infor">
-                <a href=""><h3>California</h3></a>
-                <p>United State of America</p>
-                <div class="rate">
-                        <span>
-                            <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                            <a href="">(20 Review)</a>
-                        </span>
-                    <div class="days">
-                        <i class="ti-alarm-clock"></i>
-                        <a href="">5 Days</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </c:forEach>
+
     </div>
 </div>
 
 <%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
+<script >
+    document.getElementById("check-in-date").addEventListener("change", getMyDateValue);
 
+    function getMyDateValue(){
+        // document.getElementById("test").innerText = "c";
+        var  checkOutDate, duration;
+        duration = parseInt(${thisTour.duration});
+        var checkInDate = document.getElementById("check-in-date").value;
+        checkOutDate = new Date(checkInDate);
+        checkOutDate.setDate(checkOutDate.getDate()+duration);
+        document.getElementById("check-out-date").value = checkOutDate.toLocaleDateString('en-CA');
+    }
+</script>
 </body>
 </html>

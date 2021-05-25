@@ -331,6 +331,9 @@
 /* Travel-variation */
 #content .travel-variation {
     margin-top: 154px;
+    width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #content .travel-variation-item p {
@@ -408,7 +411,9 @@
 
 #content .blog {
     margin-top: 154px;
-    padding-bottom: 140px;
+    width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #content .blog-title {
@@ -423,6 +428,7 @@
 
 #content .blog-item img {
     border-radius: 5px;
+    width: 100%;
 }
 
 #content .blog-item .blog-date {

@@ -1,4 +1,3 @@
-
 /*reset css*/
 * {
     padding: 0;
@@ -29,8 +28,8 @@ html {
 }
 
 .row {
-    margin-left: 88px;
-    margin-right: 88px;
+    margin-left: -15px;
+    margin-right: -15px;
 }
 
 .row::after {
@@ -41,8 +40,8 @@ html {
 
 .col {
     float: left;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .col-full {
@@ -54,15 +53,27 @@ html {
 }
 
 .col-third {
-    width: 33.33333%;
+    width: calc(100%/3);
 }
 
-.col-half-third {
-    width: 16.666667%;
+.col-two-third {
+    width: calc(100%/3*2);
 }
 
-.col-fourth {
+.col-sixth {
+    width: 16.66667%;
+}
+
+.col-five-sixth{
+    width: 83.33333%;
+}
+
+.col-quater {
     width: 25%;
+}
+
+.col-three-quater {
+    width: 75%;
 }
 
 .col-2 {

@@ -166,8 +166,18 @@
     width: 25%;
     height: 100%;
     border-right: 1px solid rgb(153, 153, 153);
-
 }
+
+.tour .tour-summary .check-in span input{
+    display: inline-block;
+    width: 133px;
+    margin-left: 24px;
+    padding-left: 5px;
+    color: rgb(122, 131, 139);
+    border: 1px solid rgb(122, 131, 139);
+    border-radius: 5px;
+}
+
 .tour .tour-summary .check-out{
     display: inline-block;
     width: 25%;
@@ -175,6 +185,17 @@
     border-right: 1px solid rgb(153, 153, 153);
 
 }
+
+.tour .tour-summary .check-out span input{
+    display: inline-block;
+    width: 133px;
+    margin-left: 24px;
+    padding-left: 5px;
+    color: rgb(122, 131, 139);
+    border: 1px solid rgb(122, 131, 139);
+    border-radius: 5px;
+}
+
 .tour .tour-summary .price{
     display: inline-block;
     width: 24%;
@@ -320,4 +341,3 @@
 .destination-infor .rate .days a{
     color: rgb(122, 131, 139);
 }
-
