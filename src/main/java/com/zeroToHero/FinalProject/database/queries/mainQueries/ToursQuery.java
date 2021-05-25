@@ -9,4 +9,5 @@ public interface ToursQuery {
                 "AND cities.country_id = countries.country_id " +
         "GROUP BY tours.tour_id, countries.name " +
         "LIMIT 6;";
+
 }
