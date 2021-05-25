@@ -1,0 +1,120 @@
+/* web  */
+@media screen and (min-width: 1024px) {
+    #header .header-contents .mobile-menu-btn {
+        display: none;
+    }
+
+    .places-area .container {
+        max-width: 1140px;
+    }
+}
+
+/* table  */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #slider {
+        height: 600px;
+    }
+
+}
+
+/* mobile  */
+@media screen and (max-width: 767px) {
+    #slider {
+        height: 300px;
+        width: 757px;
+    }
+
+    #slider .slider-contents h3 {
+        font-size: 50px !important;
+    }
+
+    #slider .slider-contents p {
+        font-size: 16px !important;
+    }
+
+    .where-to-go-area {
+        width: 757px;
+    }
+
+    .popular-destinations-area {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .popular-destinations-area .description h3 {
+        font-size: 30px;
+    }
+
+    .places-area {
+        width: 757px;
+    }
+}
+
+
+
+/* table & mobile */
+@media screen and (max-width: 1023px) {
+    .where-to-go-area .container {
+        height: 100%;
+    }
+
+    .where-to-go-area .where-you-want-to-go {
+        font-size: 18px;
+    }
+
+    .form-search, .input-field, .search-btn {
+        display: block !important;
+    }
+
+    .form-search input, .form-search select, .form-search button {
+        width: 510px !important;
+        margin: 10px 0 !important;
+    }
+
+    .places-area .detail {
+        width: 757px !important;
+    }
+}
+
+
+/* other */
+
+/* header */
+@media screen and (max-width: 1089px) {
+    #slider .slider-contents h3 {
+        font-size: 75px;
+    }
+}
+
+/* where-to-go-area */
+@media screen and (max-width: 1113px) {
+    .where-to-go-area .where-you-want-to-go {
+        font-size: 18px;
+    }
+
+    .form-search .input-field input, .form-search .input-field select {
+        width: 170px;
+    }
+}
+
+/* places-area */
+@media screen and (max-width: 1154px){
+    .filter-result-wrap {
+        display: block !important;
+        padding-left: 0 !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 690px !important;
+        margin-bottom: 30px;
+    }
+
+    .places-area .detail {
+        display: block !important;
+        margin: 0 auto 0 auto;
+        float: none !important;
+        padding: 0px !important;
+    }
+}
+
+
+

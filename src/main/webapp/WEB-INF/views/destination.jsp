@@ -10,8 +10,10 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/header-resp.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/destination.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/destination-resp.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
 </head>
 <body>
@@ -54,7 +56,7 @@
 
                 </div>
                 <div class="input-field">
-                    <select name="" id="">
+                    <select name="">
                         <option data-display="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -77,7 +79,7 @@
             <div class="filter-bordered">
                 <div class="filter-inner">
                     <div class="single-select">
-                        <select name="" id="" style="display:inline-block;">
+                        <select name=""  style="display:inline-block;">
                             <option data-display="Country">Country</option>
                             <option value="1">Africa</option>
                             <option value="2">canada</option>
@@ -275,6 +277,8 @@
         <div class="clear"></div>
     </div>
 </div>
+<script src="${pageContext.request.contextPath}/resources/javascripts/destination.js" ></script>
+<script src="${pageContext.request.contextPath}/resources/javascripts/header.js" ></script>
 <%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
 </body>
 </html>
