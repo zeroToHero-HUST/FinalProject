@@ -1,0 +1,239 @@
+/* begin: user-panel  */
+.user-panel {
+    margin-top: 110px;
+}
+
+.user-panel .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    width: 1000px;
+    position: relative;
+}
+
+.user-panel .card {
+    margin-top: 50px;
+    width: 620px;
+    background-color: #fff;
+    border-radius: 4px ;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+
+
+}
+
+.user-panel .card .card-header {
+    padding: 15px 0px 15px 0px;
+    margin: 0px 15px;
+    border-bottom: 1px solid rgb(86, 86, 86);
+}
+
+.user-panel .card .card-header h4 {
+    color: rgb(33, 37, 41);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.user-panel .card .card-body {
+    padding: 15px 15px 10px 15px;
+}
+
+.card-body input, textarea, button {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid rgb(227, 227, 227);
+    color: rgb(86, 86, 86);
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.user-panel .card-body .first-name {
+    display: inline-block;
+    width: 49%;
+}
+
+.user-panel .card-body .last-name {
+    display: inline-block;
+    width: 50%;
+}
+
+.user-panel .card-body .email{
+    display: inline-block;
+    width: 70%;
+}
+
+.user-panel .card-body .password {
+    display: inline-block;
+    width: 29%;
+}
+
+.user-panel .card-body .img input{
+    border: none;
+}
+
+
+.card-body button {
+    color: #fff;
+    background-color: #1ec6b6;
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+
+}
+
+.card-body button:hover {
+    background-color: #FF4A52;
+    transition: 0.3s;
+}
+
+.profile {
+    display: inline-block;
+    float: right;
+    position: absolute;
+    top: 80px;
+    right: 0%;
+    width: 340px;
+    height: 340px;
+    background-color: #fff;
+    border-radius: 340px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+
+}
+
+.profile .card-image {
+    display: inline-block;
+    width: 135px;
+    height: 135px;
+    margin-top: 50px;
+    border: 5px solid #FF4A52;
+    border-radius: 50%;
+
+
+
+}
+
+.profile .card-image img.avatar {
+    width: 123px;
+    height: 123px;
+    border-radius: 50%;
+    margin-top: 1px;
+}
+
+.profile .card-body{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.profile .card-body h4.name {
+    font-size: 22px;
+    font-weight: 300;
+    color: #1ec6b6;
+    margin-bottom: 5px;
+
+}
+
+.profile .card-body small.email {
+    color: #363e52;
+    margin-right: 10px;
+}
+
+.profile .card-body small.password {
+    color: #363e52;
+}
+/* end: user-panel  */
+
+
+/* begin: booking list  */
+.booking-list {
+    margin-top: 50px;
+    width: 1145px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.booking-list .card {
+    margin-top: 50px;
+    background-color: #fff;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 4px ;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.booking-list .card .card-header {
+    padding: 15px 0px 15px 0px;
+    margin: 0px 15px;
+    border-bottom: 1px solid rgb(86, 86, 86);
+}
+
+.booking-list .card .card-header h4 {
+    color: rgb(33, 37, 41);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.booking-list .card .card-body {
+    padding: 15px 15px 10px 15px;
+}
+
+.card-body th {
+    border-top: 1px solid rgb(233, 236, 239);
+    border-bottom: 2px solid rgb(233, 236, 239);
+    text-align: left;
+    padding: 12px 10px;
+    /* width: 100%; */
+}
+
+.card-body th.id {
+    width: 5%;
+}
+
+.card-body th.destination-id{
+    width: 10%;
+}
+
+.card-body th.name{
+    width: 15%;
+}
+
+.card-body th.start-date {
+    width: 15%;
+}
+
+.card-body th.end-date {
+    width: 15%;
+}
+
+.card-body th.user-id {
+    width: 10%;
+}
+
+.card-body th.price {
+    width: 10%;
+}
+
+.card-body th.created-at {
+    width: 10%;
+}
+
+.card-body td {
+    padding: 12px 10px;
+}
+
+.booking-list .card-body td button {
+    background-color: #1ec6b6;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.booking-list .card-body td button:hover {
+    background-color: #FF4A52;
+    transition: 0.3s;
+
+}
+
+/* end: booking list  */

@@ -1,19 +1,16 @@
-/*reset css*/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+
 }
 
 html {
-    background-color: #ffffff;
+    background-color: #f7fafd;
     font-weight: 400;
     font-size: 16px;
-    scroll-behavior: smooth;
-
 }
-
 
 .clear {
     clear: both;
@@ -89,7 +86,8 @@ html {
     font-weight: 400;
     width: 100%;
     height: 110px;
-    background-color: rgba(255, 255, 255,1) ;
+    background-color: rgb(255, 255, 255);
+
     position: fixed;
     z-index: 2;
     margin-top: -110px;
@@ -203,48 +201,36 @@ html {
     color: #f7fafd;
 }
 
-#contact .user .sign-up {
+#contact .user .log-out {
+    color: #363e52;
     display: inline-block;
-    background-color: rgba(255, 74, 82, 0.6);
+    /* background-color: rgba(255, 74, 82, 0.6); */
+    border-radius: 5px;
+    padding: 0 18px;
+    font-size: 18px;
+}
+
+#contact .user .log-out:hover {
+    background-color: #FF4A52;
+    color: #f7fafd;
+    transition: 0.3s;
+}
+
+#contact .user .log-out i {
+    display: inline-block;
+}
+
+#contact .user .name {
+    display: inline-block;
+    color: #363e52;
+    /* background-color: rgba(30, 198, 182,0.6); */
     border-radius: 5px;
     padding: 0 10px;
     font-size: 18px;
 }
 
-#contact .user .sign-up:hover {
-    background-color: #ff464f;
+#contact .user .name:hover {
+    background-color: #1ec6b6;
+    color: #f7fafd;
     transition: 0.3s;
-}
-
-#contact .user .log-in {
-    display: inline-block;
-    background-color: rgba(30, 198, 182,0.6);
-    border-radius: 5px;
-    padding: 0 10px;
-    font-size: 18px;
-}
-
-#contact .user .log-in:hover {
-    background-color: #1ec6b0;
-    transition: 0.3s;
-}
-
-.inline {
-    display: inline;
-}
-
-.link-button {
-    background: none;
-    border: none;
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 1em;
-    font-family: serif;
-}
-.link-button:focus {
-    outline: none;
-}
-.link-button:active {
-    color:red;
 }

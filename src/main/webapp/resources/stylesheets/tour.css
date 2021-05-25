@@ -3,30 +3,72 @@
     margin-top: 110px;
     width: 100%;
     height: 800px;
-    background-image: url('../images/slider/slide-tour-demo.jpg');
+    background-image: url('slide1.jpeg');
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
+    background-position: center center;
     position: relative;
-    /* display: none; */
 }
 
 
 
 
+#slider .left {
+    position: absolute;
+    float: left;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    padding: 50px 15px;
+    background-color:rgba(255, 255, 255, 0.2)
+}
+
+#slider .left:hover, #slider .right:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s;
+}
+
+#slider .right {
+    position: absolute;
+    /* float: right; */
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    color: #fff;
+    padding: 50px 15px;
+    background-color:rgba(255, 255, 255, 0.2)
+}
 #slider .slider-contents{
     display: inline-block;
     text-align: center;
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%,-60%);
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#slider .slider-1 {
+    transition: display 2s;
+    display: block;
 }
 
 
+#slider .slider-2 {
+    transition: display 2s;
+    display: none;
+}
+
+#slider .slider-3 {
+    transition: display 2s;
+    display: none;
+}
 
 
+/* change */
 .slider-contents h3 {
-    height: 135px;
+
+    height: 100%;
     font-size: 120px;
     font-family: cursive;
     font-weight: 400;
@@ -34,7 +76,7 @@
 }
 
 .slider-contents p {
-    margin: 33px 0;
+    margin: 0 0 33px 0;
     font-size: 20px;
     color: #fff;
 }
@@ -61,6 +103,7 @@
     padding: 70px 0px 150px 0px;
     margin: auto;
 
+    /* display: none; */
 
 
 }
@@ -157,39 +200,41 @@
 
 .tour .tour-summary .destination {
     display: inline-block;
-    width: 24%;
+    width: 38%;
     height: 100%;
     border-right: 1px solid rgb(153, 153, 153);
 }
 .tour .tour-summary .check-in{
     display: inline-block;
-    width: 25%;
+    width: 20%;
     height: 100%;
     border-right: 1px solid rgb(153, 153, 153);
+
 }
 
-.tour .tour-summary .check-in span input{
+.tour .tour-summary .check-in input {
     display: inline-block;
-    width: 133px;
-    margin-left: 24px;
+    width: 130px;
+    margin-left: 5px;
     padding-left: 5px;
     color: rgb(122, 131, 139);
     border: 1px solid rgb(122, 131, 139);
     border-radius: 5px;
 }
 
+
 .tour .tour-summary .check-out{
     display: inline-block;
-    width: 25%;
+    width: 20%;
     height: 100%;
     border-right: 1px solid rgb(153, 153, 153);
 
 }
 
-.tour .tour-summary .check-out span input{
+.tour .tour-summary .check-out input {
     display: inline-block;
-    width: 133px;
-    margin-left: 24px;
+    width: 130px;
+    margin-left: 5px;
     padding-left: 5px;
     color: rgb(122, 131, 139);
     border: 1px solid rgb(122, 131, 139);
@@ -198,7 +243,7 @@
 
 .tour .tour-summary .price{
     display: inline-block;
-    width: 24%;
+    width: 20%;
 
 }
 
@@ -219,6 +264,10 @@
 .more-tours {
     margin: 0px 0px 150px 0px;
     width: 1150px;
+    /* position: relative; */
+    /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%); */
     margin-left: auto;
     margin-right: auto;
 

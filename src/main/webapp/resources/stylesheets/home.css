@@ -3,21 +3,18 @@
     transition: background-image 0.5s ;
     margin-top: 110px;
     width: 100%;
-    height: 495px;
-    background-image: url('../images/slider/slide2.jpg');
+    height: 650px;
+    background-image: url("../images/slider/mien-bac.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     position: relative;
-    /* display: none; */
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
 }
-
 
 #slider .left {
     position: absolute;
     float: left;
-    top: 40%;
+    top: 50%;
+    transform: translateY(-50%);
     color: #fff;
     padding: 50px 15px;
     background-color:rgba(255, 255, 255, 0.2)
@@ -32,25 +29,43 @@
 #slider .right {
     position: absolute;
     /* float: right; */
-    top: 40%;
+    top: 50%;
+    transform: translateY(-50%);
     right: 0;
     color: #fff;
     padding: 50px 15px;
     background-color:rgba(255, 255, 255, 0.2)
 }
-
-
 #slider .slider-contents{
     display: inline-block;
     text-align: center;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    margin-top: 85px;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
+#slider .slider-1 {
+    transition: display 2s;
+    display: block;
+}
+
+
+#slider .slider-2 {
+    transition: display 2s;
+    display: none;
+}
+
+#slider .slider-3 {
+    transition: display 2s;
+    display: none;
+}
+
+
+/* change */
 .slider-contents h3 {
-    height: 135px;
+
+    height: 100%;
     font-size: 120px;
     font-family: cursive;
     font-weight: 400;
@@ -58,7 +73,7 @@
 }
 
 .slider-contents p {
-    margin: 33px 0;
+    margin: 0 0 33px 0;
     font-size: 20px;
     color: #fff;
 }
@@ -160,13 +175,14 @@
 }
 
 .popular-destinations-area {
-    background-color: #f7fafd;
     padding: 142px 0 150px 0;
 }
 
 .popular-destinations-area .container {
     text-align: center;
-    margin: 0 142px;
+    /* margin: 0 142px; */
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -207,7 +223,7 @@
 
 }
 .popular-destinations-area .single-destination:hover {
-    box-shadow: 0 10px 20px rgb(0,0,0);
+    box-shadow: 0 10px 20px rgb(0, 0, 0);
     transition: 0.3s;
 }
 

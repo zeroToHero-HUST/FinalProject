@@ -1,0 +1,82 @@
+/* web  */
+@media screen and (min-width: 1024px) {
+    #header .header-contents .mobile-menu-btn {
+        display: none;
+    }
+}
+
+/* table  */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #slider {
+        height: 600px;
+    }
+}
+
+/* mobile  */
+@media screen and (max-width: 767px) {
+    #slider {
+        height: 300px;
+    }
+
+    #slider .slider-contents h3 {
+        font-size: 50px !important;
+    }
+
+    #slider .slider-contents p {
+        font-size: 16px !important;
+    }
+
+    .popular-destinations-area {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .popular-destinations-area .description h3 {
+        font-size: 30px;
+    }
+}
+
+
+
+/* table & mobile */
+@media screen and (max-width: 1023px) {
+    .where-to-go-area .container {
+        height: 100%;
+    }
+
+    .where-to-go-area .where-you-want-to-go {
+        font-size: 18px;
+    }
+
+    .form-search, .input-field, .search-btn {
+        display: block !important;
+    }
+
+    .form-search input, .form-search select, .form-search button {
+        width: 510px !important;
+        margin: 10px 0 !important;
+    }
+}
+
+
+/* other */
+
+/* header */
+@media screen and (max-width: 1089px) {
+    #slider .slider-contents h3 {
+        font-size: 75px;
+    }
+}
+
+/* where-to-go-area */
+@media screen and (max-width: 1113px) {
+    .where-to-go-area .where-you-want-to-go {
+        font-size: 18px;
+    }
+
+    .form-search .input-field input, .form-search .input-field select {
+        width: 170px;
+    }
+}
+
+
