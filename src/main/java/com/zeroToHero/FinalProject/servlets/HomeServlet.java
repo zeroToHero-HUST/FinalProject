@@ -16,9 +16,10 @@ public class HomeServlet extends HttpServlet
 {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ArrayList<Tours> popTours = new ToursDAO().getPopularTours();
 
+        ArrayList<Tours> popTours =  new ToursDAO().getPopularTours();
         req.setAttribute("popTours", popTours);
+
         req.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(req, resp);
     }
 }

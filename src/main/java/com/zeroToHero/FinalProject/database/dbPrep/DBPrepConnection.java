@@ -20,6 +20,7 @@ public class DBPrepConnection {
         this.user = this.prop.getProperty("DB.USER");
         this.password = this.prop.getProperty("DB.PASSWORD");
         this.connection = DriverManager.getConnection(this.dbURL, this.user, this.password);
+
     }
 
     public Connection getConnection() {
