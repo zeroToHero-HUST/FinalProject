@@ -1,0 +1,134 @@
+/* Common */
+html,
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Tablet */
+@media (min-width: 741px) and (max-width: 1023px) {
+    .m-col-full {
+        width: 100%;
+    }
+
+    .m-col-half {
+        width: 50%;
+    }
+
+    /* Our story */
+
+    #content .our-story {
+        padding-left: 30px;
+    }
+
+    #content .story-content {
+        margin-left: 0%;
+    }
+
+    #content .story-text {
+        width: 100%;
+    }
+
+    #content .story-img-list {
+        width: 100%;
+    }
+
+
+    /* Travel variation */
+
+    #content .travel-variation {
+        max-width: 720px;
+    }
+
+    #content .travel-variation-item {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* Feedback */
+
+    /* Blog */
+
+    #content .blog-list {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #content .blog-item {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+    .s-col-full {
+        width: 100%;
+    }
+
+    .s-col-half {
+        width: 50%;
+    }
+
+    .s-col-third {
+        width: calc(100%/3);
+    }
+
+    /* Our story */
+
+    #content .our-story {
+        padding-left: 30px;
+    }
+
+    #content .story-content {
+        margin-left: 0%;
+    }
+
+    #content .story-text {
+        width: 100%;
+    }
+
+    #content .story-img-list {
+        width: 100%;
+    }
+
+    #content .story-count-item {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    #content .story-count-item p {
+        margin-top: 15px;
+    }
+
+    /*Travel variation  */
+
+    #content .travel-variation-item {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /* Feedback */
+
+    #content .feedback-item {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /* Blog */
+
+    #content .blog-list {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #content .blog-item {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+}
