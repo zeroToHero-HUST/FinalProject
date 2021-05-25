@@ -5,20 +5,18 @@ import com.zeroToHero.FinalProject.database.queries.mainQueries.ToursQuery;
 import com.zeroToHero.FinalProject.models.beans.Tours;
 
 import javax.naming.NamingException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class ToursDAO {
     private Connection conn = null;
+    private PreparedStatement pst = null;
+    private Statement st = null;
+    private ResultSet rs = null;
 
     public ArrayList<Tours> getPopularTours()
     {
         ArrayList<Tours> popTours = new ArrayList<>();
-        Statement st = null;
-        ResultSet rs = null;
 
         try {
             conn = DBConnectionManager.getConnection();
@@ -45,4 +43,6 @@ public class ToursDAO {
         }
         return popTours;
     }
+
+//
 }

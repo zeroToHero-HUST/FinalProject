@@ -5,7 +5,9 @@
   Time: 11:19 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>Title</title>
@@ -22,23 +24,28 @@
 <div id="content">
     <h2>Type form</h2>
     <div class="form-control">
-        <form action="">
+        <form action="sign-up" method="post">
             <div class="form-fistname">
                 <label for="firstname">First Name</label>
-                <input type="text" placeholder="Bruce" name="" id="firstname">
+                <input type="text" placeholder="Bruce" name="firstName" id="firstname" maxlength="99" required>
             </div>
             <div class="form-lastname">
                 <label for="lastname">Last Name</label>
-                <input type="text" placeholder="Wayne" name="" id="lastname">
+                <input type="text" placeholder="Wayne" name="lastName" id="lastname" maxlength="99" required>
             </div>
             <div class="form-email">
                 <label for="email">Email</label>
-                <input type="email" placeholder="bruce@wayne.com" name="" id="email">
+                <input type="email" placeholder="bruce@wayne.com" name="email" id="email" required>
             </div>
             <div class="form-password">
                 <label for="password">Password</label>
-                <input type="password" placeholder="At least 8 charecters" name="" id="password">
+                <input type="password" placeholder="At least 6 charecters" name="password" id="password" minlength="6" maxlength="25" required>
             </div>
+
+            <c:if test="${error}">
+                <p>Địa chỉ email này đã được sử dung. Vui lòng chọn địa chỉ khác.</p>
+            </c:if>
+
             <input type="submit" value="Creat my free acount">
         </form>
     </div>

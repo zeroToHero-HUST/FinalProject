@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: phamtuanson
@@ -115,135 +116,64 @@
                     <div class="range-price">
                         <span>Price range</span>
                         <div class="range-slider">
-                            <input type="range" min="1" max="100" value="50" class="slider">
+                            <input type="range" min="1" max="100" value="50" class="slider" id = "sliderSearch"  onclick="setValue();">
                         </div>
-                        <p>$0 -> $<span onclick="setValue();">0</span></p>
+                        <p>$0 -> $<span id = "maxLimitPrice">5.000.000đ</span></p>
                     </div>
                 </div>
                 <div class="search-btn"><button>Search</button></div>
             </div>
         </div>
         <div class="detail">
-            <div class="single-destination">
-                <div class="thumb">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                    <a href="">$500</a>
-                </div>
-                <div class="destination-infor">
-                    <a href=""><h3>California</h3></a>
-                    <p>United State of America</p>
-                    <div class="rate">
+            <c:forEach var = "destination" items="${allTours}">
+                <c:choose>
+                    <c:when test="${destination.tourId le 6}">
+                        <div class="single-destination" id = "tour${destination.tourId}">
+                            <div class="thumb">
+                                <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.price}</a>
+                            </div>
+                            <div class="destination-infor">
+                                <a href=""><h3>${destination.title}</h3></a>
+                                <p>${destination.countryName}</p>
+                                <div class="rate">
                             <span>
                                 <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                                <a href="">(20 Review)</a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">(20 Review)</a>
                             </span>
-                        <div class="days">
-                            <i class="ti-alarm-clock"></i>
-                            <a href="">5 Days</a>
+                                    <div class="days">
+                                        <i class="ti-alarm-clock"></i>
+                                        <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.duration}</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single-destination">
-                <div class="thumb">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                    <a href="">$500</a>
-                </div>
-                <div class="destination-infor">
-                    <a href=""><h3>California</h3></a>
-                    <p>United State of America</p>
-                    <div class="rate">
+                    </c:when>
+                    <c:otherwise>
+                        <div class="single-destination"  id = "tour${destination.tourId}" style="display: none">
+                            <div class="thumb">
+                                <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.price}</a>
+                            </div>
+                            <div class="destination-infor">
+                                <a href=""><h3>${destination.title}</h3></a>
+                                <p>${destination.countryName}</p>
+                                <div class="rate">
                             <span>
                                 <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                                <a href="">(20 Review)</a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">(20 Review)</a>
                             </span>
-                        <div class="days">
-                            <i class="ti-alarm-clock"></i>
-                            <a href="">5 Days</a>
+                                    <div class="days">
+                                        <i class="ti-alarm-clock"></i>
+                                        <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.duration}</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single-destination">
-                <div class="thumb">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                    <a href="">$500</a>
-                </div>
-                <div class="destination-infor">
-                    <a href=""><h3>California</h3></a>
-                    <p>United State of America</p>
-                    <div class="rate">
-                            <span>
-                                <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                                <a href="">(20 Review)</a>
-                            </span>
-                        <div class="days">
-                            <i class="ti-alarm-clock"></i>
-                            <a href="">5 Days</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single-destination">
-                <div class="thumb">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                    <a href="">$500</a>
-                </div>
-                <div class="destination-infor">
-                    <a href=""><h3>California</h3></a>
-                    <p>United State of America</p>
-                    <div class="rate">
-                            <span>
-                                <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                                <a href="">(20 Review)</a>
-                            </span>
-                        <div class="days">
-                            <i class="ti-alarm-clock"></i>
-                            <a href="">5 Days</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single-destination">
-                <div class="thumb">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                    <a href="">$500</a>
-                </div>
-                <div class="destination-infor">
-                    <a href=""><h3>California</h3></a>
-                    <p>United State of America</p>
-                    <div class="rate">
-                            <span>
-                                <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                                <a href="">(20 Review)</a>
-                            </span>
-                        <div class="days">
-                            <i class="ti-alarm-clock"></i>
-                            <a href="">5 Days</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single-destination">
-                <div class="thumb">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                    <a href="">$500</a>
-                </div>
-                <div class="destination-infor">
-                    <a href=""><h3>California</h3></a>
-                    <p>United State of America</p>
-                    <div class="rate">
-                            <span>
-                                <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                                <a href="">(20 Review)</a>
-                            </span>
-                        <div class="days">
-                            <i class="ti-alarm-clock"></i>
-                            <a href="">5 Days</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    </c:otherwise>
+                </c:choose>
+            </c:forEach>
+
             <div class="more-places">
                 <a href="">More Places</a>
             </div>
@@ -277,8 +207,16 @@
         <div class="clear"></div>
     </div>
 </div>
+  
 <script src="${pageContext.request.contextPath}/resources/javascripts/destination.js" ></script>
 <script src="${pageContext.request.contextPath}/resources/javascripts/header.js" ></script>
+<script>
+    function setValue(){
+        var x = document.getElementById("sliderSearch").value;
+        document.getElementById("maxLimitPrice").innerText = new Intl.NumberFormat('de-DE').format(parseInt(x)*100000) + "đ";
+    }
+</script>
+
 <%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
 </body>
 </html>

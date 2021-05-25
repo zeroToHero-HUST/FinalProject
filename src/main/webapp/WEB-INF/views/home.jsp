@@ -85,7 +85,7 @@
                 <div class="single-destination">
                     <div class="thumb">
                         <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                        <a href="">${destination.price}</a>
+                        <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.price}</a>
                     </div>
                     <div class="destination-infor">
                         <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"><h3 class="title-des">${destination.title}</h3></a>
@@ -93,11 +93,11 @@
                         <div class="rate">
                                 <span>
                                     <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                                    <a href="">(20 Review)</a>
+                                    <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">(20 Review)</a>
                                 </span>
                             <div class="days">
                                 <i class="ti-alarm-clock"></i>
-                                <a href="">${destination.duration} Days</a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.duration} Days</a>
                             </div>
                         </div>
                     </div>
