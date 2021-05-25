@@ -103,4 +103,43 @@ public class MoreTousDAO {
         return tour;
     }
 
+  public ArrayList<Tours> AllTours(){
+        ArrayList<Tours> allTours = new ArrayList<>();
+        Statement st = null;
+        ResultSet rs = null;
+        String getMoreTours =
+                "SELECT tours.tour_id, title, duration, price, countries.name AS country_name " +
+                        "FROM tours, destinations, cities, countries " +
+                        "WHERE tours.tour_id = destinations.tour_id " +
+                        "AND destinations.city_id = cities.city_id " +
+                        "AND cities.country_id = countries.country_id " +
+                        "GROUP BY tours.tour_id, countries.name " +
+                        " ;";
+        try {
+            conn = DBConnectionManager.getConnection();
+            st = conn.createStatement();
+            rs = st.executeQuery(getMoreTours);
+            int i = 0;
+            int max = 3;
+            while (rs.next())
+            {
+
+                i += 1;
+                Tours tour = new Tours();
+                tour.setTourId(rs.getLong("tour_id"));
+                tour.setTitle(rs.getString("title"));
+                tour.setDuration(rs.getLong("duration"));
+                tour.setPrice(rs.getString("price"));
+                tour.setCountryName(rs.getString("country_name"));
+                allTours.add(tour);
+            }
+        }
+        catch (SQLException | NamingException throwable) {
+            throwable.printStackTrace();
+        }
+        finally {
+            DBConnectionManager.closeConnection(conn, st, rs);
+        }
+        return allTours;
+    }
 }
