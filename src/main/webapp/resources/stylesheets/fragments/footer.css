@@ -9,6 +9,7 @@
 
 #footer .footer-section {
     width: 1110px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -19,11 +20,6 @@
 }
 
 .footer-top .footer-widget {
-    float: left;
-    display: inline-block;
-}
-
-.footer-top .footer-widget-info {
 
 }
 
@@ -47,6 +43,7 @@
 
 .footer-top .social-links {
     margin-top: 20px;
+    overflow: hidden;
 }
 
 .footer-top .social-links li {
@@ -115,6 +112,3 @@
     font-weight: 400;
     color: #AAB1B7;
 }
-
-
-
