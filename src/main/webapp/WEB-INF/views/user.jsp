@@ -82,24 +82,26 @@
         <div class="card-body">
             <table>
                 <thead>
-                <th class="description-id">description-id</th>
+                <th class="description-id">Booking ID</th>
                 <th class="name">Name</th>
-                <th class="start-date">Start-date</th>
-                <th class="end-date">End-date</th>
-                <th class="user-id">User-id</th>
+                <th class="start-date">Start date</th>
+                <th class="end-date">End date</th>
+                <th class="user-id">User ID</th>
                 <th class="price">Price</th>
-                <th class="created-at">Created-at</th>
+                <th class="created-at">Created at</th>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>123456</td>
-                    <td>Ha noi - hai phong</td>
-                    <td>5/2/2021</td>
-                    <td>31/4/2021</td>
-                    <td>qweq1231q123</td>
-                    <td>5.000.000</td>
-                    <td>6/2/2021</td>
-                </tr>
+                <c:forEach var="booking" items="${bookings}">
+                    <tr>
+                        <td>${booking.bookingId}</td>
+                        <td>${booking.tourId}</td>
+                        <td>${booking.startDate}</td>
+                        <td>${booking.endDate}</td>
+                        <td>${booking.userId}</td>
+                        <td>${booking.price}</td>
+                        <td>${booking.createdAt}</td>
+                    </tr>
+                </c:forEach>
                 </tbody>
             </table>
         </div>
