@@ -14,6 +14,7 @@ public class DestinationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ArrayList<Tours> allTours = (new MoreTousDAO()).AllTours();
+        request.setAttribute("numOfTours",allTours.size());
         request.setAttribute("allTours",allTours);
         request.getRequestDispatcher("/WEB-INF/views/destination.jsp").forward(request, response);
     }

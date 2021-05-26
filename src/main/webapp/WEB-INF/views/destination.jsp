@@ -127,7 +127,7 @@
         <div class="detail">
             <c:forEach var = "destination" items="${allTours}">
                 <c:choose>
-                    <c:when test="${destination.tourId le 6}">
+                    <c:when test="${destination.tourId le 4}">
                         <div class="single-destination" id = "tour${destination.tourId}">
                             <div class="thumb">
                                 <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
@@ -175,7 +175,7 @@
             </c:forEach>
 
             <div class="more-places">
-                <a href="">More Places</a>
+                <button id = "more-button" onclick="morePlaces();">More Places</button>
             </div>
         </div>
     </div>
@@ -214,6 +214,33 @@
     function setValue(){
         var x = document.getElementById("sliderSearch").value;
         document.getElementById("maxLimitPrice").innerText = new Intl.NumberFormat('de-DE').format(parseInt(x)*100000) + "đ";
+    }
+    function search(){
+
+    }
+    function morePlaces(){
+        var i;
+        var x = document.getElementById("more-button").innerText;
+        if (x === "More Places"){
+            document.getElementById("more-button").innerText = "Less Places";
+            for (i = 4; i <= ${numOfTours}; i++){
+                var t = "tour"
+                t += i;
+                document.getElementById(t).style.display = "";
+
+            }
+        }
+
+        else{
+            document.getElementById("more-button").innerText ="More Places";
+            for (i = 5; i <= ${numOfTours}; i++){
+                var t = "tour"
+                t += i;
+                document.getElementById(t).style.display = "none";
+
+            }
+
+        }
     }
 </script>
 
