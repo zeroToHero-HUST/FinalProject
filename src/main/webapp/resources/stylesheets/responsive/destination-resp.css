@@ -21,7 +21,6 @@
 @media screen and (max-width: 767px) {
     #slider {
         height: 300px;
-        width: 757px;
     }
 
     #slider .slider-contents h3 {
@@ -32,9 +31,7 @@
         font-size: 16px !important;
     }
 
-    .where-to-go-area {
-        width: 757px;
-    }
+
 
     .popular-destinations-area {
         padding-top: 60px;
@@ -45,17 +42,17 @@
         font-size: 30px;
     }
 
-    .places-area {
-        width: 757px;
-    }
+
 }
 
 
 
 /* table & mobile */
 @media screen and (max-width: 1023px) {
+
+
     .where-to-go-area .container {
-        height: 100%;
+        height: 220px;
     }
 
     .where-to-go-area .where-you-want-to-go {
@@ -71,9 +68,7 @@
         margin: 10px 0 !important;
     }
 
-    .places-area .detail {
-        width: 757px !important;
-    }
+
 }
 
 
@@ -116,5 +111,91 @@
     }
 }
 
+@media screen and (max-width: 414px) {
+    #header.header1 {
+        max-width: 414px;
+    }
+
+    .form-search .input-field input, .form-search .input-field select, .form-search button {
+        max-width: 300px;
+    }
+
+    .popular-destinations-area .description {
+        max-width: 300px;
+    }
+
+    .places-area .filter-result-wrap, .places-area .detail {
+        max-width: 375px !important;
+    }
+
+}
 
 
+/*--------*/
+/* Common */
+html,
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .m-col-full {
+        width: 100%;
+    }
+
+    .m-col-half {
+        width: 50%;
+    }
+
+    .m-col-third {
+        width: calc(100%/3);
+    }
+
+
+    /* Blog */
+
+   .blog-list {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .blog-item {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    .s-col-full {
+        width: 100%;
+    }
+
+    .s-col-half {
+        width: 50%;
+    }
+
+    .s-col-third {
+        width: calc(100%/3);
+    }
+
+
+
+
+
+    /* Blog */
+
+    .blog-list {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .blog-item {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+}

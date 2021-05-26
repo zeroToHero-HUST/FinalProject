@@ -12,6 +12,26 @@
     }
 }
 
+/* table & mobile */
+@media screen and (max-width: 1023px) {
+    .where-to-go-area .container {
+        height: 100%;
+    }
+
+    .where-to-go-area .where-you-want-to-go {
+        font-size: 18px;
+    }
+
+    .form-search, .input-field, .search-btn {
+        display: block !important;
+    }
+
+    .form-search input, .form-search select, .form-search button {
+        width: 510px !important;
+        margin: 10px 0 !important;
+    }
+}
+
 /* mobile  */
 @media screen and (max-width: 767px) {
     #slider {
@@ -34,30 +54,12 @@
     .popular-destinations-area .description h3 {
         font-size: 30px;
     }
-}
 
 
-
-/* table & mobile */
-@media screen and (max-width: 1023px) {
-    .where-to-go-area .container {
-        height: 100%;
-    }
-
-    .where-to-go-area .where-you-want-to-go {
-        font-size: 18px;
-    }
-
-    .form-search, .input-field, .search-btn {
-        display: block !important;
-    }
-
-    .form-search input, .form-search select, .form-search button {
-        width: 510px !important;
-        margin: 10px 0 !important;
+    .form-search input, .form-search button {
+        width: 300px !important;
     }
 }
-
 
 /* other */
 
@@ -77,6 +79,21 @@
     .form-search .input-field input, .form-search .input-field select {
         width: 170px;
     }
+}
+
+@media screen and (max-width: 414px) {
+    #header.header1 {
+        max-width: 414px;
+    }
+
+    .form-search .input-field input, .form-search .input-field select, .form-search button {
+        max-width: 300px;
+    }
+
+    .popular-destinations-area .description {
+        max-width: 300px;
+    }
+
 }
 
 
