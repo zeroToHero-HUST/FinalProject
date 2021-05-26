@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: phamtuanson
@@ -25,12 +26,25 @@
             <div class="card-body">
                 <form action="">
                     <div class="city-id"><input type="text" placeholder="City-id"></div>
+
                     <div class="name"><input type="text" placeholder="Name"></div>
                     <div class="description"><textarea name=""  cols="30" rows="10" placeholder="Description"></textarea></div>
                     <div class="duration"><input type="text" name=""  placeholder="Duration"></div>
                     <div class="rating"><input type="text" name="" id="" placeholder="Rating"></div>
                     <div class="price"><input type="text" placeholder="Price"></div>
                     <div class="img" ><input  type="file" accept="image/*"></div>
+                    <div id="list1" class="dropdown-check-list" tabindex="100">
+                        <span class="anchor">Select Fruits</span>
+                        <ul class="items">
+                            <li><input type="checkbox" />Apple </li>
+                            <li><input type="checkbox" />Orange</li>
+                            <li><input type="checkbox" />Grapes </li>
+                            <li><input type="checkbox" />Berry </li>
+                            <li><input type="checkbox" />Mango </li>
+                            <li><input type="checkbox" />Banana </li>
+                            <li><input type="checkbox" />Tomato</li>
+                        </ul>
+                    </div>
                     <button type="submit">Submit</button>
                 </form>
             </div>
@@ -47,33 +61,41 @@
             <div class="card-body">
                 <table>
                     <thead>
-                    <th class="id">Id</th>
-                    <th class="city-id">City-id</th>
-                    <th class="name">Name</th>
+                    <th class="id">tourId</th>
+                    <th class="name">Title</th>
+                    <th class="city-id">Cities list</th>
                     <th class="description">Description</th>
+                    <th>Images</th>
                     <th class="duration">Duration</th>
                     <th class="rating">Rating</th>
                     <th class="price">Price</th>
-                    <th class="img">Img</th>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>123456</td>
-                        <td>Ha noi - hai phong</td>
-                        <td>fawf aesf awef adsf awe fas df awf as f aw fa sf wa fasd faw f asdf aw f asdf awg a w f adf aw g fsa g dj f tku tr kur  tkr  rh f wef a dfadsf</td>
-                        <td>5/2 - 31/4</td>
-                        <td>5</td>
-                        <td>5.000.000</td>
-                        <td>abc</td>
-                        <td><button type="submit">Delete</button></td>
-                        <td><button type="submit">Change</button></td>
-                    </tr>
+                    <c:forEach var="tourItem" items="${toursList}" varStatus="loop">
+                        <tr>
+                            <td>${tourItem.tourId}</td>
+                            <td>${tourItem.title}</td>
+                            <td>
+                                <c:forEach var="city" items="${tourItem.cities}">
+                                    ${citiesList[city.cityId] += ", "}
+                                </c:forEach>
+                            </td>
+                            <td>${tourItem.description}</td>
+                            <td>${tourItem.images}</td>
+                            <td>${tourItem.duration}</td>
+                            <td>${tourItem.rating}</td>
+                            <td>${tourItem.price}</td>
+                            <td><button type="submit">Delete</button></td>
+                            <td><button type="submit">Change</button></td>
+                        </tr>
+                    </c:forEach>
+
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
     <!-- end: tour-list -->
+<script src="${pageContext.request.contextPath}/resources/javascripts/admin/tour.js" defer></script>
 </body>
 </html>

@@ -27,10 +27,8 @@ public class AdminUserServlet extends HttpServlet {
         int countUsers = new UsersDAO().count();
         int nOfPages = countUsers / 10;
 
-        if (nOfPages % 10 > 0) {
-
+        if (nOfPages % 10 > 0)
             nOfPages++;
-        }
 
         ArrayList<Users> usersList = new UsersDAO().getUsersByPage(currentPage);
         int[] listPages = GetListPages.run(currentPage, nOfPages);
