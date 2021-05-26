@@ -58,6 +58,7 @@ public interface CreateQuery {
             "\t\"user_id\" uuid NOT NULL,\n" +
             "\t\"created_at\" timestamp NOT NULL DEFAULT (now()),\n" +
             "\t\"updated_at\" timestamp NOT NULL DEFAULT (now()),\n" +
+            "\t\"title\" text NOT NULL,\n" +
             "\t\"content\" text NOT NULL,\n" +
             "\t\"images\" varchar[]\n" +
         ");"
@@ -155,27 +156,36 @@ public interface CreateQuery {
     );
 
     StringBuilder createFnGetToursByPageNumberAndSize = new StringBuilder(
-        "CREATE OR REPLACE FUNCTION f_GetToursByPageNumberAndSize(\n" +
-        "    PageNumber INTEGER = NULL,\n" +
-        "    PageSize INTEGER = NULL\n" +
-        ")\n" +
-        "    RETURNS SETOF tours AS\n" +
-        "$BODY$\n" +
-        "DECLARE\n" +
-        "    PageOffset INTEGER :=0;\n" +
-        "BEGIN\n" +
-        "\n" +
-        "    PageOffset := ((PageNumber-1) * PageSize);\n" +
-        "\n" +
+        "CREATE OR REPLACE FUNCTION f_GetToursByPageNumberAndSize(PageNumber INTEGER = NULL, PageSize INTEGER = NULL)\n" +
+        "RETURNS TABLE (\n" +
+        "    tour_id integer,\n" +
+        "    title varchar(100),\n" +
+        "    description text,\n" +
+        "    images varchar[],\n" +
+        "    duration integer,\n" +
+        "    rating real,\n" +
+        "    price money,\n" +
+        "    cities_list integer[]) \n" +
+        "AS\n" +
+        "    $BODY$\n" +
+        "    DECLARE\n" +
+        "        PageOffset INTEGER :=0;\n" +
+        "    BEGIN\n" +
+        "    \n" +
+        "        PageOffset := ((PageNumber-1) * PageSize);\n" +
+        "    \n" +
         "    RETURN QUERY\n" +
-        "        SELECT *\n" +
-        "        FROM tours\n" +
-        "        ORDER BY tour_id\n" +
+        "        SELECT tours.tour_id, tours.title, tours.description, tours.images, tours.duration, tours.rating, tours.price, array_agg(cities.city_id) AS cities_list\n" +
+        "        FROM tours, destinations, cities\n" +
+        "        WHERE tours.tour_id = destinations.tour_id\n" +
+        "            AND destinations.city_id = cities.city_id\n" +
+        "        GROUP BY tours.tour_id\n" +
+        "        ORDER BY tours.tour_id\n" +
         "        OFFSET PageOffset\n" +
         "        FETCH NEXT PageSize ROWS ONLY;\n" +
-        "END;\n" +
-        "$BODY$\n" +
-        "    LANGUAGE plpgsql;"
+        "    END;\n" +
+        "    $BODY$\n" +
+        "LANGUAGE plpgsql;"
     );
 
     StringBuilder createAll = createType
