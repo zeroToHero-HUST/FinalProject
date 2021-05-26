@@ -25,7 +25,7 @@ public class LogInServlet extends HttpServlet {
         if (user != null)
         {
             Auth.setTokenCookies(response, user);
-            response.sendRedirect("tour");
+            response.sendRedirect(request.getContextPath());
         }
         else
         {

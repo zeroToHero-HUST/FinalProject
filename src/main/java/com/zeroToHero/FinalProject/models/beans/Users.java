@@ -2,6 +2,7 @@ package com.zeroToHero.FinalProject.models.beans;
 
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 public class Users implements Serializable {
 
@@ -16,6 +17,17 @@ public class Users implements Serializable {
     private long countryId;
 
     public Users() {
+    }
+
+    public Users(String userId, String email, String firstName, String lastName, String profileImage, Timestamp createdAt, String role, long countryId) {
+        this.userId = userId;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.profileImage = profileImage;
+        this.createdAt = createdAt;
+        this.role = role;
+        this.countryId = countryId;
     }
 
     public String getUserId() {
