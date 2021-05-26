@@ -52,17 +52,17 @@
                 <div class="input-field">
                     <input type="text" placeholder="Where to go?">
                 </div>
-                <div class="input-field date">
-                    <input type="date" placeholder="Date">
+<%--                <div class="input-field date">--%>
+<%--                    <input type="date" placeholder="Date">--%>
 
-                </div>
-                <div class="input-field">
-                    <select name="">
-                        <option data-display="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                    </select>
-                </div>
+<%--                </div>--%>
+<%--                <div class="input-field">--%>
+<%--                    <select name="">--%>
+<%--                        <option data-display="0">0</option>--%>
+<%--                        <option value="1">1</option>--%>
+<%--                        <option value="2">2</option>--%>
+<%--                    </select>--%>
+<%--                </div>--%>
                 <div class="search-btn">
                     <button type="submit">Search</button>
                 </div>
