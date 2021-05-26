@@ -130,6 +130,54 @@ public interface CreateQuery {
         "ALTER TABLE \"destinations\" ADD FOREIGN KEY (\"tour_id\") REFERENCES \"tours\" (\"tour_id\");"
     );
 
+    StringBuilder createFnGetUsersByPageNumberAndSize = new StringBuilder(
+        "CREATE OR REPLACE FUNCTION f_GetUsersByPageNumberAndSize(\n" +
+        "    PageNumber INTEGER = NULL,\n" +
+        "    PageSize INTEGER = NULL\n" +
+        ")\n" +
+        "    RETURNS SETOF users AS\n" +
+        "$BODY$\n" +
+        "DECLARE\n" +
+        "    PageOffset INTEGER :=0;\n" +
+        "BEGIN\n" +
+        "\n" +
+        "    PageOffset := ((PageNumber-1) * PageSize);\n" +
+        "\n" +
+        "    RETURN QUERY\n" +
+        "        SELECT *\n" +
+        "        FROM users\n" +
+        "        ORDER BY created_at\n" +
+        "        OFFSET PageOffset\n" +
+        "        FETCH NEXT PageSize ROWS ONLY;\n" +
+        "END;\n" +
+        "$BODY$\n" +
+        "    LANGUAGE plpgsql;"
+    );
+
+    StringBuilder createFnGetToursByPageNumberAndSize = new StringBuilder(
+        "CREATE OR REPLACE FUNCTION f_GetToursByPageNumberAndSize(\n" +
+        "    PageNumber INTEGER = NULL,\n" +
+        "    PageSize INTEGER = NULL\n" +
+        ")\n" +
+        "    RETURNS SETOF tours AS\n" +
+        "$BODY$\n" +
+        "DECLARE\n" +
+        "    PageOffset INTEGER :=0;\n" +
+        "BEGIN\n" +
+        "\n" +
+        "    PageOffset := ((PageNumber-1) * PageSize);\n" +
+        "\n" +
+        "    RETURN QUERY\n" +
+        "        SELECT *\n" +
+        "        FROM tours\n" +
+        "        ORDER BY tour_id\n" +
+        "        OFFSET PageOffset\n" +
+        "        FETCH NEXT PageSize ROWS ONLY;\n" +
+        "END;\n" +
+        "$BODY$\n" +
+        "    LANGUAGE plpgsql;"
+    );
+
     StringBuilder createAll = createType
         .append(createTBUsers)
         .append(createTBCountries)
@@ -140,5 +188,7 @@ public interface CreateQuery {
         .append(createTBReviews)
         .append(createTBBookings)
         .append(createTBDestinations)
-        .append(createRelations);
+        .append(createRelations)
+        .append(createFnGetUsersByPageNumberAndSize)
+        .append(createFnGetToursByPageNumberAndSize);
 }

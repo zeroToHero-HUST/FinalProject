@@ -225,7 +225,7 @@
 
         </div>
         <div class="more-places">
-            <a href="">More Places</a>
+            <a href="${pageContext.request.contextPath}/destination">More Places</a>
         </div>
     </div>
 </div>
