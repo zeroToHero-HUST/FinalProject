@@ -16,9 +16,15 @@
                 <li><a href="${pageContext.request.contextPath}/">Home</a></li>
                 <li><a href="${pageContext.request.contextPath}/about_us">About</a></li>
                 <li><a href="${pageContext.request.contextPath}/destination">Destination</a></li>
-<%--                <li><a href="${pageContext.request.contextPath}/tour">Tour</a></li>--%>
                 <li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
                 <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
+                <li>
+                    <c:if test="${admin}">
+                        <a href="${pageContext.request.contextPath}/admin">
+                                Admin Page
+                        </a>
+                    </c:if>
+                </li>
             </ul>
         </div>
         <!-- end: main menu  -->
@@ -35,31 +41,20 @@
                 </ul>
             </div> -->
             <div class="user">
-
+                <form method="post" action="${pageContext.request.contextPath}/log-out" name="log-out" id="log-out"></form>
                 <c:choose>
                     <c:when test="${login}">
-                        <a href="">
+                        <a href="${pageContext.request.contextPath}/me">
                             <div class="log-in">
-                                Hi ${user.firstName}
+                                Me!
                             </div>
                         </a>
 
-                        <form method="post" action="log-out" class="inline">
-                            <input type="hidden" name="extra_submit_param" value="extra_submit_value">
-                            <button type="submit" name="submit_param" value="submit_value" class="link-button">
-                                <div class="sign-up">
-                                    <i class="ti-power-off"></i>
-                                </div>
-                            </button>
-                        </form>
-
-                        <c:if test="${admin}">
-                            <a href="${pageContext.request.contextPath}/admin">
-                                <div class="sign-up">
-                                    Admin Page
-                                </div>
-                            </a>
-                        </c:if>
+                        <a onclick="document.getElementById('log-out').submit();">
+                            <div class="sign-up">
+                                Log out
+                            </div>
+                        </a>
                     </c:when>
                     <c:otherwise>
                         <a href="${pageContext.request.contextPath}/log-in">

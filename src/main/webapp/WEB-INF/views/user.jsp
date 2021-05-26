@@ -9,8 +9,20 @@
 <html>
 <head>
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/user.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/header-resp.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/user-resp.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/footer-resp.css" />
+
 </head>
 <body>
+
+<%@ include file="/WEB-INF/views/fragments/header.jspf" %>
+
 <!-- begin: body  -->
 <!-- begin: user-edit -->
 <div class="user-panel">
@@ -18,19 +30,35 @@
         <div class="card">
             <div class="card-header">
                 <h4>Edit profile</h4>
+                <c:if test="${result == -1}">
+                    <h4>Tạo mới hoặc cập nhật thất bại</h4>
+                </c:if>
             </div>
             <div class="card-body">
-                <form action="">
-                    <div class="first-name"><input type="text" name="" id="" placeholder="First-name"></div>
-                    <div class="last-name"><input type="text" name="" id="" placeholder="Last-name"></div>
-                    <div class="email"><input type="email" placeholder="Email"></div>
-                    <div class="password"><input type="password" name="" id="" placeholder="Password"></div>
-                    <div class="img" ><input  type="file" accept="image/*"></div>
+                <form action="me" method="post">
+                    <div>
+                        <input type="text" name="userId" value="${user.userId}" readonly>
+                    </div>
+                    <div class="first-name">
+                        <input type="text" name="firstName"  value="${user.firstName}">
+                    </div>
+                    <div class="last-name">
+                        <input type="text" name="lastName"  value="${user.lastName}">
+                    </div>
+                    <div class="email">
+                        <input type="email" name="email" value="${user.email}" readonly>
+                    </div>
+                    <div class="password">
+                        <input type="password" name="password"  placeholder="Password">
+                    </div>
+                    <div class="img" >
+                        <input  type="file" accept="image/*">
+                    </div>
                     <button type="submit">Submit</button>
                 </form>
             </div>
         </div>
-        <div class="profile">
+        <%--<div class="profile">
             <div class="card-image">
                 <img src="./avatar.jpg" alt="" class="avatar">
             </div>
@@ -39,7 +67,7 @@
                 <small class="email">abcacb123@gmail.com</small>
                 <small class="password">Pass: 123456</small>
             </div>
-        </div>
+        </div>--%>
     </div>
 
 </div>
@@ -79,5 +107,7 @@
 </div>
 <!-- end: booking-list -->
 <!-- end: body  -->
+
+<%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
 </body>
 </html>

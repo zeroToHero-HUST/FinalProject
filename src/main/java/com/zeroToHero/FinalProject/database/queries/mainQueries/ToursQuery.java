@@ -10,4 +10,9 @@ public interface ToursQuery {
         "GROUP BY tours.tour_id, countries.name " +
         "LIMIT 6;";
 
+    String getToursByPage =
+        "SELECT * FROM f_gettoursbypagenumberandsize(?, 10);";
+
+    String count =
+        "SELECT count(*) FROM tours;";
 }

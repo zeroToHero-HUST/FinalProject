@@ -132,6 +132,7 @@ public class UsersDAO {
             pst.setString(4, user.getRole());
             pst.setString(5, user.getProfileImage());
             pst.setString(6, user.getUserId());
+
             result = pst.executeUpdate();
 
         } catch (SQLException | NamingException throwable) {
