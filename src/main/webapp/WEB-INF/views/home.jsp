@@ -51,17 +51,16 @@
                 <div class="input-field" >
                     <input type="search" placeholder="Where to go?" id = "search-text">
                 </div>
-                <div class="input-field date">
-                    <input type="search" placeholder="Date">
-
-                </div>
-                <div class="input-field">
-                    <select name="" id="">
-                        <option data-display="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                    </select>
-                </div>
+<%--                <div class="input-field date">--%>
+<%--                    <input type="search" placeholder="Date">--%>
+<%--                </div>--%>
+<%--                <div class="input-field">--%>
+<%--                    <select name="" id="">--%>
+<%--                        <option data-display="0">0</option>--%>
+<%--                        <option value="1">1</option>--%>
+<%--                        <option value="2">2</option>--%>
+<%--                    </select>--%>
+<%--                </div>--%>
                 <div class="search-btn">
                     <button onclick="searchBar();">Search</button>
                 </div>
