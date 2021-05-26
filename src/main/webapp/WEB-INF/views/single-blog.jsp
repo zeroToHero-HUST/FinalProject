@@ -9,6 +9,14 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/header-resp.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/single-blog.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/single-blog-resp.css" />
+
+
 </head>
 <body>
 <!-- begin: slide -->
@@ -19,6 +27,8 @@
         <a href="">Explore Now</a>
     </div>
 </div>
+
+
 <!-- end: slide -->
 
 <!-- begin:single-blog  -->

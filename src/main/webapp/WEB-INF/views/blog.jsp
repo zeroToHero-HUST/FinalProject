@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="blog-details">
-                    <a href="" class="blog-title">
+                    <a href="singleBlog" class="blog-title">
                         <h2>Google inks pact for new 35-storey office</h2>
                     </a>
                     <p>
