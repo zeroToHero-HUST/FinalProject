@@ -89,13 +89,17 @@ body{
 }
 
 /* Tablet */
-@media (min-width: 741px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .m-col-full {
         width: 100%;
     }
 
     .m-col-half {
         width: 50%;
+    }
+
+    .m-col-third {
+        width: calc(100%/3);
     }
 
     /* Travel variation */
@@ -126,7 +130,7 @@ body{
 }
 
 /* Mobile */
-@media (max-width: 740px) {
+@media screen and (max-width: 767px) {
     .s-col-full {
         width: 100%;
     }
