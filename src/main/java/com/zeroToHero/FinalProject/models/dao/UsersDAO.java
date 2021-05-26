@@ -7,6 +7,7 @@ import com.zeroToHero.FinalProject.utilities.Auth;
 
 import javax.naming.NamingException;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class UsersDAO {
     private Connection conn = null;
@@ -68,15 +69,15 @@ public class UsersDAO {
 
                 if (Auth.checkPassword(password, rs.getString("password")))
                 {
-                    result = new Users();
-                    result.setUserId(rs.getString("user_id"));
-                    result.setEmail(rs.getString("email"));
-                    result.setFirstName(rs.getString("first_name"));
-                    result.setLastName(rs.getString("last_name"));
-                    result.setCreatedAt(rs.getTimestamp("created_at"));
-                    result.setProfileImage(rs.getString("profile_image"));
-                    result.setRole(rs.getString("role"));
-                    result.setCountryId(rs.getLong("country_id"));
+                    result = new Users(
+                            rs.getString("user_id"),
+                            rs.getString("email"),
+                            rs.getString("first_name"),
+                            rs.getString("last_name"),
+                            rs.getString("profile_image"),
+                            rs.getTimestamp("created_at"),
+                            rs.getString("role"),
+                            rs.getLong("country_id"));
                 }
             }
         } catch (SQLException | NamingException throwable) {
@@ -86,5 +87,93 @@ public class UsersDAO {
         }
 
         return result;
+    }
+
+    public ArrayList<Users> getUsersByPage(int pageNumber)
+    {
+        ArrayList<Users> result = new ArrayList<>();
+
+        try {
+            conn = DBConnectionManager.getConnection();
+            pst = conn.prepareStatement(UsersQuery.getUsersByPage);
+            pst.setInt(1, pageNumber);
+            rs = pst.executeQuery();
+
+            while (rs.next())
+            {
+                result.add(new Users(
+                        rs.getString("user_id"),
+                        rs.getString("email"),
+                        rs.getString("first_name"),
+                        rs.getString("last_name"),
+                        rs.getString("profile_image"),
+                        rs.getTimestamp("created_at"),
+                        rs.getString("role"),
+                        rs.getLong("country_id")));
+            }
+        } catch (SQLException | NamingException throwable) {
+            throwable.printStackTrace();
+        } finally {
+            DBConnectionManager.closeConnection(conn, pst, rs);
+        }
+
+        return result;
+    }
+
+    public int updateUser(Users user)
+    {
+        int result = -1;
+        try {
+            conn = DBConnectionManager.getConnection();
+            pst = conn.prepareStatement(UsersQuery.updateUser);
+            pst.setString(1, user.getFirstName());
+            pst.setString(2, user.getLastName());
+            pst.setString(3, user.getEmail());
+            pst.setString(4, user.getRole());
+            pst.setString(5, user.getProfileImage());
+            pst.setString(6, user.getUserId());
+            result = pst.executeUpdate();
+
+        } catch (SQLException | NamingException throwable) {
+            throwable.printStackTrace();
+        } finally {
+            DBConnectionManager.closeConnection(conn, pst, rs);
+        }
+        return result;
+    }
+
+    public int count()
+    {
+        int result = 0;
+        try {
+            conn = DBConnectionManager.getConnection();
+            pst = conn.prepareStatement(UsersQuery.count);
+            rs = pst.executeQuery();
+            rs.next();
+
+            result = rs.getInt("count");
+
+        } catch (SQLException | NamingException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnectionManager.closeConnection(conn, pst, rs);
+        }
+        return result;
+    }
+
+    public void deleteUser(String userId, String email)
+    {
+        try {
+            conn = DBConnectionManager.getConnection();
+            pst = conn.prepareStatement(UsersQuery.deleteUser);
+            pst.setString(1, userId);
+            pst.setString(2, email);
+
+            pst.executeUpdate();
+        } catch (SQLException | NamingException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnectionManager.closeConnection(conn, pst, rs);
+        }
     }
 }

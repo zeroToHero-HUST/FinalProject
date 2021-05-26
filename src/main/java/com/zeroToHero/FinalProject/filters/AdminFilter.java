@@ -7,20 +7,20 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebFilter(filterName = "LoggedInFilter", urlPatterns = {"/log-in", "/sign-up"})
-public class LoggedInFilter implements Filter {
+@WebFilter(filterName = "AdminFilter", urlPatterns = "/admin/*")
+public class AdminFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
-        boolean isLogIn = false;
+        boolean isAdmin = false;
         HttpServletResponse response1 = (HttpServletResponse) response;
         HttpServletRequest request1 = (HttpServletRequest) request;
 
-        if (request.getAttribute("login") != null)
+        if (request.getAttribute("login") != null && request.getAttribute("admin") != null)
         {
-            isLogIn = (boolean) request.getAttribute("login");
+            isAdmin = (boolean) request.getAttribute("admin");
         }
 
-        if (isLogIn)
+        if (!isAdmin)
         {
             response1.sendRedirect(request1.getContextPath());
         }

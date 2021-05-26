@@ -2,6 +2,8 @@ package com.zeroToHero.FinalProject.database.queries.prepQueries;
 
 public interface DropQuery {
     String dropTables =
+        "DROP FUNCTION IF EXISTS f_GetUsersByPageNumberAndSize;\n" +
+        "DROP FUNCTION IF EXISTS f_GetToursByPageNumberAndSize;\n" +
         "DROP TABLE IF EXISTS destinations;\n" +
         "DROP TABLE IF EXISTS cities;\n" +
         "DROP TABLE IF EXISTS comments;\n" +
@@ -11,5 +13,5 @@ public interface DropQuery {
         "DROP TABLE IF EXISTS tours;\n" +
         "DROP TABLE IF EXISTS users;\n" +
         "DROP TABLE IF EXISTS countries;\n" +
-        "DROP TYPE role_type;";
+        "DROP TYPE IF EXISTS role_type;";
 }

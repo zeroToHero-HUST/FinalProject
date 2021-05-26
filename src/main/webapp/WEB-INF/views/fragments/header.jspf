@@ -52,7 +52,7 @@
                         </form>
 
                         <c:if test="${admin}">
-                            <a href="">
+                            <a href="${pageContext.request.contextPath}/admin">
                                 <div class="sign-up">
                                     Admin Page
                                 </div>

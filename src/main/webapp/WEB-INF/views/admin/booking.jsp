@@ -9,49 +9,12 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/admin/booking.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/sidebar.css" />
 </head>
 <body>
-    <!-- begin: sidebar -->
-    <div class="sidebar-wrapper">
-        <!-- begin: logo  -->
-        <div class="logo">
-            <p>Pham Tuan Son</p>
-            <a href=""><i class="ti-power-off"></i></a>
-        </div>
-        <!-- end: logo  -->
 
-        <!-- begin: nav -->
-        <ul class="nav">
-            <li>
-                <a href="" class="nav-link">
-                    <i class="ti-user"></i>
-                    <p>User Profile</p>
-                </a>
-            </li>
-            <li>
-                <a href="" class="nav-link">
-                    <i class="ti-clipboard"></i>
-                    <p>Blog</p>
-                </a>
-            </li>
-            <li>
-                <a href="" class="nav-link">
-                    <i class="ti-map"></i>
-                    <p>Tour</p>
-                </a>
-            </li>
-            <li class="choosed">
-                <a href="" class="nav-link" >
-                    <i class="ti-check-box"></i>
-                    <p>Booking</p>
-                </a>
-            </li>
-
-
-        </ul>
-        <!-- end: nav -->
-    </div>
-    <!-- end: sidebar -->
+<%@ include file="/WEB-INF/views/fragments/sidebar.jspf" %>
 
     <div class="booking">
         <!-- begin: booking-edit -->
