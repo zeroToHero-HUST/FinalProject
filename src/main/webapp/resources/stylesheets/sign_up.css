@@ -111,7 +111,7 @@ html {
 .form-control input[type="submit"] {
     margin-top: 24px;
     display: block;
-    width: 100%;
+    width: 60%;
     font-size: 15px;
     line-height: 28px;
     height: 40px;

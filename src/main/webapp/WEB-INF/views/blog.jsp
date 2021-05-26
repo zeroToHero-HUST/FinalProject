@@ -12,7 +12,9 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/header-resp.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/blog.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/blog-resp.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/footer-resp.css" />
 
     <script src="${pageContext.request.contextPath}/resources/javascripts/blog.js" defer></script>
     <script src="${pageContext.request.contextPath}/resources/javascripts/header.js" defer></script>
@@ -273,7 +275,7 @@
             <!-- item4 -->
             <div class="blog-item">
                 <div class="blog-item-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_4.png" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_1.png" alt="">
                     <a href="" class="blog-item-date">
                         <h3>15</h3>
                         <p>Jan</p>
@@ -336,9 +338,6 @@
                 <li><button class="nav-num" onclick="currentDiv(1)">1</button></li>
                 <li><button class="nav-num" onclick="currentDiv(2)">2</button></li>
                 <li><button class="nav-arrow" onclick="plusDivs(1)">❯</button></li>
-
-
-
             </ul>
         </div>
 
