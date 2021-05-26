@@ -203,12 +203,38 @@ html {
     color: #f7fafd;
 }
 
+
+
 #contact .user .sign-up {
     display: inline-block;
     background-color: rgba(255, 74, 82, 0.6);
     border-radius: 5px;
     padding: 0 10px;
     font-size: 18px;
+}
+
+/*#contact .user .sign-up i {*/
+/*    color: #ffffff;*/
+/*}*/
+
+#contact .user button {
+    color: #ffffff;
+}
+
+
+
+#contact .user .power-off {
+    display: inline-block;
+    background-color: rgba(255, 74, 82, 0.6);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+#contact .user .power-off:hover {
+    background-color: #ff464f;
+    transition: 0.3s;
+
 }
 
 #contact .user .sign-up:hover {

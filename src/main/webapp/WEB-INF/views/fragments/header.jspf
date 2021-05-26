@@ -40,14 +40,16 @@
                     <c:when test="${login}">
                         <a href="">
                             <div class="log-in">
-                                Hello ${user.firstName}
+                                Hi ${user.firstName}
                             </div>
                         </a>
 
                         <form method="post" action="log-out" class="inline">
                             <input type="hidden" name="extra_submit_param" value="extra_submit_value">
                             <button type="submit" name="submit_param" value="submit_value" class="link-button">
-                                Log out
+                                <div class="sign-up">
+                                    <i class="ti-power-off"></i>
+                                </div>
                             </button>
                         </form>
 

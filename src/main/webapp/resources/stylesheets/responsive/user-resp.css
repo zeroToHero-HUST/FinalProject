@@ -1,0 +1,53 @@
+/* web  */
+@media screen and (min-width: 1024px) {
+
+}
+
+/* table  */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* mobile  */
+@media screen and (max-width: 767px) {
+
+}
+
+
+
+/* table & mobile */
+@media screen and (max-width: 1023px) {
+    .user-panel .container {
+        width: 760px;
+    }
+
+    .user-panel .container .profile {
+        right: 50%;
+        top: 0%;
+        transform: translateX(50%);
+
+    }
+
+    .user-panel .container .card {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 350px;
+    }
+
+    .booking-list {
+        width: 760px !important;
+    }
+
+
+}
+
+
+/* other */
+@media screen and (max-width: 1159px) {
+    .booking-list {
+        width: 1023px;
+    }
+}
+
+
