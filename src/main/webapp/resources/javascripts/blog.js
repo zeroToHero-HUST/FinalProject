@@ -10,13 +10,15 @@ function plusDivs(n) {
 function currentDiv(n) {
     showDivs(slide = n);
 }
-
 function showDivs(n) {
+    document.getElementById("test").innerText= "1";
+
     var i;
     var x = document.getElementsByClassName("blog-list");
     var num_btn = document.getElementsByClassName("nav-num");
     if (n > x.length) {slide = 1}
     if (n < 1) {slide = x.length}
+    //x.length.toString()
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
