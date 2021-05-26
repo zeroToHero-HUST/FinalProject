@@ -121,7 +121,7 @@
                         <p>$0 -> $<span id = "maxLimitPrice">5.000.000đ</span></p>
                     </div>
                 </div>
-                <div class="search-btn"><button>Search</button></div>
+                <div class="search-btn" ><button onclick="searchRange();">Search</button></div>
             </div>
         </div>
         <div class="detail">
@@ -131,7 +131,7 @@
                         <div class="single-destination" id = "tour${destination.tourId}">
                             <div class="thumb">
                                 <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.price}</a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}" id = "tour${destination.tourId}Price">${destination.price}</a>
                             </div>
                             <div class="destination-infor">
                                 <a href=""><h3>${destination.title}</h3></a>
@@ -139,7 +139,7 @@
                                 <div class="rate">
                             <span>
                                 <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">(20 Review)</a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}" >(20 Review)</a>
                             </span>
                                     <div class="days">
                                         <i class="ti-alarm-clock"></i>
@@ -153,7 +153,7 @@
                         <div class="single-destination"  id = "tour${destination.tourId}" style="display: none">
                             <div class="thumb">
                                 <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
-                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.price}</a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"  id = "tour${destination.tourId}Price">${destination.price}</a>
                             </div>
                             <div class="destination-infor">
                                 <a href=""><h3>${destination.title}</h3></a>
@@ -211,12 +211,21 @@
 <script src="${pageContext.request.contextPath}/resources/javascripts/destination.js" ></script>
 <script src="${pageContext.request.contextPath}/resources/javascripts/header.js" ></script>
 <script>
+
     function setValue(){
         var x = document.getElementById("sliderSearch").value;
         document.getElementById("maxLimitPrice").innerText = new Intl.NumberFormat('de-DE').format(parseInt(x)*100000) + "đ";
     }
-    function search(){
-
+    function searchRange(){
+        var range =  document.getElementById("sliderSearch").value;
+        var i;
+        for (i = 1; i <= ${numOfTours}; i++){
+            var t = document.getElementById("tour"+i+"Price").value;
+            document.getElementById("tour"+i+"Price").innerText = t;
+            if (parseInt(t) > 100000*parseInt(range)){
+                document.getElementById("tour"+i).style.display = "none";
+            }
+        }
     }
     function morePlaces(){
         var i;
