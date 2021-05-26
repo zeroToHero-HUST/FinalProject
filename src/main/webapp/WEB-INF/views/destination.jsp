@@ -11,6 +11,7 @@
 <head>
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/destination.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
@@ -84,10 +85,10 @@
                 <div class="filter-inner">
                     <div class="single-select">
                         <select name=""  style="display:inline-block;">
-                            <option data-display="Country">Country</option>
-                            <option value="1">Africa</option>
-                            <option value="2">canada</option>
-                            <option value="3">USA</option>
+                            <option data-display="Country">Điểm đến ...</option>
+                            <option value="1">Hà Nội</option>
+                            <option value="2">Hải Phòng</option>
+                            <option value="3">Nha Trang</option>
                         </select>
                         <!-- <div class="nice-select">
                             <span class="current">Country</span>
@@ -186,30 +187,30 @@
 <script src="./destination.js"></script>
 <!-- end: places-area  -->
 
-<!-- begin: blog-section  -->
-<div class="blog">
-    <h3 class="blog-title text-align">Recent Trips</h3>
+<%--<!-- begin: blog-section  -->--%>
+<%--<div class="blog">--%>
+<%--    <h3 class="blog-title text-align">Recent Trips</h3>--%>
 
-    <div class="row blog-list">
-        <div class="col col-third blog-item">
-            <img src="https://preview.colorlib.com/theme/travelo/img/trip/1.png" alt="">
-            <div class="blog-date">Oct 12, 2019</div>
-            <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
-        </div>
-        <div class="col col-third blog-item">
-            <img src="https://preview.colorlib.com/theme/travelo/img/trip/2.png" alt="">
-            <div class="blog-date">Oct 12, 2019</div>
-            <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
-        </div>
-        <div class="col col-third blog-item">
-            <img src="https://preview.colorlib.com/theme/travelo/img/trip/3.png" alt="">
-            <div class="blog-date">Oct 12, 2019</div>
-            <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
-        </div>
+<%--    <div class="row blog-list">--%>
+<%--        <div class="col col-third blog-item">--%>
+<%--            <img src="https://preview.colorlib.com/theme/travelo/img/trip/1.png" alt="">--%>
+<%--            <div class="blog-date">Oct 12, 2019</div>--%>
+<%--            <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>--%>
+<%--        </div>--%>
+<%--        <div class="col col-third blog-item">--%>
+<%--            <img src="https://preview.colorlib.com/theme/travelo/img/trip/2.png" alt="">--%>
+<%--            <div class="blog-date">Oct 12, 2019</div>--%>
+<%--            <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>--%>
+<%--        </div>--%>
+<%--        <div class="col col-third blog-item">--%>
+<%--            <img src="https://preview.colorlib.com/theme/travelo/img/trip/3.png" alt="">--%>
+<%--            <div class="blog-date">Oct 12, 2019</div>--%>
+<%--            <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>--%>
+<%--        </div>--%>
 
-        <div class="clear"></div>
-    </div>
-</div>
+<%--        <div class="clear"></div>--%>
+<%--    </div>--%>
+<%--</div>--%>
   
 <script src="${pageContext.request.contextPath}/resources/javascripts/destination.js" ></script>
 <script src="${pageContext.request.contextPath}/resources/javascripts/header.js" ></script>

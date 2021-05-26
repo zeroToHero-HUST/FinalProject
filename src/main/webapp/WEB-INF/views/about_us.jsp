@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/footer-resp.css" />
 
     <script src="${pageContext.request.contextPath}/resources/javascripts/home.js" defer></script>
+    <script src="${pageContext.request.contextPath}/resources/javascripts/header.js" defer></script>
 </head>
 <body>
 
