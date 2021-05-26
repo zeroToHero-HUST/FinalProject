@@ -10,6 +10,11 @@ public class Cities implements Serializable {
     private long countryId;
     private String description;
 
+    public Cities(long cityId, String name) {
+        this.cityId = cityId;
+        this.name = name;
+    }
+
     public Cities(long cityId) {
         this.cityId = cityId;
     }
