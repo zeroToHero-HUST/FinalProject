@@ -42,6 +42,14 @@ public interface PopulateQuery {
         "('Du lịch Thành phố Hồ Chí Minh', 'Cùng khám phá thành phố Hồ Chí Minh tươi đẹp.', 3, 1000000);"
     );
 
+    StringBuilder insertBlogs = new StringBuilder(
+        "INSERT INTO blogs (user_id, title, content) VALUES\n" +
+        "('438ee9bb-05e0-474a-9ea7-1733b8d5b57b', '''Giải nhiệt'' ở công viên Thống Nhất Hà Nội ngay khi hết dịch!', '<p>Công viên Thống Nhất ở đâu?</p><br><p>Công viên Thống Nhất có diện tích lớn, trồng toàn cây xanh. Công viên được hình thành từ năm 1958, cái tên Thống Nhất xuất phát từ ý muốn được sum vầy của người dân 2 miền Nam Bắc ngày ấy.</p><br><p>Đi đến Công viên Thống Nhất bằng cách nào?\n" +
+        "Vì tiếp giáp với 4 tuyến phố và có 2 cổng nên rất dễ dàng tiếp cận địa điểm này. Bạn có thể đi xe máy hoặc taxi đến công viên. Nếu sử dụng xe buýt thì hãy đón xe số 3, 32, 35, 44 và 51. </p>'),\n" +
+        "('438ee9bb-05e0-474a-9ea7-1733b8d5b57b', '''Sau ánh hoàng hôn'' Hà Nội khoác lên chiếc áo lung linh đẹp đến nao lòng', '<p>Cùng hòa mình vào các cuộc vui hay chỉ đơn giản là lượn quanh phố phường và tận hưởng cái mát dịu của đêm Hà Nội ! Lưu ngay 4 điểm đến Hà Nội cực yêu “sau ánh hoàng hôn” này lại để có thể dắt xe và đi bất cứ khi nào muốn mà không cần lên mạng tìm kiếm nhé!</p><br><p><Sau một ngày làm việc căng thẳng, mệt mỏi, đêm đến chính là khung thời gian tuyệt vời để bạn giải tỏa căng thẳng. 4 điểm đến nhất định nên đi thử  khi Hà Nội về đêm cực “hay ho và này nọ” sau đây, chắc chắn sẽ khiến bạn thích thú “đi quên lối về”, cùng Dulichvietnam tìm hiểu nhé!/p><br><p>1. Phố đi bộ Hà Nội - Phố đêm của giới trẻ Hà Thành\n" +
+        "Có lẽ đây là điểm hết thu hút nhiều bạn trẻ, các cặp tình nhân nhất, đặc biệt là vào khung thời gian buổi tối.</p>');"
+    );
+
     StringBuilder insertDestinations = new StringBuilder(
         "INSERT INTO destinations (tour_id, city_id) VALUES \n" +
         "(1, 1),\n" +
@@ -58,5 +66,6 @@ public interface PopulateQuery {
             .append(insertCities)
             .append(insertUsers)
             .append(insertTours)
-            .append(insertDestinations);
+            .append(insertDestinations)
+            .append(insertBlogs);
 }
