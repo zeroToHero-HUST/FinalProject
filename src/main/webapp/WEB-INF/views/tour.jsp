@@ -57,6 +57,7 @@
 
         </div>
         <div style="border-top: 1px solid rgb(228, 230, 232); margin-top: 56px; padding-bottom: 56px;"></div>
+        <form action="booking" method="get" name ="booking">
         <div class="tour-summary">
             <div class="destination">
                 <p>Tour</p>
@@ -67,12 +68,12 @@
                 <p>Check-in</p>
 
 <%--                <i class="ti-calendar"></i>--%>
-                <span><input type="date" id = "check-in-date" ></span>
+                <span><input type="date" id = "check-in-date" name = "checkInDate"></span>
             </div>
             <div class="check-out">
                 <p>Check-out</p>
 <%--                <i class="ti-calendar"></i>--%>
-                <span><input type="date" id = "check-out-date"></span>
+                <span><input type="date" id = "check-out-date" name="checkOutDate"></span>
             </div>
             <div class="price">
                 <p>Price</p>
@@ -80,7 +81,8 @@
                 <span>${thisTour.price}</span>
             </div>
         </div>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
+        </form>
     </div>
 
 </div>
@@ -117,8 +119,9 @@
 <%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
 <script >
     document.getElementById("check-in-date").addEventListener("change", getMyDateValue);
-
+    document.getElementById("check-out-date").addEventListener("change", setStartDate);
     function getMyDateValue(){
+        // set checkout date when check in date is changed
         // document.getElementById("test").innerText = "c";
         var  checkOutDate, duration;
         duration = parseInt(${thisTour.duration});
@@ -126,6 +129,16 @@
         checkOutDate = new Date(checkInDate);
         checkOutDate.setDate(checkOutDate.getDate()+duration);
         document.getElementById("check-out-date").value = checkOutDate.toLocaleDateString('en-CA');
+
+    }
+    function setStartDate(){
+        // set check in date when check out date is changed
+        var  checkInDate, duration;
+        duration = parseInt(${thisTour.duration});
+        var checkOutDate = document.getElementById("check-out-date").value;
+        checkInDate = new Date(checkOutDate);
+        checkInDate.setDate(checkInDate.getDate()-duration);
+        document.getElementById("check-in-date").value = checkInDate.toLocaleDateString('en-CA');
     }
 </script>
 </body>
