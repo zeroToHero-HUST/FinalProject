@@ -1,14 +1,40 @@
 #slider{
+    max-width: 100%;
+    transition: background-image 0.5s ;
     margin-top: 110px;
     width: 100%;
-    height: 500px;
-    background-image: url(https://preview.colorlib.com/theme/travelo/img/banner/xbradcam3.png.pagespeed.ic.-JpoZsHPxh.jpg);
+    height: 650px;
+    background-image: url('../images/slider/mien-bac.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
     position: relative;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
+}
+
+#slider .left {
+    position: absolute;
+    float: left;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    padding: 50px 15px;
+    background-color:rgba(255, 255, 255, 0.2)
+}
+
+#slider .left:hover, #slider .right:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s;
+}
+
+#slider .right {
+    position: absolute;
+    /* float: right; */
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    color: #fff;
+    padding: 50px 15px;
+    background-color:rgba(255, 255, 255, 0.2)
 }
 
 #slider .slider-contents{
@@ -16,22 +42,53 @@
     text-align: center;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    margin-top: 85px;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
+#slider .slider-1 {
+    transition: display 2s;
+    display: block;
+}
+
+#slider .slider-2 {
+    transition: display 2s;
+    display: none;
+}
+
+#slider .slider-3 {
+    transition: display 2s;
+    display: none;
+}
+
+
+/* change */
 .slider-contents h3 {
-    margin-top: 84px;
-    font-size: 80px;
+
+    height: 100%;
+    font-size: 120px;
     font-family: cursive;
     font-weight: 400;
     color: #fff;
 }
 
 .slider-contents p {
-    margin: 4px 0;
+    margin: 0 0 33px 0;
     font-size: 20px;
     color: #fff;
+}
+
+.slider-contents a {
+    text-decoration: none;
+    color: #fff;
+    padding: 18px 41px;
+    background-color: rgb(30, 198, 182);
+    border-radius: 5px;
+    font-size: 16px;
+}
+.slider-contents a:hover {
+    background-color: #FF4A52;
+    transition: 0.3s;
 }
 
 /* Main */

@@ -6,7 +6,7 @@ body{
 }
 
 /* Tablet */
-@media (min-width: 741px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .m-col-full {
         width: 100%;
     }
@@ -21,7 +21,7 @@ body{
 }
 
 /* Mobile */
-@media (max-width: 740px) {
+@media screen and (max-width: 767px) {
     .s-col-full {
         width: 100%;
     }

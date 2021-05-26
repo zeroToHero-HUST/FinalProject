@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/sign_up.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/sign_up-resp.css" />
 </head>

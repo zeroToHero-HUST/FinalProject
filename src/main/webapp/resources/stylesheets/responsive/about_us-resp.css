@@ -6,13 +6,18 @@ body{
 }
 
 /* Tablet */
-@media (min-width: 741px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .m-col-full {
         width: 100%;
     }
 
     .m-col-half {
         width: 50%;
+    }
+
+    /* Slider */
+    #slider {
+        height: 600px;
     }
 
     /* Our story */
@@ -62,7 +67,7 @@ body{
 }
 
 /* Mobile */
-@media (max-width: 740px) {
+@media screen and (max-width: 767px) {
     .s-col-full {
         width: 100%;
     }
@@ -73,6 +78,20 @@ body{
 
     .s-col-third {
         width: calc(100%/3);
+    }
+
+    /* Slider */
+    #slider {
+        height: 300px;
+        width: 757px;
+    }
+
+    #slider .slider-contents h3 {
+        font-size: 50px !important;
+    }
+
+    #slider .slider-contents p {
+        font-size: 16px !important;
     }
 
     /* Our story */
