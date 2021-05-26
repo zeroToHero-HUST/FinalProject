@@ -16,7 +16,7 @@
                 <li><a href="${pageContext.request.contextPath}/">Home</a></li>
                 <li><a href="${pageContext.request.contextPath}/about_us">About</a></li>
                 <li><a href="${pageContext.request.contextPath}/destination">Destination</a></li>
-                <li><a href="${pageContext.request.contextPath}/tour">Tour</a></li>
+<%--                <li><a href="${pageContext.request.contextPath}/tour">Tour</a></li>--%>
                 <li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
                 <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
             </ul>
