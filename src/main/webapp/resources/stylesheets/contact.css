@@ -1,35 +1,15 @@
-
-
-html {
-    background-color: #f7fafd;
-    /* background-color: aquamarine; */
-    /*height: 5000px;*/
-    font-weight: 400;
-    font-size: 16px;
-}
-
 #slider{
     margin-top: 110px;
     width: 100%;
     height: 500px;
     background-repeat: no-repeat;
     background-image: url(https://preview.colorlib.com/theme/travelo/img/banner/xbradcam4.png.pagespeed.ic.7Sr4ATOVqB.jpg);
-    /* background-size: 100% auto; */
     background-size: cover;
     background-position: center center;
     position: relative;
-    /* display: none; */
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
 }
-
-/* @-webkit-keyframes slide {
-    20% {margin-left: 0px;}
-    30% {margin-left: -728px;}
-    50% {margin-left: -728px;}
-    60% {margin-left: -1456px;}
-    80% {margin-left: -1456px;}
-  } */
 
 #slider .slider-contents{
     display: inline-block;
@@ -52,91 +32,6 @@ html {
     margin: 4px 0;
     font-size: 20px;
     color: #fff;
-}
-
-/*---------------------------------------------------------------*/
-/* Reset CSS */
-/** {*/
-/*    padding: 0;*/
-/*    margin: 0;*/
-/*    box-sizing: border-box;*/
-/*}*/
-
-/* Common */
-
-html {
-    scroll-behavior: smooth;
-    /*font-family: Arial, Helvetica, sans-serif;*/
-}
-
-.clear {
-    clear: both;
-}
-
-.text-align {
-    text-align: center;
-}
-
-.pull-right {
-    float: right !important;
-}
-
-.row {
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-.row::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.col {
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.col-full {
-    width: 100%;
-}
-
-.col-half {
-    width: 50%;
-}
-
-.col-third {
-    width: calc(100%/3);
-}
-
-.col-two-third {
-    width: calc(100%/3*2);
-}
-
-.col-sixth {
-    width: 16.66667%;
-}
-
-.col-five-sixth{
-    width: 83.33333%;
-}
-
-.col-quater {
-    width: 25%;
-}
-
-.col-three-quater {
-    width: 75%;
-}
-
-.col-2 {
-    columns: 2;
-    width: 100%;
-}
-
-.col-3 {
-    columns: 3;
 }
 
 /* Main */

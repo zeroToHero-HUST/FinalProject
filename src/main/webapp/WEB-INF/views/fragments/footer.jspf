@@ -7,7 +7,7 @@
         <!-- footer-top -->
         <div class="row footer-top">
 
-            <div class="col col-third footer-widget footer-widget-info">
+            <div class="col col-third footer-widget m-col-half s-col-full footer-widget-info">
                 <div class="footer-logo">
                     <a href="#"><img src="https://preview.colorlib.com/theme/travelo/img/footer_logo.png" alt=""></a>
                 </div>
@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <div class="col col-sixth footer-widget footer-company">
+            <div class="col col-sixth footer-widget m-col-half s-col-full footer-company">
                 <h3 class="footer-title">Company</h3>
                 <ul class="footer-links">
                     <li><a href="#">Pricing</a></li>
@@ -41,7 +41,7 @@
                 </ul>
             </div>
 
-            <div class="col col-quater footer-widget footer-des">
+            <div class="col col-quater footer-widget m-col-half s-col-full footer-des">
                 <h3 class="footer-title">Popular Destination</h3>
                 <ul class="footer-links col-2">
                     <li><a href="">Đà Nẵng</a></li>
@@ -55,7 +55,7 @@
                 </ul>
             </div>
 
-            <div class="col col-quater footer-widget footer-insta pull-right">
+            <div class="col col-quater footer-widget m-col-half s-col-full footer-insta pull-right">
                 <h3 class="footer-title">Instagram</h3>
                 <ul class="insta-place col-3">
                     <li><a href=""><img src="https://preview.colorlib.com/theme/travelo/img/instagram/1.png" alt=""></a></li>
@@ -70,8 +70,8 @@
         </div>
 
         <!-- copyright -->
-        <div>
-            <div class="row border-copyright"></div>
+        <div class="copyright-section">
+            <div class="border-copyright m-col-full"></div>
             <p class="copyright">Copyright ©2021 All rights reserved | This template is made with  by Colorlib</p>
         </div>
 

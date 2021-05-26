@@ -11,9 +11,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Content</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/header-resp.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/contact.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/contact-resp.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/footer-resp.css" />
 </head>
 <body>
 
@@ -35,33 +38,33 @@
 
         <div class="row contact-content">
             <!-- contact-form -->
-            <div class="col col-two-third contact-form">
+            <div class="col col-two-third contact-form s-col-full">
                 <form action="">
                     <div class="row">
-                        <div class="col col-full contact-message">
+                        <div class="col col-full contact-message s-col-full">
                                 <textarea name="" id="" cols="30" rows="9"  placeholder="Enter Message">
                                 </textarea>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col col-half">
+                        <div class="col col-half s-col-full">
                             <input type="text" placeholder="Enter your name" required name="" id="form-control">
                         </div>
-                        <div class="col col-half">
+                        <div class="col col-half s-col-full">
                             <input type="email" placeholder="Email" required name="" id="form-control">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col col-full">
+                        <div class="col col-full s-col-full">
                             <input type="text" placeholder="Enter Subject" required name="" id="form-control">
                         </div>
                     </div>
-                    <input type="submit" value="Send">
+                    <input type="submit" value="Send" class="s-col-full">
                 </form>
             </div>
 
             <!-- contact info -->
-            <div class="col contact-info pull-right">
+            <div class="col contact-info pull-right m-col-full s-col-full">
                 <div class="row info-item">
                     <div class="col info-icon"><i class="ti-home"></i></div>
                     <div class="col info-text">
