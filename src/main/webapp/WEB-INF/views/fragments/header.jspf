@@ -1,8 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page pageEncoding="UTF-8" %>
-<div id="header">
+<div id="header" class="header1">
     <div class="header-contents">
-
+        <div class="mobile-menu-btn"><i class="ti-menu"></i></div>
         <a href="#">
             <div id="logo">
                 <i class="ti-world"></i>

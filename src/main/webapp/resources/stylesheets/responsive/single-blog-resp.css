@@ -1,0 +1,61 @@
+/* web  */
+@media screen and (min-width: 1024px) {
+    #header .header-contents .mobile-menu-btn {
+        display: none;
+    }
+
+
+}
+
+/* table  */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #slider {
+        height: 600px;
+        /* width: ; */
+    }
+
+}
+
+/* mobile  */
+@media screen and (max-width: 767px) {
+    #slider {
+        height: 380px;
+        width: 757px;
+    }
+
+    #slider .slider-contents h3 {
+        font-size: 50px !important;
+    }
+
+    #slider .slider-contents p {
+        font-size: 16px !important;
+    }
+
+
+
+}
+
+
+
+/* table & mobile */
+@media screen and (max-width: 1023px) {
+}
+
+
+/* other */
+
+/* header */
+@media screen and (max-width: 1089px) {
+    #slider .slider-contents h3 {
+        font-size: 75px;
+    }
+
+    #slider .slider-contents p {
+        margin-top: 0;
+    }
+}
+
+
+
+
+
