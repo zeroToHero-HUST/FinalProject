@@ -1,34 +1,30 @@
 //page blog
 //begin: script slideshow blog
-var slideIndex = 1;
-showDivs(slideIndex);
+var slide = 1;
+showDivs(slide);
 
 function plusDivs(n) {
-    showDivs(slideIndex += n);
+    showDivs(slide += n);
 }
 
 function currentDiv(n) {
-    showDivs(slideIndex = n);
+    showDivs(slide = n);
 }
 
 function showDivs(n) {
     var i;
     var x = document.getElementsByClassName("blog-list");
-    var dots = document.getElementsByClassName("nav-num");
-    if (n > x.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = x.length
-    }
+    var num_btn = document.getElementsByClassName("nav-num");
+    if (n > x.length) {slide = 1}
+    if (n < 1) {slide = x.length}
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" dot-active", "");
+    for (i = 0; i < num_btn.length; i++) {
+        num_btn[i].className = num_btn[i].className.replace(" num-active", "");
     }
-    x[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " dot-active";
+    x[slide-1].style.display = "block";
+    num_btn[slide-1].className += " num-active";
 }
 
 //end: script slideshow blog
