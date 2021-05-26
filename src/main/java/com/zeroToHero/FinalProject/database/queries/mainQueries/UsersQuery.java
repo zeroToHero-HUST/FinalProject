@@ -10,11 +10,17 @@ public interface UsersQuery {
     String getUserByEmail =
         "SELECT * FROM users WHERE users.email = ?";
 
+    String getUserById =
+        "SELECT * FROM users WHERE users.user_id = ?::uuid";
+
     String getUsersByPage =
         "SELECT * FROM f_getusersbypagenumberandsize(?, 10);";
 
-    String updateUser =
+    String updateUserByAdmin =
         "UPDATE users SET (first_name, last_name, email, role, profile_image) = (?, ?, ?, ?::role_type, ?) WHERE user_id = ?::uuid;";
+
+    String updateMyUser =
+        "UPDATE users SET (email, password, first_name, last_name) = (?, ?, ?, ?) WHERE user_id = ?::uuid;";
 
     String count =
         "SELECT count(*) FROM users;";

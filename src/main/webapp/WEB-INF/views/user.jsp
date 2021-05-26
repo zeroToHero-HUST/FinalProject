@@ -33,16 +33,16 @@
             <div class="card-body">
                 <form action="me" method="post">
                     <div>
-                        <input type="text" name="userId" value="${user.userId}" readonly>
+                        <input type="text" name="userId" value="${dbUser.userId}" readonly>
                     </div>
                     <div class="first-name">
-                        <input type="text" name="firstName"  value="${user.firstName}">
+                        <input type="text" name="firstName"  value="${dbUser.firstName}">
                     </div>
                     <div class="last-name">
-                        <input type="text" name="lastName"  value="${user.lastName}">
+                        <input type="text" name="lastName"  value="${dbUser.lastName}">
                     </div>
                     <div class="email">
-                        <input type="email" name="email" value="${user.email}" readonly>
+                        <input type="email" name="email" value="${dbUser.email}" readonly>
                     </div>
                     <div class="password">
                         <input type="password" name="password"  placeholder="Password">

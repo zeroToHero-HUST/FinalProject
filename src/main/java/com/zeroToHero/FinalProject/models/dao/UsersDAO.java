@@ -120,12 +120,12 @@ public class UsersDAO {
         return result;
     }
 
-    public int updateUser(Users user)
+    public int updateUserByAdmin(Users user)
     {
         int result = -1;
         try {
             conn = DBConnectionManager.getConnection();
-            pst = conn.prepareStatement(UsersQuery.updateUser);
+            pst = conn.prepareStatement(UsersQuery.updateUserByAdmin);
             pst.setString(1, user.getFirstName());
             pst.setString(2, user.getLastName());
             pst.setString(3, user.getEmail());
@@ -137,6 +137,28 @@ public class UsersDAO {
 
         } catch (SQLException | NamingException throwable) {
             throwable.printStackTrace();
+        } finally {
+            DBConnectionManager.closeConnection(conn, pst, rs);
+        }
+        return result;
+    }
+
+    public int updateMyUser(Users user)
+    {
+        int result = -1;
+        try {
+            conn = DBConnectionManager.getConnection();
+            pst = conn.prepareStatement(UsersQuery.updateMyUser);
+            pst.setString(1, user.getEmail());
+            pst.setString(2, user.getPassword());
+            pst.setString(3, user.getFirstName());
+            pst.setString(4, user.getLastName());
+            pst.setString(5, user.getUserId());
+
+            result = pst.executeUpdate();
+
+        } catch (SQLException | NamingException e) {
+            e.printStackTrace();
         } finally {
             DBConnectionManager.closeConnection(conn, pst, rs);
         }
@@ -176,5 +198,33 @@ public class UsersDAO {
         } finally {
             DBConnectionManager.closeConnection(conn, pst, rs);
         }
+    }
+
+    public Users getUserById(String userId)
+    {
+        Users result = new Users();
+        try {
+            conn = DBConnectionManager.getConnection();
+            pst = conn.prepareStatement(UsersQuery.getUserById);
+            pst.setString(1, userId);
+            rs = pst.executeQuery();
+            rs.next();
+
+            result = new Users(
+                    rs.getString("user_id"),
+                    rs.getString("email"),
+                    rs.getString("first_name"),
+                    rs.getString("last_name"),
+                    rs.getString("profile_image"),
+                    rs.getTimestamp("created_at"),
+                    rs.getString("role"),
+                    rs.getLong("country_id"));
+        } catch (SQLException | NamingException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnectionManager.closeConnection(conn, pst, rs);
+        }
+
+        return result;
     }
 }

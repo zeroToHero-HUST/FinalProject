@@ -8,12 +8,15 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 @WebServlet(name = "UserServlet", value = "/me")
 public class UserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Users temp = (Users) request.getAttribute("user");
+        Users dbUser = new UsersDAO().getUserById(temp.getUserId());
+        request.setAttribute("dbUser", dbUser);
+
         request.getRequestDispatcher("/WEB-INF/views/user.jsp").forward(request, response);
     }
 
@@ -25,17 +28,9 @@ public class UserServlet extends HttpServlet {
         user.setFirstName(request.getParameter("firstName"));
         user.setLastName(request.getParameter("lastName"));
         user.setPassword(Auth.encryptPassword(request.getParameter("password")));
-        Users temp = (Users) request.getAttribute("user");
-        user.setRole(temp.getRole());
-
-        System.out.println(user.getUserId());
-        System.out.println(user.getEmail());
-        System.out.println(user.getLastName());
-        System.out.println(user.getFirstName());
-        System.out.println(user.getPassword());
 
         UsersDAO usersDAO = new UsersDAO();
-        int result = usersDAO.updateUser(user);
+        int result = usersDAO.updateMyUser(user);
         if (result != -1)
         {
             response.sendRedirect("me");
