@@ -90,7 +90,7 @@ html {
 
     position: fixed;
     z-index: 2;
-    margin-top: -110px;
+    /*margin-top: -110px;*/
 }
 
 .header-contents {
