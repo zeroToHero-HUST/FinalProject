@@ -74,7 +74,7 @@ public class AdminUserServlet extends HttpServlet {
         }
         else
         {
-            int result = usersDAO.updateUser(user);
+            int result = usersDAO.updateUserByAdmin(user);
             if (result != -1)
             {
                 response.sendRedirect("user");
