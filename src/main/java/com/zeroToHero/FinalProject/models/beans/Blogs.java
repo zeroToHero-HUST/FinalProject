@@ -10,6 +10,22 @@ public class Blogs implements Serializable {
     private java.sql.Timestamp updatedAt;
     private String content;
     private String images;
+    private String title;
+    private String date;
+    private String month;
+
+    public String getDate(){
+        return date;
+    }
+    public void setDate(String date){
+        this.date = date;
+    }
+    public String getMonth(){
+        return  month;
+    }
+    public void setMonth(String month){
+        this.month = month;
+    }
 
     public Blogs() {
     }
@@ -65,6 +81,13 @@ public class Blogs implements Serializable {
 
     public void setImages(String images) {
         this.images = images;
+    }
+    public void setTitle(String title){
+        this.title = title;
+    }
+    public String getTitle(){
+        return title;
+
     }
 
 }

@@ -17,8 +17,6 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/footer-resp.css" />
 
-    <script src="${pageContext.request.contextPath}/resources/javascripts/blog.js" defer></script>
-    <script src="${pageContext.request.contextPath}/resources/javascripts/header.js" defer></script>
 </head>
 <body>
 
@@ -37,315 +35,96 @@
 <div id="content">
     <!-- Blog section -->
     <div class="blog-section">
-
         <!-- blog-list-page 1 (5item) -->
+        <c:forEach var="page" begin="1" end = "${numPage}">
         <div class="blog-list">
+            <h1>${page}</h1>
+            <c:forEach var = "blog" items="${allBlogs}">
+                    <c:set value="${page*5}" var = "index"/>
+                    <c:if test="${blog.blogId <= index}">
+                    <c:if test="${blog.blogId > index-5}">
+                    <div class="blog-item">
+                        <div class="blog-item-img">
+                            <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_1.png" alt="">
+                            <a href="${pageContext.request.contextPath}/singleBlog/single-blog?BlogId=${blog.blogId}" class="blog-item-date">
+                                <h3>${blog.date}</h3>
+                                <p>${blog.month}</p>
+                            </a>
+                        </div>
 
-
-            <!-- item1 -->
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_1.png" alt="">
-                    <a href="" class="blog-item-date">
-                        <h3>15</h3>
-                        <p>Jan</p>
-                    </a>
-                </div>
-
-                <div class="blog-details">
-                    <a href="singleBlog" class="blog-title">
-                        <h2>Google inks pact for new 35-storey office</h2>
-                    </a>
-                    <p>
-                        That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
-                    </p>
-                    <ul class="blog-info-link">
-                        <li class="link-user">
-                            <a href="" class="link-user"><i class="ti-user"></i>Travel, Lifestyle</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="ti-comment"></i>03 Comments</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- item2 -->
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_2.png" alt="">
-                    <a href="" class="blog-item-date">
-                        <h3>15</h3>
-                        <p>Jan</p>
-                    </a>
-                </div>
-
-                <div class="blog-details">
-                    <a href="" class="blog-title">
-                        <h2>Google inks pact for new 35-storey office</h2>
-                    </a>
-                    <p>
-                        That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
-                    </p>
-                    <ul class="blog-info-link">
-                        <li class="link-user">
-                            <a href="" class="link-user"><i class="ti-user"></i>Travel, Lifestyle</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="ti-comment"></i>03 Comments</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- item3 -->
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_3.png" alt="">
-                    <a href="" class="blog-item-date">
-                        <h3>15</h3>
-                        <p>Jan</p>
-                    </a>
-                </div>
-
-                <div class="blog-details">
-                    <a href="" class="blog-title">
-                        <h2>Google inks pact for new 35-storey office</h2>
-                    </a>
-                    <p>
-                        That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
-                    </p>
-                    <ul class="blog-info-link">
-                        <li class="link-user">
-                            <a href="" class="link-user"><i class="ti-user"></i>Travel, Lifestyle</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="ti-comment"></i>03 Comments</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- item4 -->
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_4.png" alt="">
-                    <a href="" class="blog-item-date">
-                        <h3>15</h3>
-                        <p>Jan</p>
-                    </a>
-                </div>
-
-                <div class="blog-details">
-                    <a href="" class="blog-title">
-                        <h2>Google inks pact for new 35-storey office</h2>
-                    </a>
-                    <p>
-                        That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
-                    </p>
-                    <ul class="blog-info-link">
-                        <li class="link-user">
-                            <a href="" class="link-user"><i class="ti-user"></i>Travel, Lifestyle</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="ti-comment"></i>03 Comments</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- item5 -->
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_5.png" alt="">
-                    <a href="" class="blog-item-date">
-                        <h3>15</h3>
-                        <p>Jan</p>
-                    </a>
-                </div>
-
-                <div class="blog-details">
-                    <a href="" class="blog-title">
-                        <h2>Google inks pact for new 35-storey office</h2>
-                    </a>
-                    <p>
-                        That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
-                    </p>
-                    <ul class="blog-info-link">
-                        <li class="link-user">
-                            <a href="" class="link-user"><i class="ti-user"></i>Travel, Lifestyle</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="ti-comment"></i>03 Comments</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                        <div class="blog-details">
+                            <a href="${pageContext.request.contextPath}/singleBlog/single-blog?TotalBlogs=${totalBlog}&BlogId=${blog.blogId}" class="blog-title">
+                                <h2>${blog.title}</h2>
+                            </a>
+                            <ul class="blog-info-link">
+                                <li class="link-user">
+                                    <a href="" class="link-user"><i class="ti-user"></i>Travel, Lifestyle</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="ti-comment"></i>03 Comments</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </c:if>
+                    </c:if>
+            </c:forEach>
 
         </div>
+        </c:forEach>
+
         <!-- end: blog-item page1 -->
-
-        <!-- blog-list-page 2 (5item) -->
-        <div class="blog-list">
-
-
-            <!-- item1 -->
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_1.png" alt="">
-                    <a href="" class="blog-item-date">
-                        <h3>15</h3>
-                        <p>Jan</p>
-                    </a>
-                </div>
-
-                <div class="blog-details">
-                    <a href="" class="blog-title">
-                        <h2>Google inks pact for new 35-storey office</h2>
-                    </a>
-                    <p>
-                        That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
-                    </p>
-                    <ul class="blog-info-link">
-                        <li class="link-user">
-                            <a href="" class="link-user"><i class="ti-user"></i>Travel, Lifestyle</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="ti-comment"></i>03 Comments</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- item2 -->
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_2.png" alt="">
-                    <a href="" class="blog-item-date">
-                        <h3>15</h3>
-                        <p>Jan</p>
-                    </a>
-                </div>
-
-                <div class="blog-details">
-                    <a href="" class="blog-title">
-                        <h2>Google inks pact for new 35-storey office</h2>
-                    </a>
-                    <p>
-                        That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
-                    </p>
-                    <ul class="blog-info-link">
-                        <li class="link-user">
-                            <a href="" class="link-user"><i class="ti-user"></i>Travel, Lifestyle</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="ti-comment"></i>03 Comments</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- item3 -->
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_3.png" alt="">
-                    <a href="" class="blog-item-date">
-                        <h3>15</h3>
-                        <p>Jan</p>
-                    </a>
-                </div>
-
-                <div class="blog-details">
-                    <a href="" class="blog-title">
-                        <h2>Google inks pact for new 35-storey office</h2>
-                    </a>
-                    <p>
-                        That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
-                    </p>
-                    <ul class="blog-info-link">
-                        <li class="link-user">
-                            <a href="" class="link-user"><i class="ti-user"></i>Travel, Lifestyle</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="ti-comment"></i>03 Comments</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- item4 -->
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_1.png" alt="">
-                    <a href="" class="blog-item-date">
-                        <h3>15</h3>
-                        <p>Jan</p>
-                    </a>
-                </div>
-
-                <div class="blog-details">
-                    <a href="" class="blog-title">
-                        <h2>Google inks pact for new 35-storey office</h2>
-                    </a>
-                    <p>
-                        That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
-                    </p>
-                    <ul class="blog-info-link">
-                        <li class="link-user">
-                            <a href="" class="link-user"><i class="ti-user"></i>Travel, Lifestyle</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="ti-comment"></i>03 Comments</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- item5 -->
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_4.png" alt="">
-                    <a href="" class="blog-item-date">
-                        <h3>15</h3>
-                        <p>Jan</p>
-                    </a>
-                </div>
-
-                <div class="blog-details">
-                    <a href="" class="blog-title">
-                        <h2>Google inks pact for new 35-storey office</h2>
-                    </a>
-                    <p>
-                        That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.
-                    </p>
-                    <ul class="blog-info-link">
-                        <li class="link-user">
-                            <a href="" class="link-user"><i class="ti-user"></i>Travel, Lifestyle</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="ti-comment"></i>03 Comments</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <!-- end: blog-item page2 -->
 
         <!-- Blog slideshow -->
         <div class="blog-nav">
             <ul>
                 <li><button class="nav-arrow" onclick="plusDivs(-1)">❮</button></li>
-                <li><button class="nav-num" onclick="currentDiv(1)">1</button></li>
-                <li><button class="nav-num" onclick="currentDiv(2)">2</button></li>
+                <c:forEach var = "indexPage" begin="1" end="${numPage}">
+                    <li><button class="nav-num" onclick="currentDiv(${indexPage})">${indexPage}</button></li>
+                </c:forEach>
+
                 <li><button class="nav-arrow" onclick="plusDivs(1)">❯</button></li>
             </ul>
         </div>
 
     </div>
 </div>
-<!-- End: content -->
+<script>
+    //page blog
+    //begin: script slideshow blog
+    var slide = 1;
+    showDivs(slide);
 
+    function plusDivs(n) {
+        showDivs(slide += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slide = n);
+    }
+    function showDivs(n) {
+
+        var i;
+        var x = document.getElementsByClassName("blog-list");
+        var num_btn = document.getElementsByClassName("nav-num");
+        if (n > x.length) {slide = 1}
+        if (n < 1) {slide = x.length}
+        //x.length.toString()
+
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < num_btn.length; i++) {
+            num_btn[i].className = num_btn[i].className.replace(" num-active", "");
+        }
+        x[slide-1].style.display = "block";
+        num_btn[slide-1].className += " num-active";
+    }
+
+    //end: script slideshow blog
+</script>
+<!-- End: content -->
+<script src="${pageContext.request.contextPath}/resources/javascripts/header.js" defer></script>
 <%@ include file="/WEB-INF/views/fragments/footer.jspf" %>
 
 </body>
