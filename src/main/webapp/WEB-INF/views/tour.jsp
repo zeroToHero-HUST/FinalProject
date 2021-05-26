@@ -28,10 +28,8 @@
 <!-- begin: slide -->
 <div id="slider">
     <div class="slider-contents slider-1 fade" >
-        <h3>Miền Bắc</h3>
-        <p>Pixel perfect design with awesome contents</p>
-        <a href="">Explore Now</a>
-
+        <h3>${thisTour.title}</h3>
+        <p>${thisTour.description}</p>
     </div>
 
 </div>
@@ -60,7 +58,10 @@
 
         </div>
         <div style="border-top: 1px solid rgb(228, 230, 232); margin-top: 56px; padding-bottom: 56px;"></div>
-        <form action="booking" method="get" name ="booking">
+        <form action="${pageContext.request.contextPath}/booking" method="post" name ="booking" id="booking">
+        <input type="text" name="tourId" value="${thisTour.tourId}" form="booking" hidden>
+        <input type="text" name="price" value="${thisTour.price}" form="booking" hidden>
+        <input type="text" name="userId" value="${user.userId}" form="booking" hidden>
         <div class="tour-summary">
             <div class="destination">
                 <p>Tour</p>
@@ -71,12 +72,12 @@
                 <p>Check-in</p>
 
 <%--                <i class="ti-calendar"></i>--%>
-                <span><input type="date" id = "check-in-date" name = "checkInDate"></span>
+                <span><input type="date" id = "check-in-date" name="checkInDate" required></span>
             </div>
             <div class="check-out">
                 <p>Check-out</p>
 <%--                <i class="ti-calendar"></i>--%>
-                <span><input type="date" id = "check-out-date" name="checkOutDate"></span>
+                <span><input type="date" id = "check-out-date" name="checkOutDate" required></span>
             </div>
             <div class="price">
                 <p>Price</p>
