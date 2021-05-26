@@ -1,0 +1,54 @@
+/* Common */
+html,
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Tablet */
+@media (min-width: 741px) and (max-width: 1023px) {
+    .m-col-full {
+        width: 100%;
+    }
+
+    .m-col-half {
+        width: 50%;
+    }
+
+    #content {
+        margin-top: 132px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+    .s-col-full {
+        width: 100%;
+    }
+
+    .s-col-half {
+        width: 50%;
+    }
+
+    .s-col-third {
+        width: calc(100%/3);
+    }
+
+    #content {
+        max-width: 256px;
+        margin-top: 30px;
+    }
+
+    #content .form-control {
+        width: 256px;
+    }
+
+    .form-control input {
+        width: 256px;
+    }
+
+    .form-control input[type="submit"] {
+        width: 100%;
+    }
+
+}
