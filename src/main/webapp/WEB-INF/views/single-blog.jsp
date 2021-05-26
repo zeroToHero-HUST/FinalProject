@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: phamtuanson
@@ -37,40 +38,12 @@
         <!-- single-post  -->
         <div class="single-post">
             <div class="blog-details">
-                <h2>Second divided from form fish beast made every of seas
-                    all gathered us saying he our</h2>
+                <h2>${thisBlog.title}</h2>
                 <ul>
                     <li style="border-right: 1px solid rgb(102, 102, 102);"><a href=""><i class="ti-user" ></i> Travel, Lifestyle</a></li>
                     <li><a href=""><i class="ti-comments"></i>  03 Comments</a></li>
                 </ul>
-                <p>
-                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                    should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                    fraction of the camp price. However, who has the willpower
-                </p>
-                <p>
-                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                    should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                    fraction of the camp price. However, who has the willpower to actually sit through a
-                    self-imposed MCSE training. who has the willpower to actually
-                </p>
-                <div class="quote-wrapper">
-                    <div class="quote">
-                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                        should have to spend money on boot camp when you can get the MCSE study materials yourself at
-                        a fraction of the camp price. However, who has the willpower to actually sit through a
-                        self-imposed MCSE training.
-                    </div>
-                </div>
-                <p>
-                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                    should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                    fraction of the camp price. However, who has the willpower</p>
-                <p>
-                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                    should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                    fraction of the camp price. However, who has the willpower to actually sit through a
-                    self-imposed MCSE training. who has the willpower to actually</p>
+                ${thisBlog.content}
             </div>
         </div>
 
@@ -90,13 +63,15 @@
                     </div> -->
                     <div class="details">
                         <p>Prev Post</p>
-                        <a href=""><h4>Space The Final Frontier</h4></a>
+                        <c:if test="${prevBlog != 0}">
+                        <a href=""><h4>${prevBlog.title}</h4></a>
+                        </c:if>
                     </div>
                 </div>
                 <div class="right">
                     <div class="details">
                         <p>Next Post</p>
-                        <a href=""><h4>Telescopes 101</h4></a>
+                        <a href=""><h4>${nextBlog.title}</h4></a>
                     </div>
                     <!-- <div class="arrow">
                         <i class="ti-arrow-right"></i>
@@ -117,8 +92,7 @@
                 <img src="https://preview.colorlib.com/theme/travelo/img/blog/xauthor.png.pagespeed.ic.ODzYv6n44a.webp" alt="">
                 <div class="media-body">
                     <a href=""><h4>Harvard milan</h4></a>
-                    <p>Second divided from form fish beast made. Every of seas all gathered use saying you're, he
-                        our dominion twon Second divided from</p>
+                    <p>${thisBlog.title}</p>
                 </div>
             </div>
         </div>
