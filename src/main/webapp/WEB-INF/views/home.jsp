@@ -3,14 +3,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/header-resp.css" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/home.css" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/home-resp.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/footer.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/header-resp.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/home-resp.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/footer-resp.css" />
+
 
 </head>
 <body>
@@ -236,7 +239,7 @@
     <div class="travel-variation">
         <div class="row travel-variation-list">
 
-            <div class="col col-third travel-variation-item m-col-half s-col-full text-align">
+            <div class="col col-third travel-variation-item m-col-third s-col-full text-align">
                 <div class="travel-variation-icon">
                     <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/1.svg" alt="">
                 </div>
@@ -245,7 +248,7 @@
                     A wonderful serenity has taken to the possession of my entire soul.
                 </p>
             </div>
-            <div class="col col-third travel-variation-item m-col-half s-col-full text-align">
+            <div class="col col-third travel-variation-item m-col-third s-col-full text-align">
                 <div class="travel-variation-icon">
                     <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/2.svg" alt="">
                 </div>
@@ -254,7 +257,7 @@
                     A wonderful serenity has taken to the possession of my entire soul.
                 </p>
             </div>
-            <div class="col col-third travel-variation-item m-col-half s-col-full text-align">
+            <div class="col col-third travel-variation-item m-col-third s-col-full text-align">
                 <div class="travel-variation-icon">
                     <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/3.svg" alt="">
                 </div>
@@ -329,17 +332,17 @@
         <h3 class="blog-title text-align">Recent Trips</h3>
 
         <div class="row blog-list">
-            <div class="col col-third blog-item m-col-half s-col-full">
+            <div class="col col-third blog-item m-col-third s-col-full">
                 <img src="https://preview.colorlib.com/theme/travelo/img/trip/1.png" alt="">
                 <div class="blog-date">Oct 12, 2019</div>
                 <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
             </div>
-            <div class="col col-third blog-item m-col-half s-col-full">
+            <div class="col col-third blog-item m-col-third s-col-full">
                 <img src="https://preview.colorlib.com/theme/travelo/img/trip/2.png" alt="">
                 <div class="blog-date">Oct 12, 2019</div>
                 <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
             </div>
-            <div class="col col-third blog-item m-col-half s-col-full">
+            <div class="col col-third blog-item m-col-third s-col-full">
                 <img src="https://preview.colorlib.com/theme/travelo/img/trip/3.png" alt="">
                 <div class="blog-date">Oct 12, 2019</div>
                 <h3 class="blog-text"><a href="">Journeys Are Best Measured In New Friends</a></h3>
