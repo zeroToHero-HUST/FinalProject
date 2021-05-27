@@ -84,4 +84,38 @@ public class BlogDAO {
         }
         return Blog;
     }
+
+    public ArrayList<Blogs> getAllBlogs()
+    {
+        ArrayList<Blogs> allBlogs = new ArrayList<>();
+        Statement st = null;
+        ResultSet rs = null;
+        String getMoreTours =
+            "SELECT * FROM blogs;";
+
+        try {
+            conn = DBConnectionManager.getConnection();
+            st = conn.createStatement();
+            rs = st.executeQuery(getMoreTours);
+            while (rs.next())
+            {
+                Blogs blog = new Blogs();
+                blog.setBlogId(rs.getInt("blog_id"));
+                blog.setTitle(rs.getString("title"));
+                blog.setContent(rs.getString("content"));
+                blog.setUserId(rs.getString("user_id"));
+                blog.setCreatedAt(rs.getTimestamp("created_at"));
+                blog.setUpdatedAt(rs.getTimestamp("updated_at"));
+                blog.setImages(rs.getString("images"));
+                allBlogs.add(blog);
+            }
+        }
+        catch (SQLException | NamingException throwable) {
+            throwable.printStackTrace();
+        }
+        finally {
+            DBConnectionManager.closeConnection(conn, st, rs);
+        }
+        return allBlogs;
+    }
 }

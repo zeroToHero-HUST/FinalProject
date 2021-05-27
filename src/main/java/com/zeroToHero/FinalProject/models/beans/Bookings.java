@@ -8,10 +8,19 @@ public class Bookings implements Serializable {
     private long bookingId;
     private String userId;
     private long tourId;
+    private String tourTitle;
     private java.sql.Timestamp createdAt;
     private java.sql.Date startDate;
     private java.sql.Date endDate;
     private String price;
+
+    public String getTourTitle() {
+        return tourTitle;
+    }
+
+    public void setTourTitle(String tourTitle) {
+        this.tourTitle = tourTitle;
+    }
 
     public Bookings() {
     }

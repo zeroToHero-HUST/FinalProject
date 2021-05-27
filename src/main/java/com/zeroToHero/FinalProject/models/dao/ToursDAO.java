@@ -33,6 +33,9 @@ public class ToursDAO {
                 tour.setPrice(rs.getString("price"));
                 tour.setCountryName(rs.getString("country_name"));
 
+                String[] images = (String[]) rs.getArray("images").getArray();
+                tour.setImages(images[0]);
+
                 popTours.add(tour);
             }
         }

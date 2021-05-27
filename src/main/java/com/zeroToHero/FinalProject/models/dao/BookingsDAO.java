@@ -46,7 +46,7 @@ public class BookingsDAO {
         ArrayList<Bookings> result = new ArrayList<>();
         try {
             conn = DBConnectionManager.getConnection();
-            pst = conn.prepareStatement(BookingsQuery.getBookingsByUserId);
+            pst = conn.prepareStatement(BookingsQuery.getBookingsTourNameByUserId);
             pst.setString(1, userId);
             rs = pst.executeQuery();
 
@@ -54,7 +54,37 @@ public class BookingsDAO {
             {
                 Bookings temp = new Bookings();
                 temp.setBookingId(rs.getLong("booking_id"));
-                temp.setTourId(rs.getLong("tour_id"));
+                temp.setTourTitle(rs.getString("title"));
+                temp.setUserId(rs.getString("user_id"));
+                temp.setCreatedAt(rs.getTimestamp("created_at"));
+                temp.setStartDate(rs.getDate("start_date"));
+                temp.setEndDate(rs.getDate("end_date"));
+                temp.setPrice(rs.getString("price"));
+
+                result.add(temp);
+            }
+        } catch (SQLException | NamingException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnectionManager.closeConnection(conn, pst, rs);
+        }
+
+        return result;
+    }
+
+    public ArrayList<Bookings> getAllBookings()
+    {
+        ArrayList<Bookings> result = new ArrayList<>();
+        try {
+            conn = DBConnectionManager.getConnection();
+            pst = conn.prepareStatement(BookingsQuery.getAllBookings);
+            rs = pst.executeQuery();
+
+            while (rs.next())
+            {
+                Bookings temp = new Bookings();
+                temp.setBookingId(rs.getLong("booking_id"));
+                temp.setTourTitle(rs.getString("title"));
                 temp.setUserId(rs.getString("user_id"));
                 temp.setCreatedAt(rs.getTimestamp("created_at"));
                 temp.setStartDate(rs.getDate("start_date"));

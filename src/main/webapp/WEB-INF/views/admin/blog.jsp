@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: phamtuanson
@@ -25,7 +26,6 @@
         <div class="card-body">
             <form action="">
                 <div class="title"><input type="text" placeholder="Title"></div>
-                <div class="quote"><textarea name=""  cols="30" rows="5" placeholder="Quote"></textarea></div>
                 <div class="content"><textarea name=""  cols="30" rows="10" placeholder="Content"></textarea></div>
                 <div class="img" ><input  type="file" accept="image/*"></div>
                 <button type="submit">Submit</button>
@@ -44,35 +44,30 @@
         <div class="card-body">
             <table>
                 <thead>
-                <th class="id">Id</th>
+                <th class="id">blogId</th>
                 <th class="title">Title</th>
                 <th class="content">Content</th>
-                <th class="quote">Quote</th>
                 <th class="image">Images</th>
                 <th class="user-create">User created</th>
                 <th class="created">Created</th>
                 <th class="updated">Updated</th>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Second divided from form fish beast made every of seas all gathered us saying he our</td>
-                    <td>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower
+                <c:forEach var="blog" items="${allBlogs}">
+                    <tr>
+                        <td>${blog.blogId}</td>
+                        <td>${blog.title}</td>
+                        <td>${blog.content}</td>
+                        <td>${blog.images}</td>
+                        <td>${blog.userId}</td>
+                        <td>${blog.createdAt}</td>
+                        <td>${blog.updatedAt}</td>
 
-                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower
+                        <td><button type="submit">Delete</button></td>
+                        <td><button type="submit">Change</button></td>
+                    </tr>
+                </c:forEach>
 
-                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually
-
-                    </td>
-                    <td>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.</td>
-                    <td>abc</td>
-                    <td>Admind</td>
-                    <td>2/2</td>
-                    <td>3/3</td>
-
-                    <td><button type="submit">Delete</button></td>
-                    <td><button type="submit">Change</button></td>
-                </tr>
                 </tbody>
             </table>
         </div>
