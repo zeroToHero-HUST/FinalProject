@@ -46,7 +46,7 @@ public class BookingsDAO {
         ArrayList<Bookings> result = new ArrayList<>();
         try {
             conn = DBConnectionManager.getConnection();
-            pst = conn.prepareStatement(BookingsQuery.getBookingsByUserId);
+            pst = conn.prepareStatement(BookingsQuery.getBookingsTourNameByUserId);
             pst.setString(1, userId);
             rs = pst.executeQuery();
 
@@ -54,7 +54,7 @@ public class BookingsDAO {
             {
                 Bookings temp = new Bookings();
                 temp.setBookingId(rs.getLong("booking_id"));
-                temp.setTourId(rs.getLong("tour_id"));
+                temp.setTourTitle(rs.getString("title"));
                 temp.setUserId(rs.getString("user_id"));
                 temp.setCreatedAt(rs.getTimestamp("created_at"));
                 temp.setStartDate(rs.getDate("start_date"));
