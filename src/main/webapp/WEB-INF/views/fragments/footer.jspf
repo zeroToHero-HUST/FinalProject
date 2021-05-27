@@ -12,23 +12,23 @@
                     <a href="#"><img src="https://preview.colorlib.com/theme/travelo/img/footer_logo.png" alt=""></a>
                 </div>
                 <p class="footer-info">
-                    5th flora, 700/D kings road, green
+                    Trần Đại Nghĩa, Hai Bà Trưng, Hà Nội
                     <br>
-                    lane New York-1782
+                    Công ty về du lịch
                     <br>
                     <a href="#">+10 367 826 2567</a>
                     <br>
-                    <a href="#">contact@carpenter.com</a>
+                    <a href="#">sieucapvippro@sis.hust.edu.vn</a>
                 </p>
-                <div class="social-links">
-                    <ul>
-                        <li><a href=""><i class="ti-facebook"></i></a></li>
-                        <li><a href=""><i class="ti-twitter"></i></a></li>
-                        <li><a href=""><i class="ti-instagram"></i></a></li>
-                        <li><a href=""><i class="ti-pinterest"></i></a></li>
-                        <li><a href=""><i class="ti-youtube"></i></a></li>
-                    </ul>
-                </div>
+<%--                <div class="social-links">--%>
+<%--                    <ul>--%>
+<%--                        <li><a href=""><i class="ti-facebook"></i></a></li>--%>
+<%--                        <li><a href=""><i class="ti-twitter"></i></a></li>--%>
+<%--                        <li><a href=""><i class="ti-instagram"></i></a></li>--%>
+<%--                        <li><a href=""><i class="ti-pinterest"></i></a></li>--%>
+<%--                        <li><a href=""><i class="ti-youtube"></i></a></li>--%>
+<%--                    </ul>--%>
+<%--                </div>--%>
             </div>
 
             <div class="col col-sixth footer-widget m-col-half s-col-full footer-company">
@@ -42,7 +42,7 @@
             </div>
 
             <div class="col col-quater footer-widget m-col-half s-col-full footer-des">
-                <h3 class="footer-title">Popular Destination</h3>
+                <h3 class="footer-title">Chuyến du lịch</h3>
                 <ul class="footer-links col-2">
                     <li><a href="">Đà Nẵng</a></li>
                     <li><a href="">Hà Nội</a></li>
@@ -56,7 +56,7 @@
             </div>
 
             <div class="col col-quater footer-widget m-col-half s-col-full footer-insta pull-right">
-                <h3 class="footer-title">Instagram</h3>
+                <h3 class="footer-title">Cảnh đẹp</h3>
                 <ul class="insta-place col-3">
                     <li><a href=""><img src="https://preview.colorlib.com/theme/travelo/img/instagram/1.png" alt=""></a></li>
                     <li><a href=""><img src="https://preview.colorlib.com/theme/travelo/img/instagram/4.png" alt=""></a></li>
@@ -72,7 +72,7 @@
         <!-- copyright -->
         <div class="copyright-section">
             <div class="border-copyright m-col-full"></div>
-            <p class="copyright">Copyright ©2021 All rights reserved | This template is made with  by Colorlib</p>
+            <p class="copyright">Copyright ©2021</p>
         </div>
 
     </div>

@@ -1,102 +1,5 @@
 /*background-image: url('../images/slider/mien-bac.jpg');*/
 
-#main-menu {
-    float: left;
-    padding: 0 15px;
-}
-
-#main-menu ul {
-    list-style-type: none;
-}
-
-#main-menu li {
-    display: inline-block;
-    margin-right: 35px;
-}
-
-#main-menu a {
-    font-size: 15px;
-    color: #000;
-    text-decoration: none;
-}
-
-#main-menu a:hover {
-    color: #1ec6b6;
-    transition: 0.3s;
-}
-
-
-#contact {
-    float: right;
-    display: inline-block;
-    width: 300px;
-}
-
-#contact .phone-number {
-    float: left;
-    display: inline-block;
-    font-size: 14px;
-
-}
-
-#contact .phone-number a{
-    text-decoration: none;
-    color: #363e52;
-}
-
-#contact .phone-number a:hover {
-    color: rgb(255, 77, 85);
-    transition: 0.3s;
-}
-
-#contact .phone-number p {
-    padding-right: 10px;
-    border-right: 1px solid rgb(234, 234, 234);
-
-}
-
-#contact .phone-number i{
-    color: #FF4A52
-}
-
-
-#contact .user {
-    display: inline-block;
-    float: right;
-    color: #f7fafd;
-}
-
-#contact .user a {
-    text-decoration: none;
-    color: #f7fafd;
-}
-
-#contact .user .sign-up {
-    display: inline-block;
-    background-color: rgba(255, 74, 82, 0.6);
-    border-radius: 5px;
-    padding: 0 10px;
-    font-size: 18px;
-}
-
-#contact .user .sign-up:hover {
-    background-color: #ff464f;
-    transition: 0.3s;
-}
-
-#contact .user .log-in {
-    display: inline-block;
-    background-color: rgba(30, 198, 182,0.6);
-    border-radius: 5px;
-    padding: 0 10px;
-    font-size: 18px;
-}
-
-#contact .user .log-in:hover {
-    background-color: #1ec6b0;
-    transition: 0.3s;
-}
-
 
 #slider{
     transition: background-image 0.5s ;
@@ -104,7 +7,6 @@
     width: 100%;
     height: 650px;
     background-image: url('../images/slider/mien-bac.jpg');
-
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -280,7 +182,7 @@
 
 .places-area {
     padding: 142px 0 150px 0;
-
+    overflow: hidden;
 }
 
 .places-area .container {
@@ -430,7 +332,7 @@
 
 }
 .detail .single-destination:hover {
-    box-shadow: 0 10px 20px rgb(0 0 0 / 5%);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     transition: 0.3s;
 }
 
@@ -543,6 +445,12 @@
     transform: translateX(-50%);
     border: none;
     bottom: -50px;
+    cursor: pointer;
+}
+
+.more-places button:hover {
+    background-color: #1ec6b6;
+    transition: 0.3s;
 }
 
 #footer {

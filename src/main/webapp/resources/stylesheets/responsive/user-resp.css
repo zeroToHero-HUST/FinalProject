@@ -17,8 +17,13 @@
 
 /* table & mobile */
 @media screen and (max-width: 1023px) {
+    .user-panel {
+        margin-top: 0;
+    }
+
     .user-panel .container {
         width: 760px;
+        max-width: 100%;
     }
 
     .user-panel .container .profile {
@@ -33,6 +38,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 350px;
+        max-width: 100%;
     }
 
     .booking-list {
@@ -47,7 +53,20 @@
 @media screen and (max-width: 1159px) {
     .booking-list {
         width: 1023px;
+        max-width: 100%;
     }
+}
+
+@media all and (max-width: 414px) {
+    thead .description-id, thead .user-id, thead .created-at {
+        display: none;
+    }
+
+    tbody .description-id, tbody .user-id, tbody .created-at {
+        display: none;
+    }
+
+
 }
 
 

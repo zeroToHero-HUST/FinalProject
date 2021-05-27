@@ -17,15 +17,15 @@
 </head>
 <body>
 <div id="sign_up-link">
-    <p>Don't have an account yet?
-        <a href="" class="sign_up-btn">Sign up</a>
-        <a href="" class="need-help">Need help?</a>
+    <p>Bạn đã có tài khoản chưa?
+        <a href="" class="sign_up-btn">Đăng kí</a>
+<%--        <a href="" class="need-help">Need help?</a>--%>
     </p>
 </div>
 
 <div id="content">
-    <h2>Type form</h2>
-    <h3>Hello</h3>
+    <h2>Travello</h2>
+    <h3>Chào bạn!</h3>
     <div class="form-control">
         <form action="log-in" method="post">
             <div class="form-email">
@@ -35,14 +35,14 @@
             </div>
             <div class="form-pass">
 
-                <label for="password">Password</label>
-                <input type="password" placeholder="At least 6 charecters" name="password" id="password" minlength="6" maxlength="25" required>
+                <label for="password">Mật khẩu</label>
+                <input type="password" placeholder="Gồm ít nhất 6 kí tự" name="password" id="password" minlength="6" maxlength="25" required>
             </div>
-            <a href="">I forgot my password</a>
+            <a href="">Quên mật khẩu</a>
             <c:if test="${error}">
                 <p>Email hoặc mật khẩu không đúng.</p>
             </c:if>
-            <input type="submit" value="Log in to Typeform">
+            <input type="submit" value="Đăng nhập">
         </form>
     </div>
 </div>
