@@ -28,9 +28,9 @@
 <!-- begin: slide -->
 <div id="slider">
     <div class="slider-contents fade">
-        <h3>Indonesia</h3>
-        <p>Pixel perfect design with awesome contents</p>
-        <a href="">Explore Now</a>
+        <h3>Việt nam</h3>
+        <p>Tự hào dân tộc Việt Nam</p>
+<%--        <a href="">Explore Now</a>--%>
     </div>
     <!-- <div class="slider-contents fade">
         <h3>Iabc</h3>
@@ -49,12 +49,12 @@
 <div class="where-to-go-area">
     <div class="container">
         <div class="where-you-want-to-go">
-            <h3>Where you want to go?</h3>
+            <h3>Bạn muốn đi đâu ?</h3>
         </div>
         <div class="form-search">
             <form action="" method="get">
                 <div class="input-field">
-                    <input type="text" placeholder="Where to go?">
+                    <input type="text" placeholder="Nơi bạn muốn đi?">
                 </div>
 <%--                <div class="input-field date">--%>
 <%--                    <input type="date" placeholder="Date">--%>
@@ -68,7 +68,7 @@
 <%--                    </select>--%>
 <%--                </div>--%>
                 <div class="search-btn">
-                    <button type="submit">Search</button>
+                    <button type="submit">Tìm kiếm</button>
                 </div>
             </form>
         </div>
@@ -80,7 +80,7 @@
 <div class="places-area">
     <div class="container">
         <div class="filter-result-wrap">
-            <h3>Filter Result</h3>
+            <h3>Bộ lọc tìm kiếm</h3>
             <div class="filter-bordered">
                 <div class="filter-inner">
                     <div class="single-select">
@@ -101,12 +101,12 @@
                         </div> -->
                     </div>
                     <div class="single-select">
-                        <select name="" id="" style="display: inline-block;">
-                            <option data-display="Travel type">Travel type</option>
-                            <option value="1">advanve</option>
-                            <option value="2">advance</option>
-                            <option value="3">premium</option>
-                        </select>
+<%--                        <select name="" id="" style="display: inline-block;">--%>
+<%--                            <option data-display="Travel type">Kiểu du lịch</option>--%>
+<%--                            <option value="1">advanve</option>--%>
+<%--                            <option value="2">advance</option>--%>
+<%--                            <option value="3">premium</option>--%>
+<%--                        </select>--%>
                         <!-- <div class="nice-select">
                             <span class="current"></span>
                             <ul class="list">
@@ -143,7 +143,7 @@
                                 <div class="rate">
                             <span>
                                 <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}" >(20 Review)</a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}" >(20 Nhận xét)</a>
                             </span>
                                     <div class="days">
                                         <i class="ti-alarm-clock"></i>
@@ -179,7 +179,7 @@
             </c:forEach>
 
             <div class="more-places">
-                <button id = "more-button" onclick="morePlaces();">More Places</button>
+                <button id = "more-button" onclick="morePlaces();">Mở rộng</button>
             </div>
         </div>
     </div>

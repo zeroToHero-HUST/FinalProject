@@ -127,11 +127,11 @@
 
 .form-search .input-field {
     display: inline-block;
-    padding-right: 5px;
+    padding-right: 15px;
 }
 
 .form-search .input-field input, .form-search .input-field select{
-    width: 200px;
+    width: 250px;
     height: 50px;
     background: transparent;
     padding-left: 15px;
