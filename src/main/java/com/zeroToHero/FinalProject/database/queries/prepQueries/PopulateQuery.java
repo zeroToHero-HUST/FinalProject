@@ -29,6 +29,11 @@ public interface PopulateQuery {
         "('test@gmail.com', '$argon2id$v=19$m=10240,t=10,p=1$1e3bvoJl439uLUEY1ttdkw$OVQRZyefLkDzvbmB0HkG4+9pgoHfpHDosX1FXOJQDRQ', 'A', 'B', 'user', 1),\n" +
         "('test2@gmail.com', '$argon2id$v=19$m=10240,t=10,p=1$1e3bvoJl439uLUEY1ttdkw$OVQRZyefLkDzvbmB0HkG4+9pgoHfpHDosX1FXOJQDRQ', 'C', 'B', 'user', 1),\n" +
         "('test3@gmail.com', '$argon2id$v=19$m=10240,t=10,p=1$1e3bvoJl439uLUEY1ttdkw$OVQRZyefLkDzvbmB0HkG4+9pgoHfpHDosX1FXOJQDRQ', 'A', 'D', 'user', 1),\n" +
+        "('test5@gmail.com', '$argon2id$v=19$m=10240,t=10,p=1$1e3bvoJl439uLUEY1ttdkw$OVQRZyefLkDzvbmB0HkG4+9pgoHfpHDosX1FXOJQDRQ', 'xA', 'mD', 'user', 1),\n" +
+        "('test6@gmail.com', '$argon2id$v=19$m=10240,t=10,p=1$1e3bvoJl439uLUEY1ttdkw$OVQRZyefLkDzvbmB0HkG4+9pgoHfpHDosX1FXOJQDRQ', 'r', 'D', 'user', 1),\n" +
+        "('test7@gmail.com', '$argon2id$v=19$m=10240,t=10,p=1$1e3bvoJl439uLUEY1ttdkw$OVQRZyefLkDzvbmB0HkG4+9pgoHfpHDosX1FXOJQDRQ', 'm', 'D', 'user', 1),\n" +
+        "('test8@gmail.com', '$argon2id$v=19$m=10240,t=10,p=1$1e3bvoJl439uLUEY1ttdkw$OVQRZyefLkDzvbmB0HkG4+9pgoHfpHDosX1FXOJQDRQ', 'A', 'D', 'user', 1),\n" +
+        "('test9@gmail.com', '$argon2id$v=19$m=10240,t=10,p=1$1e3bvoJl439uLUEY1ttdkw$OVQRZyefLkDzvbmB0HkG4+9pgoHfpHDosX1FXOJQDRQ', 'A', 'D', 'user', 1),\n" +
         "('test4@gmail.com', '$argon2id$v=19$m=10240,t=10,p=1$1e3bvoJl439uLUEY1ttdkw$OVQRZyefLkDzvbmB0HkG4+9pgoHfpHDosX1FXOJQDRQ', 'E', 'B', 'user', 1);"
     );
 
