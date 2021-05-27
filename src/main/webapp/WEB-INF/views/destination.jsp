@@ -134,11 +134,11 @@
                     <c:when test="${destination.tourId le 4}">
                         <div class="single-destination" id = "tour${destination.tourId}">
                             <div class="thumb">
-                                <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
+                                <img src="${pageContext.request.contextPath}/resources/images/${destination.images}" alt="">
                                 <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}" id = "tour${destination.tourId}Price">${destination.price}</a>
                             </div>
                             <div class="destination-infor">
-                                <a href=""><h3>${destination.title}</h3></a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"><h3>${destination.title}</h3></a>
                                 <p>${destination.countryName}</p>
                                 <div class="rate">
                             <span>

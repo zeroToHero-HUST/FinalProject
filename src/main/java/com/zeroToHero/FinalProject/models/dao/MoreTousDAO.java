@@ -108,7 +108,7 @@ public class MoreTousDAO {
         Statement st = null;
         ResultSet rs = null;
         String getMoreTours =
-                "SELECT tours.tour_id, title, duration, price, countries.name AS country_name " +
+                "SELECT tours.tour_id, title, duration, price, countries.name AS country_name, images " +
                         "FROM tours, destinations, cities, countries " +
                         "WHERE tours.tour_id = destinations.tour_id " +
                         "AND destinations.city_id = cities.city_id " +
@@ -131,6 +131,8 @@ public class MoreTousDAO {
                 tour.setDuration(rs.getLong("duration"));
                 tour.setPrice(rs.getString("price"));
                 tour.setCountryName(rs.getString("country_name"));
+                String[] images = (String[]) rs.getArray("images").getArray();
+                tour.setImages(images[0]);
                 allTours.add(tour);
             }
         }

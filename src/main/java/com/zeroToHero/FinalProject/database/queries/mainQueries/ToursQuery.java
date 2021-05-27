@@ -2,7 +2,7 @@ package com.zeroToHero.FinalProject.database.queries.mainQueries;
 
 public interface ToursQuery {
     String getPopularTours =
-        "SELECT tours.tour_id, title, duration, price, countries.name AS country_name " +
+        "SELECT tours.tour_id, title, duration, price, countries.name AS country_name, images " +
         "FROM tours, destinations, cities, countries " +
         "WHERE tours.tour_id = destinations.tour_id " +
                 "AND destinations.city_id = cities.city_id " +
