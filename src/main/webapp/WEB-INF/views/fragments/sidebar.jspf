@@ -1,9 +1,11 @@
 <!-- begin: sidebar -->
 <div class="sidebar-wrapper">
+    <form method="post" action="${pageContext.request.contextPath}/log-out" name="log-out" id="log-out"></form>
+
     <!-- begin: logo  -->
     <div class="logo">
         <p>${user.firstName} ${user.lastName}</p>
-        <a href=""><i class="ti-power-off"></i></a>
+        <a onclick="document.getElementById('log-out').submit();"><i class="ti-power-off"></i></a>
     </div>
     <!-- end: logo  -->
 
@@ -15,7 +17,7 @@
                 <p>User Profile</p>
             </a>
         </li>
-        <li class="choosed">
+        <li>
             <a href="blog" class="nav-link">
                 <i class="ti-clipboard"></i>
                 <p>Blog</p>
