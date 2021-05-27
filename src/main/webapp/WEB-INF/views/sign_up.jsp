@@ -18,8 +18,7 @@
 <body>
 <div id="sign_up-link">
     <p>Bạn đã đăng kí tài khoản?
-        <a href="" class="sign_up-btn">Đăng nhập</a>
-<%--        <a href="" class="need-help">Need help?</a>--%>
+        <a href="log-in" class="sign_up-btn">Đăng nhập</a>
     </p>
 </div>
 
