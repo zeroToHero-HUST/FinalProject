@@ -91,14 +91,14 @@
                 <th class="start-date">Bắt đầu</th>
                 <th class="end-date">Kết thúc</th>
                 <th class="user-id">Người đặt</th>
-                <th class="price"Giá</th>
+                <th class="price">Giá</th>
                 <th class="created-at">Đặt lúc</th>
                 </thead>
                 <tbody>
                 <c:forEach var="booking" items="${bookings}">
                     <tr>
                         <td>${booking.bookingId}</td>
-                        <td>${booking.tourId}</td>
+                        <td>${booking.tourTitle}</td>
                         <td>${booking.startDate}</td>
                         <td>${booking.endDate}</td>
                         <td>${booking.userId}</td>

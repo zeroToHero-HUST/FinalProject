@@ -38,13 +38,13 @@ public interface PopulateQuery {
     );
 
     StringBuilder insertTours = new StringBuilder(
-        "INSERT INTO tours (title, description, duration, price) VALUES\n" +
-        "('Hà Nội', 'Cùng khám phá mảnh đất thủ đô ngàn năm văn hiến.', 2, 1000000),\n" +
-        "('Hà Nội - Hải Phòng', 'Cùng khám phá mảnh đất thủ đô ngàn năm văn hiến và Thành phố Hải Phòng.', 4, 1500000),\n" +
-        "('Đà Nẵng', 'Cùng khám phá thành phố Đà Nẵng tươi đẹp.', 3, 1200000),\n" +
-        "('Thừa Thiên Huế', 'Cùng khám phá cố đô Huế cổ kính.', 2, 800000),\n" +
-        "('Đà Nẵng - Thừa Thiên Huế', 'Cùng khám phá cố đô Huế cổ kính và thành phố Đà Nẵng.', 4, 1700000),\n" +
-        "('Thành phố Hồ Chí Minh', 'Cùng khám phá thành phố Hồ Chí Minh tươi đẹp.', 3, 1000000);"
+        "INSERT INTO tours (title, description, duration, price, images) VALUES\n" +
+        "('Hà Nội', 'Cùng khám phá mảnh đất thủ đô ngàn năm văn hiến.', 2, 1000000, ARRAY['tours/hanoi.jpeg']),\n" +
+        "('Hà Nội - Hải Phòng', 'Cùng khám phá mảnh đất thủ đô ngàn năm văn hiến và Thành phố Hải Phòng.', 4, 1500000, ARRAY['tours/hanoi-haiphong.jpeg']),\n" +
+        "('Đà Nẵng', 'Cùng khám phá thành phố Đà Nẵng tươi đẹp.', 3, 1200000, ARRAY['tours/danang.jpeg']),\n" +
+        "('Thừa Thiên Huế', 'Cùng khám phá cố đô Huế cổ kính.', 2, 800000, ARRAY['tours/hue.jpeg']),\n" +
+        "('Đà Nẵng - Thừa Thiên Huế', 'Cùng khám phá cố đô Huế cổ kính và thành phố Đà Nẵng.', 4, 1700000, ARRAY['tours/hue-danang.jpeg']),\n" +
+        "('Thành phố Hồ Chí Minh', 'Cùng khám phá thành phố Hồ Chí Minh tươi đẹp.', 3, 1000000, ARRAY['tours/tphcm.jpeg']);"
     );
 
     StringBuilder insertBlogs = new StringBuilder(

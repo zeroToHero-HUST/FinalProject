@@ -86,7 +86,7 @@
             <c:forEach var="destination" items="${popTours}">
                 <div class="single-destination">
                     <div class="thumb">
-                        <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/images/${destination.images}" alt="">
                         <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}">${destination.price}</a>
                     </div>
                     <div class="destination-infor">

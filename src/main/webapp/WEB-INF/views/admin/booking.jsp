@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: phamtuanson
@@ -22,7 +23,7 @@
         <!-- begin: booking-edit -->
         <div class="booking-panel">
             <div class="card">
-                <div class="card-header">
+                <%--<div class="card-header">
                     <h4>Edit booking</h4>
                 </div>
                 <div class="card-body">
@@ -36,7 +37,7 @@
                         <div class="price"><input type="text" placeholder="Price"></div>
                         <button type="submit">Submit</button>
                     </form>
-                </div>
+                </div>--%>
             </div>
         </div>
         <!-- end: booking-edit -->
@@ -50,8 +51,7 @@
                 <div class="card-body">
                     <table>
                         <thead>
-                        <th class="id">Id</th>
-                        <th class="description-id">description-id</th>
+                        <th class="id">bookingId</th>
                         <th class="name">Name</th>
                         <th class="start-date">Start-date</th>
                         <th class="end-date">End-date</th>
@@ -60,18 +60,18 @@
                         <th class="created-at">Created-at</th>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>123456</td>
-                            <td>Ha noi - hai phong</td>
-                            <td>5/2/2021</td>
-                            <td>31/4/2021</td>
-                            <td>qweq1231q123</td>
-                            <td>5.000.000</td>
-                            <td>6/2/2021</td>
-                            <td><button type="submit">Delete</button></td>
-                            <td><button type="submit">Change</button></td>
-                        </tr>
+                        <c:forEach var="booking" items="${allBookings}">
+                            <tr>
+                                <td>${booking.bookingId}</td>
+                                <td>${booking.tourTitle}</td>
+                                <td>${booking.startDate}</td>
+                                <td>${booking.endDate}</td>
+                                <td>${booking.userId}</td>
+                                <td>${booking.price}</td>
+                                <td>${booking.createdAt}</td>
+                            </tr>
+                        </c:forEach>
+
                         </tbody>
                     </table>
                 </div>

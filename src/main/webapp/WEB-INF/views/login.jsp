@@ -37,7 +37,6 @@
                 <label for="password">Mật khẩu</label>
                 <input type="password" placeholder="Gồm ít nhất 6 kí tự" name="password" id="password" minlength="6" maxlength="25" required>
             </div>
-            <a href="">Quên mật khẩu</a>
             <c:if test="${error}">
                 <p>Email hoặc mật khẩu không đúng.</p>
             </c:if>
