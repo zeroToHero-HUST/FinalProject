@@ -18,8 +18,8 @@
 <body>
 <div id="sign_up-link">
     <p>Already have an account?
-        <a href="" class="sign_up-btn">Log in</a>
-        <a href="" class="need-help">Need help?</a>
+        <a href="log-in" class="sign_up-btn">Log in</a>
+        <a href="contact" class="need-help">Need help?</a>
     </p>
 </div>
 
