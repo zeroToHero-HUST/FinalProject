@@ -26,18 +26,18 @@
     <i class="right ti-angle-right" onclick="ChangeRight();"></i>
     <div class="slider-contents slider-1 fade">
         <h3>Miền Bắc</h3>
-        <p>Pixel perfect design with awesome contents</p>
-        <a href="">Explore Now</a>
+<%--        <p>Pixel perfect design with awesome contents</p>--%>
+        <a href="">Khám phá ngay</a>
     </div>
     <div class="slider-contents slider-2 fade" style="display: none;" >
         <h3>Miền Trung</h3>
-        <p>Pixel perfect design with awesome contents</p>
-        <a href="">Explore Now</a>
+<%--        <p>Pixel perfect design with awesome contents</p>--%>
+        <a href="">Khám phá ngay</a>
     </div>
     <div class="slider-contents slider-3 fade" style="display: none;">
         <h3>Miền Nam</h3>
-        <p>Pixel perfect design with awesome contents</p>
-        <a href="">Explore Now</a>
+<%--        <p>Pixel perfect design with awesome contents</p>--%>
+        <a href="">Khám phá ngay</a>
     </div>
 </div>
 
@@ -47,12 +47,12 @@
 <div class="where-to-go-area">
     <div class="container">
         <div class="where-you-want-to-go">
-            <h3>Where you want to go?</h3>
+            <h3>Bạn muốn đi đâu ?</h3>
         </div>
         <div class="form-search">
             <form id ="newForm" onsubmit="return false">
                 <div class="input-field" >
-                    <input type="search" placeholder="Where to go?" id = "search-text">
+                    <input type="search" placeholder="Nơi bạn muốn đi?" id = "search-text">
                 </div>
 <%--                <div class="input-field date">--%>
 <%--                    <input type="search" placeholder="Date">--%>
@@ -65,7 +65,7 @@
 <%--                    </select>--%>
 <%--                </div>--%>
                 <div class="search-btn">
-                    <button onclick="searchBar();">Search</button>
+                    <button onclick="searchBar();">Tìm kiếm</button>
                 </div>
             </form>
         </div>
@@ -79,8 +79,8 @@
 <div class="popular-destinations-area">
     <div class="container">
         <div class="description">
-            <h3>Popular Destinations</h3>
-            <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
+            <h3>Những chuyến du lịch <br> phổ biến nhất</h3>
+            <p>Những chuyến du lịch có chất lượng tốt nhất, được phản hồi tốt nhất của khách hàng </p>
         </div>
         <div class="detail" id="des-detail">
             <c:forEach var="destination" items="${popTours}">
@@ -228,7 +228,7 @@
 
         </div>
         <div class="more-places">
-            <a href="${pageContext.request.contextPath}/destination">More Places</a>
+            <a href="${pageContext.request.contextPath}/destination">Mở rộng</a>
         </div>
     </div>
 </div>
@@ -243,27 +243,27 @@
                 <div class="travel-variation-icon">
                     <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/1.svg" alt="">
                 </div>
-                <h3 class="travel-variation-title">Comfortable Journey</h3>
+                <h3 class="travel-variation-title">An toàn</h3>
                 <p class="travel-variation-des">
-                    A wonderful serenity has taken to the possession of my entire soul.
+                    Đối với chúng tôi an toàn là ưu tiên hàng đầu.
                 </p>
             </div>
             <div class="col col-third travel-variation-item m-col-third s-col-full text-align">
                 <div class="travel-variation-icon">
                     <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/2.svg" alt="">
                 </div>
-                <h3 class="travel-variation-title">Comfortable Journey</h3>
+                <h3 class="travel-variation-title">Thoải mái</h3>
                 <p class="travel-variation-des">
-                    A wonderful serenity has taken to the possession of my entire soul.
+                    Dịch vụ tiện nghi cùng với những khách sạn hàng đầu đảm bảo sẽ làm bạn hài lòng.
                 </p>
             </div>
             <div class="col col-third travel-variation-item m-col-third s-col-full text-align">
                 <div class="travel-variation-icon">
                     <img src="https://preview.colorlib.com/theme/travelo/img/svg_icon/3.svg" alt="">
                 </div>
-                <h3 class="travel-variation-title">Comfortable Journey</h3>
+                <h3 class="travel-variation-title">Đa dạng</h3>
                 <p class="travel-variation-des">
-                    A wonderful serenity has taken to the possession of my entire soul.
+                    Rất nhiều chuyến đi khắp mọi miền tổ quốc sẽ chiều lòng được tất cả các yêu cầu của bạn.
                 </p>
             </div>
 
@@ -282,11 +282,11 @@
                     </div>
                     <div class="feedback-text">
                         <p>
-                            "Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."
+                            "Đây thực sự là 1 trải nghiệm bạn nên thử một lần trong đời"
                         </p>
                     </div>
                     <div class="feedback-author">
-                        <p>- Micky Mouse</p>
+                        <p>- Nguyễn Quang Anh</p>
                     </div>
                 </div>
 
@@ -296,11 +296,11 @@
                     </div>
                     <div class="feedback-text">
                         <p>
-                            " with humanitarian aid agencies, we have supported programmes to help alleviate human suffering."
+                            "Trong cuộc đời mình, đây là lần đầu tiên tôi được tận hưởng một dịch vụ tốt như thế này"
                         </p>
                     </div>
                     <div class="feedback-author">
-                        <p>- Micky Mouse2</p>
+                        <p>- Đỗ Việt Hoàng</p>
                     </div>
                 </div>
 
@@ -310,11 +310,11 @@
                     </div>
                     <div class="feedback-text">
                         <p>
-                            "Witarian aid agencies, we have supported programmes to help alleviate human suffering."
+                            "Nhân viên thực sự nhiệt tình, chốn nghỉ ngơi cao cấp, quả thực là một chuyến đi để đời"
                         </p>
                     </div>
                     <div class="feedback-author">
-                        <p>- Micky Mouse3</p>
+                        <p>- Nguyễn Thái Việt</p>
                     </div>
                 </div>
             </div>
@@ -329,7 +329,7 @@
     </div>
     <!-- Blog section -->
     <div class="blog">
-        <h3 class="blog-title text-align">Recent Trips</h3>
+        <h3 class="blog-title text-align">Blogs</h3>
 
         <div class="row blog-list">
             <div class="col col-third blog-item m-col-third s-col-full">

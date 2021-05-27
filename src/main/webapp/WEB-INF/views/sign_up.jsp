@@ -17,22 +17,22 @@
 </head>
 <body>
 <div id="sign_up-link">
-    <p>Already have an account?
-        <a href="" class="sign_up-btn">Log in</a>
-        <a href="" class="need-help">Need help?</a>
+    <p>Bạn đã đăng kí tài khoản?
+        <a href="" class="sign_up-btn">Đăng nhập</a>
+<%--        <a href="" class="need-help">Need help?</a>--%>
     </p>
 </div>
 
 <div id="content">
-    <h2>Type form</h2>
+    <h2>Travello</h2>
     <div class="form-control">
         <form action="sign-up" method="post">
             <div class="form-fistname">
-                <label for="firstname">First Name</label>
+                <label for="firstname">Tên</label>
                 <input type="text" placeholder="Bruce" name="firstName" id="firstname" maxlength="99" required>
             </div>
             <div class="form-lastname">
-                <label for="lastname">Last Name</label>
+                <label for="lastname">Họ</label>
                 <input type="text" placeholder="Wayne" name="lastName" id="lastname" maxlength="99" required>
             </div>
             <div class="form-email">
@@ -40,15 +40,15 @@
                 <input type="email" placeholder="bruce@wayne.com" name="email" id="email" required>
             </div>
             <div class="form-password">
-                <label for="password">Password</label>
-                <input type="password" placeholder="At least 6 charecters" name="password" id="password" minlength="6" maxlength="25" required>
+                <label for="password">Mật khẩu</label>
+                <input type="password" placeholder="Gồm ít nhất 6 kí tự" name="password" id="password" minlength="6" maxlength="25" required>
             </div>
 
             <c:if test="${error}">
                 <p>Địa chỉ email này đã được sử dung. Vui lòng chọn địa chỉ khác.</p>
             </c:if>
 
-            <input type="submit" value="Creat my free acount">
+            <input type="submit" value="Đăng kí tài khoản">
         </form>
     </div>
 </div>

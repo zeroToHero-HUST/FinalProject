@@ -11,7 +11,7 @@
 }
 
 /* mobile  */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 740px) {
 
 }
 
@@ -91,6 +91,14 @@
 
     .header-contents #contact .phone-number {
         display: none;
+    }
+
+    #contact .user .log-in {
+        font-size: 12px;
+    }
+
+    #contact .user .sign-up {
+        font-size: 12px;
     }
 
     #slider {

@@ -13,11 +13,11 @@
         <!-- begin: main menu  -->
         <div id="main-menu">
             <ul>
-                <li><a href="${pageContext.request.contextPath}/">Home</a></li>
-                <li><a href="${pageContext.request.contextPath}/about_us">About</a></li>
-                <li><a href="${pageContext.request.contextPath}/destination">Destination</a></li>
+                <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>
+                <li><a href="${pageContext.request.contextPath}/about_us">Về chúng tôi</a></li>
+                <li><a href="${pageContext.request.contextPath}/destination">Du lịch</a></li>
                 <li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
-                <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
+<%--                <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>--%>
                 <li>
                     <c:if test="${admin}">
                         <a href="${pageContext.request.contextPath}/admin">
@@ -52,19 +52,19 @@
 
                         <a onclick="document.getElementById('log-out').submit();">
                             <div class="sign-up">
-                                Log out
+                                Đăng xuất
                             </div>
                         </a>
                     </c:when>
                     <c:otherwise>
                         <a href="${pageContext.request.contextPath}/log-in">
                             <div class="log-in">
-                                Log in
+                                Đăng nhập
                             </div>
                         </a>
                         <a href="${pageContext.request.contextPath}/sign-up">
                             <div class="sign-up">
-                                Sign up
+                                Đăng kí
                             </div>
                         </a>
                     </c:otherwise>

@@ -20,6 +20,10 @@ body{
         height: 600px;
     }
 
+    #slider .slider-contents h3 {
+        font-size: 75px !important;
+    }
+
     /* Our story */
 
     #content .our-story {
@@ -151,3 +155,4 @@ body{
     }
 
 }
+

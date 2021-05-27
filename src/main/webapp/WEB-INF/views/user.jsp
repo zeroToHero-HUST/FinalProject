@@ -18,6 +18,9 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/user-resp.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/footer-resp.css" />
 
+    <script src="${pageContext.request.contextPath}/resources/javascripts/header.js" defer ></script>
+
+
 </head>
 <body>
 
@@ -29,7 +32,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h4>Edit profile</h4>
+                <h4>Chỉnh sửa thông tin cá nhân</h4>
                 <c:if test="${result == -1}">
                     <h4>Tạo mới hoặc cập nhật thất bại</h4>
                 </c:if>
@@ -49,12 +52,12 @@
                         <input type="email" name="email" value="${dbUser.email}" readonly>
                     </div>
                     <div class="password">
-                        <input type="password" name="password"  placeholder="Password">
+                        <input type="password" name="password"  placeholder="Mật khẩu">
                     </div>
                     <div class="img" >
                         <input  type="file" accept="image/*">
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit">Xác nhận</button>
                 </form>
             </div>
         </div>
@@ -77,18 +80,19 @@
 <div class="booking-list">
     <div class="card">
         <div class="card-header">
-            <h4>Booking List</h4>
+            <h4>Tour du lịch đã đặt</h4>
         </div>
         <div class="card-body">
             <table>
                 <thead>
-                <th class="description-id">Booking ID</th>
-                <th class="name">Name</th>
-                <th class="start-date">Start date</th>
-                <th class="end-date">End date</th>
-                <th class="user-id">User ID</th>
-                <th class="price">Price</th>
-                <th class="created-at">Created at</th>
+
+                <th class="description-id">Định danh</th>
+                <th class="name">Tên</th>
+                <th class="start-date">Bắt đầu</th>
+                <th class="end-date">Kết thúc</th>
+                <th class="user-id">Người đặt</th>
+                <th class="price"Giá</th>
+                <th class="created-at">Đặt lúc</th>
                 </thead>
                 <tbody>
                 <c:forEach var="booking" items="${bookings}">
