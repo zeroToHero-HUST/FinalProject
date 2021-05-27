@@ -85,6 +85,7 @@
         <div class="card-body">
             <table>
                 <thead>
+
                 <th class="description-id">Định danh</th>
                 <th class="name">Tên</th>
                 <th class="start-date">Bắt đầu</th>
@@ -94,15 +95,17 @@
                 <th class="created-at">Đặt lúc</th>
                 </thead>
                 <tbody>
-                <tr>
-                    <td class="description-id">123456</td>
-                    <td class="name">Ha noi - hai phong</td>
-                    <td class="start-date">5/2/2021</td>
-                    <td class="end-date">31/4/2021</td>
-                    <td class="user-id">qweq1231q123</td>
-                    <td class="price">5.000.000</td>
-                    <td class="created-at">6/2/2021</td>
-                </tr>
+                <c:forEach var="booking" items="${bookings}">
+                    <tr>
+                        <td>${booking.bookingId}</td>
+                        <td>${booking.tourId}</td>
+                        <td>${booking.startDate}</td>
+                        <td>${booking.endDate}</td>
+                        <td>${booking.userId}</td>
+                        <td>${booking.price}</td>
+                        <td>${booking.createdAt}</td>
+                    </tr>
+                </c:forEach>
                 </tbody>
             </table>
         </div>
