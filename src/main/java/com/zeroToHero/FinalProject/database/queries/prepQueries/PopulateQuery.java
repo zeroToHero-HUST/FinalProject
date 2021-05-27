@@ -39,12 +39,12 @@ public interface PopulateQuery {
 
     StringBuilder insertTours = new StringBuilder(
         "INSERT INTO tours (title, description, duration, price) VALUES\n" +
-        "('Du lịch Hà Nội', 'Cùng khám phá mảnh đất thủ đô ngàn năm văn hiến.', 2, 1000000),\n" +
-        "('Du lịch Hà Nội - Hải Phòng', 'Cùng khám phá mảnh đất thủ đô ngàn năm văn hiến và Thành phố Hải Phòng.', 4, 1500000),\n" +
-        "('Du lịch Đà Nẵng', 'Cùng khám phá thành phố Đà Nẵng tươi đẹp.', 3, 1200000),\n" +
-        "('Du lịch Thừa Thiên Huế', 'Cùng khám phá cố đô Huế cổ kính.', 2, 800000),\n" +
-        "('Du lịch Đà Nẵng - Thừa Thiên Huế', 'Cùng khám phá cố đô Huế cổ kính và thành phố Đà Nẵng.', 4, 1700000),\n" +
-        "('Du lịch Thành phố Hồ Chí Minh', 'Cùng khám phá thành phố Hồ Chí Minh tươi đẹp.', 3, 1000000);"
+        "('Hà Nội', 'Cùng khám phá mảnh đất thủ đô ngàn năm văn hiến.', 2, 1000000),\n" +
+        "('Hà Nội - Hải Phòng', 'Cùng khám phá mảnh đất thủ đô ngàn năm văn hiến và Thành phố Hải Phòng.', 4, 1500000),\n" +
+        "('Đà Nẵng', 'Cùng khám phá thành phố Đà Nẵng tươi đẹp.', 3, 1200000),\n" +
+        "('Thừa Thiên Huế', 'Cùng khám phá cố đô Huế cổ kính.', 2, 800000),\n" +
+        "('Đà Nẵng - Thừa Thiên Huế', 'Cùng khám phá cố đô Huế cổ kính và thành phố Đà Nẵng.', 4, 1700000),\n" +
+        "('Thành phố Hồ Chí Minh', 'Cùng khám phá thành phố Hồ Chí Minh tươi đẹp.', 3, 1000000);"
     );
 
     StringBuilder insertBlogs = new StringBuilder(
