@@ -2,7 +2,7 @@
 .sidebar-wrapper {
     width: 260px;
     height: 821px;
-    background-image: url("../sidebar-admin.jpg");
+    background-image: url("../../images/sidebar-admin.jpg");
     background-color: rgba(0, 0, 0, 0.7);
     text-transform: uppercase;
     scroll-behavior: smooth;

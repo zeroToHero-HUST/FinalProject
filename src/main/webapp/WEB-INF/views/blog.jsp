@@ -38,7 +38,6 @@
         <!-- blog-list-page 1 (5item) -->
         <c:forEach var="page" begin="1" end = "${numPage}">
         <div class="blog-list">
-            <h1>${page}</h1>
             <c:forEach var = "blog" items="${allBlogs}">
                     <c:set value="${page*5}" var = "index"/>
                     <c:if test="${blog.blogId <= index}">
