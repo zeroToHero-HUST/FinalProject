@@ -57,12 +57,8 @@
                                 <h2>${blog.title}</h2>
                             </a>
                             <ul class="blog-info-link">
-                                <li class="link-user">
-                                    <a href="" class="link-user"><i class="ti-user"></i>Travel, Lifestyle</a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="ti-comment"></i>03 Comments</a>
-                                </li>
+
+
                             </ul>
                         </div>
                     </div>
