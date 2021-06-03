@@ -2,6 +2,8 @@ package com.zeroToHero.FinalProject.models.beans;
 
 
 import java.io.Serializable;
+import java.sql.Date;
+import java.time.LocalDateTime;
 
 public class Comments implements Serializable {
 
@@ -10,10 +12,33 @@ public class Comments implements Serializable {
     private String content;
     private java.sql.Timestamp createdAt;
     private java.sql.Timestamp updatedAt;
+    private LocalDateTime dateATime;
     private long blogId;
     private long reviewId;
-
+    private String userName;
+    private String dateTime;
     public Comments() {
+    }
+    public LocalDateTime getDateATime(){
+        return dateATime;
+    }
+    public void setDateATime(LocalDateTime dt){
+        dateATime = dt;
+    }
+    public String getDateTime(){
+        return dateTime;
+    }
+
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
+    }
+
+    public String getUserName(){
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public long getCommentId() {

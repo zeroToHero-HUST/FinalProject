@@ -224,9 +224,15 @@
         var range =  document.getElementById("sliderSearch").value;
         var i;
         for (i = 1; i <= ${numOfTours}; i++){
-            var t = document.getElementById("tour"+i+"Price").value;
-            document.getElementById("tour"+i+"Price").innerText = t;
-            if (parseInt(t) > 100000*parseInt(range)){
+            var t = document.getElementById("tour"+i+"Price").innerHTML;
+            // document.getElementById("tour"+i+"Price").innerText = (typeof t);
+            if (typeof t !== 'undefined'){
+                document.getElementById("tour"+i+"Price").innerText =${numOfTours};
+            }
+            t = t.replace(".","");
+            t = t.replace(".","");
+            t = t.replace(",","");
+            if (parseInt(t)/100 > 100000*parseInt(range)){
                 document.getElementById("tour"+i).style.display = "none";
             }
         }
@@ -234,8 +240,8 @@
     function morePlaces(){
         var i;
         var x = document.getElementById("more-button").innerText;
-        if (x === "More Places"){
-            document.getElementById("more-button").innerText = "Less Places";
+        if (x === "Mở rộng"){
+            document.getElementById("more-button").innerText = "Thu gọn";
             for (i = 4; i <= ${numOfTours}; i++){
                 var t = "tour"
                 t += i;
@@ -245,7 +251,7 @@
         }
 
         else{
-            document.getElementById("more-button").innerText ="More Places";
+            document.getElementById("more-button").innerText ="Mở rộng";
             for (i = 5; i <= ${numOfTours}; i++){
                 var t = "tour"
                 t += i;

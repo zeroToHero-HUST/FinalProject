@@ -45,8 +45,7 @@
             <div class="blog-details">
                 <h2>${thisBlog.title}</h2>
                 <ul>
-                    <li style="border-right: 1px solid rgb(102, 102, 102);"><a href=""><i class="ti-user" ></i> Travel, Lifestyle</a></li>
-                    <li><a href=""><i class="ti-comments"></i>  03 Comments</a></li>
+                    <li><a href=""><i class="ti-comments"></i> ${totalComments} Comments</a></li>
                 </ul>
                 ${thisBlog.content}
             </div>
@@ -68,15 +67,13 @@
                     </div> -->
                     <div class="details">
                         <p>Prev Post</p>
-                        <c:if test="${prevBlog != 0}">
-                        <a href=""><h4>${prevBlog.title}</h4></a>
-                        </c:if>
+                        <a href="${pageContext.request.contextPath}/singleBlog/single-blog?TotalBlogs=${totalBlogs}&BlogId=${prevBlog.blogId}"><h4>${prevBlog.title}</h4></a>
                     </div>
                 </div>
                 <div class="right">
                     <div class="details">
                         <p>Next Post</p>
-                        <a href=""><h4>${nextBlog.title}</h4></a>
+                        <a href="${pageContext.request.contextPath}/singleBlog/single-blog?TotalBlogs=${totalBlogs}&BlogId=${nextBlog.blogId}"><h4>${nextBlog.title}</h4></a>
                     </div>
                     <!-- <div class="arrow">
                         <i class="ti-arrow-right"></i>
@@ -105,75 +102,100 @@
 
         <!-- comment-area -->
         <div class="comment-area">
-            <h4>05 Comments</h4>
+            <h4>${totalComments} Comments</h4>
+        <c:forEach items="${allComments}" var="comment">
+
             <div class="comment-list">
                 <div class="single-comment">
                     <div class="thumb"><img src="https://preview.colorlib.com/theme/travelo/img/comment/xcomment_1.png.pagespeed.ic.nxxwmEk3HK.webp" alt=""></div>
                     <div class="desc">
-                        <p class="comment">Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>
+                        <p class="comment">${comment.content}</p>
                         <div class="comment-info">
-                            <h5><a href="">Emilly Blunt</a></h5>
-                            <p class="date">December 4, 2017 at 3:12 pm</p>
+                            <h5><a href="">${comment.userName}</a></h5>
+                            <p class="date">${comment.dateTime}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="comment-list">
-                <div class="single-comment">
-                    <div class="thumb"><img src="https://preview.colorlib.com/theme/travelo/img/comment/xcomment_1.png.pagespeed.ic.nxxwmEk3HK.webp" alt=""></div>
-                    <div class="desc">
-                        <p class="comment">Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>
-                        <div class="comment-info">
-                            <h5><a href="">Emilly Blunt</a></h5>
-                            <p class="date">December 4, 2017 at 3:12 pm</p>
-                        </div>
-                    </div>
-                </div>
-            </div><div class="comment-list">
-            <div class="single-comment">
-                <div class="thumb"><img src="https://preview.colorlib.com/theme/travelo/img/comment/xcomment_1.png.pagespeed.ic.nxxwmEk3HK.webp" alt=""></div>
-                <div class="desc">
-                    <p class="comment">Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>
-                    <div class="comment-info">
-                        <h5><a href="">Emilly Blunt</a></h5>
-                        <p class="date">December 4, 2017 at 3:12 pm</p>
-                    </div>
-                </div>
-            </div>
-        </div><div class="comment-list">
-            <div class="single-comment">
-                <div class="thumb"><img src="https://preview.colorlib.com/theme/travelo/img/comment/xcomment_1.png.pagespeed.ic.nxxwmEk3HK.webp" alt=""></div>
-                <div class="desc">
-                    <p class="comment">Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>
-                    <div class="comment-info">
-                        <h5><a href="">Emilly Blunt</a></h5>
-                        <p class="date">December 4, 2017 at 3:12 pm</p>
-                    </div>
-                </div>
-            </div>
-        </div><div class="comment-list">
-            <div class="single-comment">
-                <div class="thumb"><img src="https://preview.colorlib.com/theme/travelo/img/comment/xcomment_1.png.pagespeed.ic.nxxwmEk3HK.webp" alt=""></div>
-                <div class="desc">
-                    <p class="comment">Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>
-                    <div class="comment-info">
-                        <h5><a href="">Emilly Blunt</a></h5>
-                        <p class="date">December 4, 2017 at 3:12 pm</p>
-                    </div>
-                </div>
-            </div>
+        </c:forEach>
         </div>
-        </div>
+<%--        <div class="comment-area">--%>
+<%--            <h4>05 Comments</h4>--%>
+<%--            <div class="comment-list">--%>
+<%--                <div class="single-comment">--%>
+<%--                    <div class="thumb"><img src="https://preview.colorlib.com/theme/travelo/img/comment/xcomment_1.png.pagespeed.ic.nxxwmEk3HK.webp" alt=""></div>--%>
+<%--                    <div class="desc">--%>
+<%--                        <p class="comment">Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>--%>
+<%--                        <div class="comment-info">--%>
+<%--                            <h5><a href="">Emilly Blunt</a></h5>--%>
+<%--                            <p class="date">December 4, 2017 at 3:12 pm</p>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="comment-list">--%>
+<%--                <div class="single-comment">--%>
+<%--                    <div class="thumb"><img src="https://preview.colorlib.com/theme/travelo/img/comment/xcomment_1.png.pagespeed.ic.nxxwmEk3HK.webp" alt=""></div>--%>
+<%--                    <div class="desc">--%>
+<%--                        <p class="comment">Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>--%>
+<%--                        <div class="comment-info">--%>
+<%--                            <h5><a href="">Emilly Blunt</a></h5>--%>
+<%--                            <p class="date">December 4, 2017 at 3:12 pm</p>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div><div class="comment-list">--%>
+<%--            <div class="single-comment">--%>
+<%--                <div class="thumb"><img src="https://preview.colorlib.com/theme/travelo/img/comment/xcomment_1.png.pagespeed.ic.nxxwmEk3HK.webp" alt=""></div>--%>
+<%--                <div class="desc">--%>
+<%--                    <p class="comment">Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>--%>
+<%--                    <div class="comment-info">--%>
+<%--                        <h5><a href="">Emilly Blunt</a></h5>--%>
+<%--                        <p class="date">December 4, 2017 at 3:12 pm</p>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div><div class="comment-list">--%>
+<%--            <div class="single-comment">--%>
+<%--                <div class="thumb"><img src="https://preview.colorlib.com/theme/travelo/img/comment/xcomment_1.png.pagespeed.ic.nxxwmEk3HK.webp" alt=""></div>--%>
+<%--                <div class="desc">--%>
+<%--                    <p class="comment">Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>--%>
+<%--                    <div class="comment-info">--%>
+<%--                        <h5><a href="">Emilly Blunt</a></h5>--%>
+<%--                        <p class="date">December 4, 2017 at 3:12 pm</p>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div><div class="comment-list">--%>
+<%--            <div class="single-comment">--%>
+<%--                <div class="thumb"><img src="https://preview.colorlib.com/theme/travelo/img/comment/xcomment_1.png.pagespeed.ic.nxxwmEk3HK.webp" alt=""></div>--%>
+<%--                <div class="desc">--%>
+<%--                    <p class="comment">Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>--%>
+<%--                    <div class="comment-info">--%>
+<%--                        <h5><a href="">Emilly Blunt</a></h5>--%>
+<%--                        <p class="date">December 4, 2017 at 3:12 pm</p>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        </div>--%>
 
 
         <!-- comment-form -->
-        <div class="comment-form">
+        <form action="" method="post" name="comment" id = "comment">
+        <input type="text" name ="commentId" value="${totalComments+1}" form = "comment" hidden>
+            <input type="text" name ="blogId" value="${thisBlog.blogId}" form = "comment" hidden>
+            <input type="text" name="userId" value="${user.userId}" form="comment" hidden>
+
+            <div class="comment-form">
             <h4>Leave a Reply</h4>
             <div class="write-comment">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Write Comment"></textarea>
+                <textarea name="content" id="" cols="30" rows="10" placeholder="Write Comment"></textarea>
             </div>
             <button type="submit">Send</button>
+
         </div>
+        </form>
     </div>
 
 </div>
