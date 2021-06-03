@@ -52,9 +52,9 @@
             <h3>Bạn muốn đi đâu ?</h3>
         </div>
         <div class="form-search">
-            <form action="" method="get">
+            <form id = "newForm" onsubmit="return false">
                 <div class="input-field">
-                    <input type="text" placeholder="Nơi bạn muốn đi?">
+                    <input type="text" placeholder="Nơi bạn muốn đi?" id = "search-text">
                 </div>
 <%--                <div class="input-field date">--%>
 <%--                    <input type="date" placeholder="Date">--%>
@@ -68,7 +68,7 @@
 <%--                    </select>--%>
 <%--                </div>--%>
                 <div class="search-btn">
-                    <button type="submit">Tìm kiếm</button>
+                    <button onclick="searchBar();">Tìm kiếm</button>
                 </div>
             </form>
         </div>
@@ -138,7 +138,7 @@
                                 <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}" id = "tour${destination.tourId}Price">${destination.price}</a>
                             </div>
                             <div class="destination-infor">
-                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"><h3>${destination.title}</h3></a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}" ><h3 class="title-des">${destination.title}</h3></a>
                                 <p>${destination.countryName}</p>
                                 <div class="rate">
                             <span>
@@ -160,7 +160,7 @@
                                 <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"  id = "tour${destination.tourId}Price">${destination.price}</a>
                             </div>
                             <div class="destination-infor">
-                                <a href=""><h3>${destination.title}</h3></a>
+                                <a href=""><h3 class="title-des">${destination.title}</h3></a>
                                 <p>${destination.countryName}</p>
                                 <div class="rate">
                             <span>
@@ -211,7 +211,6 @@
 <%--        <div class="clear"></div>--%>
 <%--    </div>--%>
 <%--</div>--%>
-  
 <script src="${pageContext.request.contextPath}/resources/javascripts/destination.js" ></script>
 <script src="${pageContext.request.contextPath}/resources/javascripts/header.js" ></script>
 <script>
@@ -246,7 +245,6 @@
                 var t = "tour"
                 t += i;
                 document.getElementById(t).style.display = "";
-
             }
         }
 
@@ -259,6 +257,27 @@
 
             }
 
+        }
+    }
+    function searchBar()
+    {
+        var input,filter, ul, li, a, i, txtValue;
+        input = document.getElementById("search-text");
+        filter = input.value.toUpperCase();
+        ul = document.getElementsByClassName("single-destination");
+        li = document.getElementsByClassName("title-des");
+        for (i = 0; i < li.length; i++)
+        {
+            txtValue = li[i].textContent || li[i].innerText;
+            document.getElementById("test").innerHTML = txtValue
+            if (txtValue.toUpperCase().indexOf(filter) > -1)
+            {
+                ul[i].style.display = "";
+            }
+            else
+            {
+                ul[i].style.display= "none";
+            }
         }
     }
 </script>
