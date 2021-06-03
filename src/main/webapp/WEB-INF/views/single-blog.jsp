@@ -26,7 +26,7 @@
 <%@ include file="/WEB-INF/views/fragments/header.jspf" %>
 
 <!-- begin: slide -->
-<div id="slider">
+<div id="slider" style="background-image: url(${thisBlog.images})">
     <div class="slider-contents slider-1 fade" >
         <h3>Miền Bắc</h3>
         <p>Pixel perfect design with awesome contents</p>

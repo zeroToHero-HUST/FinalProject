@@ -17,6 +17,6 @@ public class LogOutServlet extends HttpServlet {
         response.addCookie(cookie1);
         response.addCookie(cookie2);
 
-        response.sendRedirect(request.getContextPath());
+        response.sendRedirect(request.getContextPath() + "/");
     }
 }

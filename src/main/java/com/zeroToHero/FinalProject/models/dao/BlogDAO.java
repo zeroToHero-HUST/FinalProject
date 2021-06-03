@@ -21,7 +21,7 @@ public class BlogDAO {
         Statement st = null;
         ResultSet rs = null;
         String getMoreTours =
-                "SELECT blog_id, created_at, title " +
+                "SELECT blog_id, created_at, title, images " +
                         "FROM blogs " +
                         ";";
         try {
@@ -39,6 +39,10 @@ public class BlogDAO {
                 LocalDateTime fmt = created_at.toLocalDateTime();
                 blog.setDate(String.valueOf(fmt.getDayOfMonth()));
                 blog.setMonth(fmt.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH));
+
+                String[] images = (String[]) rs.getArray("images").getArray();
+                blog.setImages(images[0]);
+
                 allBlogs.add(blog);
             }
         }
@@ -55,7 +59,7 @@ public class BlogDAO {
         Statement st = null;
         ResultSet rs = null;
         String getMoreTours =
-                "SELECT blog_id, created_at, title, content " +
+                "SELECT blog_id, created_at, title, content, images " +
                         "FROM blogs " +
                         "where blog_id = "+String.valueOf(index)+
                         ";";
@@ -73,6 +77,9 @@ public class BlogDAO {
                 Blog.setDate(String.valueOf(fmt.getDayOfMonth()));
                 Blog.setMonth(fmt.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH));
                 Blog.setContent(rs.getString("content"));
+
+                String[] images = (String[]) rs.getArray("images").getArray();
+                Blog.setImages(images[0]);
 
             }
         }

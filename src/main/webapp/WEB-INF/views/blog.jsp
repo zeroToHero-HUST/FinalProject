@@ -44,7 +44,7 @@
                     <c:if test="${blog.blogId > index-5}">
                     <div class="blog-item">
                         <div class="blog-item-img">
-                            <img src="https://preview.colorlib.com/theme/travelo/img/blog/single_blog_1.png" alt="">
+                            <img src="${blog.images}" alt="">
                             <a href="${pageContext.request.contextPath}/singleBlog/single-blog?BlogId=${blog.blogId}" class="blog-item-date">
                                 <h3>${blog.date}</h3>
                                 <p>${blog.month}</p>

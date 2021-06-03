@@ -22,7 +22,7 @@ public class AdminFilter implements Filter {
 
         if (!isAdmin)
         {
-            response1.sendRedirect(request1.getContextPath());
+            response1.sendRedirect(request1.getContextPath() + "/");
         }
         else
             chain.doFilter(request, response);

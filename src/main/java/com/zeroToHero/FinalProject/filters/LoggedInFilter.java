@@ -22,7 +22,7 @@ public class LoggedInFilter implements Filter {
 
         if (isLogIn)
         {
-            response1.sendRedirect(request1.getContextPath());
+            response1.sendRedirect(request1.getContextPath() + "/");
         }
         else
             chain.doFilter(request, response);

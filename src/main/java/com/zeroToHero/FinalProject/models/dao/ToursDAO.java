@@ -31,7 +31,6 @@ public class ToursDAO {
                 tour.setTitle(rs.getString("title"));
                 tour.setDuration(rs.getLong("duration"));
                 tour.setPrice(rs.getString("price"));
-                System.out.println(rs.getString("price"));
                 tour.setCountryName(rs.getString("country_name"));
 
                 String[] images = (String[]) rs.getArray("images").getArray();
