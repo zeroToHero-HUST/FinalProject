@@ -23,4 +23,9 @@ services:
             -   postgresql
         ports:
             -   8080:8080
+            -   8443:8443
         restart: always
+networks:
+    default:
+        external: true
+        name: proxy
