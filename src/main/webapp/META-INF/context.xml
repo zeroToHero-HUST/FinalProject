@@ -20,8 +20,8 @@
               jmxEnabled="true"
               jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
             org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
-              username="${DB.USER}"
-              password="${DB.PASSWORD}"
+              username="${DB_USER}"
+              password="${DB_PASSWORD}"
               driverClassName="org.postgresql.Driver"
-              url="${DB.URL.ROOT}${DB.HOST.PORT}/${DB.DBNAME}"/>
+              url="${DB_URL_ROOT}${DB_HOST_PORT}/${DB_DBNAME}"/>
 </Context>

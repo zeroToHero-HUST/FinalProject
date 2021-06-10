@@ -25,9 +25,9 @@ public class Auth {
     private static final Argon2PasswordEncoder passwordEncoder = new Argon2PasswordEncoder(saltLength, hashLength, parallelism, memoryInKb, iterations);
 
     private static final Properties prop = new LoadProperties("config.properties").getProp();
-    private static final String jwtAccessKey = prop.getProperty("JWT.ACCESS.KEY");
+    private static final String jwtAccessKey = prop.getProperty("JWT_ACCESS_KEY");
     private static final SecretKey key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtAccessKey));
-    private static final int timeExpired = Integer.parseInt(prop.getProperty("JWT.ACCESS.EXP"));
+    private static final int timeExpired = Integer.parseInt(prop.getProperty("JWT_ACCESS_EXP"));
 
     public static String encryptPassword(String password)
     {

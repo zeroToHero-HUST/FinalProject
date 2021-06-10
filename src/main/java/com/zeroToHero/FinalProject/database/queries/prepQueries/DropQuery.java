@@ -4,6 +4,7 @@ public interface DropQuery {
     String dropTables =
         "DROP FUNCTION IF EXISTS f_GetUsersByPageNumberAndSize;\n" +
         "DROP FUNCTION IF EXISTS f_GetToursByPageNumberAndSize;\n" +
+        "DROP FUNCTION IF EXISTS f_GetBlogsByPageNumberAndSize;\n" +
         "DROP TABLE IF EXISTS destinations;\n" +
         "DROP TABLE IF EXISTS cities;\n" +
         "DROP TABLE IF EXISTS comments;\n" +
