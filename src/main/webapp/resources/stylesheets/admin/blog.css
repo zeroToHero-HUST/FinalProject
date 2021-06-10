@@ -143,27 +143,23 @@ body {
 }
 
 .card-body th.created{
-    width: 10%;
+    width: 5%;
 }
 
 .card-body th.updated {
-    width: 10%;
+    width: 5%;
 }
 
 .card-body th.title {
-    width: 10%;
+    width: 15%;
 }
 
 .card-body th.content {
-    width: 40%;
-}
-
-.card-body th.quote {
-    width: 20%;
+    width: 50%;
 }
 
 .card-body th.image {
-    width: 5%;
+    width: 10%;
 }
 
 .card-body td {

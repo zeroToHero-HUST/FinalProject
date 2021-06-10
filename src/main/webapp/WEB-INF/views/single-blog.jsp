@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/single-blog.css" />
@@ -67,13 +67,13 @@
                     </div> -->
                     <div class="details">
                         <p>Prev Post</p>
-                        <a href="${pageContext.request.contextPath}/singleBlog/single-blog?TotalBlogs=${totalBlogs}&BlogId=${prevBlog.blogId}"><h4>${prevBlog.title}</h4></a>
+                        <a href="${pageContext.request.contextPath}/singleBlog?blogId=${prevBlog.blogId}"><h4>${prevBlog.title}</h4></a>
                     </div>
                 </div>
                 <div class="right">
                     <div class="details">
                         <p>Next Post</p>
-                        <a href="${pageContext.request.contextPath}/singleBlog/single-blog?TotalBlogs=${totalBlogs}&BlogId=${nextBlog.blogId}"><h4>${nextBlog.title}</h4></a>
+                        <a href="${pageContext.request.contextPath}/singleBlog?blogId=${nextBlog.blogId}"><h4>${nextBlog.title}</h4></a>
                     </div>
                     <!-- <div class="arrow">
                         <i class="ti-arrow-right"></i>

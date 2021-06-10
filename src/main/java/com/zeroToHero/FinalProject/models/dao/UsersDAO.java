@@ -102,14 +102,14 @@ public class UsersDAO {
             while (rs.next())
             {
                 result.add(new Users(
-                        rs.getString("user_id"),
-                        rs.getString("email"),
-                        rs.getString("first_name"),
-                        rs.getString("last_name"),
-                        rs.getString("profile_image"),
-                        rs.getTimestamp("created_at"),
-                        rs.getString("role"),
-                        rs.getLong("country_id")));
+                    rs.getString("user_id"),
+                    rs.getString("email"),
+                    rs.getString("first_name"),
+                    rs.getString("last_name"),
+                    rs.getString("profile_image"),
+                    rs.getTimestamp("created_at"),
+                    rs.getString("role"),
+                    rs.getLong("country_id")));
             }
         } catch (SQLException | NamingException throwable) {
             throwable.printStackTrace();

@@ -6,16 +6,14 @@ import com.zeroToHero.FinalProject.models.dao.CommentsDAO;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-import org.postgresql.util.PSQLException;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
-@WebServlet(name = "single-blog", value = "/singleBlog/*")
+@WebServlet(name = "single-blog", value = "/singleBlog")
 public class SingleBlogServlet  extends  HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int index =Integer.parseInt(request.getParameter("BlogId"));
-        int total = Integer.parseInt(request.getParameter("TotalBlogs"));
+        int index =Integer.parseInt(request.getParameter("blogId"));
+        int total = (int) request.getSession().getAttribute("totalBlogs");
         int prev = 1, next = 1 ;
         BlogDAO ba = new BlogDAO();
 
@@ -48,7 +46,7 @@ public class SingleBlogServlet  extends  HttpServlet {
 //            request.setAttribute("nextBlog",0);
         }
         request.setAttribute("totalBlogs",total);
-        ArrayList<Comments> allComments = (new CommentsDAO()).AllComments(index);
+        ArrayList<Comments> allComments = (new CommentsDAO()).getAllCommentsByBlogId(index);
         request.setAttribute("allComments",allComments);
         request.setAttribute("totalComments",allComments.size());
         request.getRequestDispatcher("/WEB-INF/views/single-blog.jsp").forward(request, response);
@@ -56,20 +54,19 @@ public class SingleBlogServlet  extends  HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Comments newComment= new Comments();
-            newComment.setUserId(request.getParameter("userId"));
-            System.out.println(request.getParameter("userId"));
-            newComment.setBlogId(Integer.parseInt(request.getParameter("BlogId")));
-            newComment.setContent(request.getParameter("content"));
-            int index = Integer.parseInt(request.getParameter("BlogId"));
-            int totalCmt = 0;
-            ArrayList<Comments> IComments;
-            int total = Integer.parseInt(request.getParameter("TotalBlogs"));
-            for (int i = 1; i <= total; i++){
-                IComments = (new CommentsDAO()).AllComments(i);
-                totalCmt+= IComments.size();
-            }
-            newComment.setCommentId(totalCmt+1);
-        new CommentsDAO().comment(newComment);
+        newComment.setUserId(request.getParameter("userId"));
+        newComment.setBlogId(Integer.parseInt(request.getParameter("blogId")));
+        newComment.setContent(request.getParameter("content"));
+        int index = Integer.parseInt(request.getParameter("blogId"));
+        int totalCmt = 0;
+        ArrayList<Comments> IComments;
+        int total = (int) request.getSession().getAttribute("totalBlogs");
+        for (int i = 1; i <= total; i++){
+            IComments = (new CommentsDAO()).getAllCommentsByBlogId(i);
+            totalCmt+= IComments.size();
+        }
+        newComment.setCommentId(totalCmt+1);
+        new CommentsDAO().insertComment(newComment);
 
         int prev = 1, next = 1;
             BlogDAO ba = new BlogDAO();
@@ -101,7 +98,7 @@ public class SingleBlogServlet  extends  HttpServlet {
 //            request.setAttribute("nextBlog",0);
             }
             request.setAttribute("totalBlogs", total);
-            ArrayList<Comments> allComments = (new CommentsDAO()).AllComments(index);
+            ArrayList<Comments> allComments = (new CommentsDAO()).getAllCommentsByBlogId(index);
             request.setAttribute("allComments", allComments);
             request.setAttribute("totalComments", allComments.size());
             request.getRequestDispatcher("/WEB-INF/views/single-blog.jsp").forward(request, response);

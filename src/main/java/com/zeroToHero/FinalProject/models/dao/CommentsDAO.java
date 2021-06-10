@@ -2,6 +2,7 @@ package com.zeroToHero.FinalProject.models.dao;
 import com.zeroToHero.FinalProject.database.DBConnectionManager;
 import com.zeroToHero.FinalProject.database.queries.mainQueries.BlogsQuery;
 import com.zeroToHero.FinalProject.database.queries.mainQueries.BookingsQuery;
+import com.zeroToHero.FinalProject.database.queries.mainQueries.CommentsQuery;
 import com.zeroToHero.FinalProject.models.beans.Bookings;
 import com.zeroToHero.FinalProject.models.beans.Comments;
 import com.zeroToHero.FinalProject.models.beans.Tours;
@@ -13,25 +14,21 @@ import java.util.ArrayList;
 
 public class CommentsDAO {
     private Connection conn = null;
-    private ResultSet rs=  null;
-    public ArrayList<Comments> AllComments(int index){
-        ArrayList<Comments> allComments = new ArrayList<>();
-        Statement st = null;
+    private PreparedStatement pst = null;
+    private Statement st = null;
+    private ResultSet rs = null;
 
-        String getAllComments ="SELECT distinct comment_id, comments.user_id,content, comments.created_at,users.first_name, users.last_name \n" +
-                "                        from comments,users\n" +
-                "                        where blog_id = "+  String.valueOf(index)+
-                "                        and comments.user_id = users.user_id"
-                ;
+    public ArrayList<Comments> getAllCommentsByBlogId(int blogId){
+        ArrayList<Comments> allComments = new ArrayList<>();
+
         try {
             conn = DBConnectionManager.getConnection();
-            st = conn.createStatement();
-            rs = st.executeQuery(getAllComments);
+            pst = conn.prepareStatement(CommentsQuery.getAllComments);
+            pst.setInt(1, blogId);
+            rs = pst.executeQuery();
 
             while (rs.next())
             {
-
-
                 Comments comments = new Comments();
                 comments.setCommentId(rs.getInt("comment_id"));
                 comments.setContent(rs.getString("content"));
@@ -42,33 +39,27 @@ public class CommentsDAO {
                 comments.setCreatedAt(rs.getTimestamp("created_at"));
 
                 allComments.add(comments);
-
             }
         }
         catch (SQLException | NamingException throwable) {
             throwable.printStackTrace();
         }
         finally {
-            DBConnectionManager.closeConnection(conn, st, rs);
+            DBConnectionManager.closeConnection(conn, pst, rs);
         }
         return allComments;
     }
-    private PreparedStatement pst = null;
-    public void comment(Comments newComment)
+
+    public void insertComment(Comments newComment)
     {
         try {
             conn = DBConnectionManager.getConnection();
-            pst = conn.prepareStatement((BlogsQuery.insertBlogs));
+            pst = conn.prepareStatement((CommentsQuery.insertComments));
 
             pst.setString(1, newComment.getUserId());
             pst.setLong(2, newComment.getCommentId());
             pst.setString(3, newComment.getContent());
             pst.setLong(4, newComment.getBlogId());
-
-            System.out.println(newComment.getUserId());
-            System.out.println(newComment.getCommentId());
-            System.out.println(newComment.getContent());
-            System.out.println(newComment.getBlogId());
 
             pst.executeUpdate();
 

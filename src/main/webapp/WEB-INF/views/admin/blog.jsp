@@ -12,6 +12,7 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/admin/blog.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/sidebar.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/pagination.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/font/themify-icons.css" />
 
 </head>
@@ -26,10 +27,10 @@
             <h4>Edit blog</h4>
         </div>
         <div class="card-body">
-            <form action="">
-                <div class="title"><input type="text" placeholder="Title"></div>
-                <div class="content"><textarea name=""  cols="30" rows="10" placeholder="Content"></textarea></div>
-                <div class="img" ><input  type="file" accept="image/*"></div>
+            <form action="blog" method="post">
+                <div class="title"><input type="text" placeholder="Title" name="title"></div>
+                <div><input type="url" placeholder="Image URL" name="image"></div>
+                <div class="content"><textarea name="content"  cols="30" rows="10" placeholder="Content"></textarea></div>
                 <button type="submit">Submit</button>
             </form>
         </div>
@@ -60,7 +61,7 @@
                         <td>${blog.blogId}</td>
                         <td>${blog.title}</td>
                         <td>${blog.content}</td>
-                        <td>${blog.images}</td>
+                        <td><a href="${blog.images}">Link</a> </td>
                         <td>${blog.userId}</td>
                         <td>${blog.createdAt}</td>
                         <td>${blog.updatedAt}</td>
@@ -74,6 +75,35 @@
             </table>
         </div>
     </div>
+
+    <div id="pagination-wrapper">
+        <!--Active and Hoverable Pagination-->
+        <div class="page-header"></div>
+        <ul id="pagination">
+            <li>
+                <a class="" href="blog?page=1">«</a>
+            </li>
+
+            <c:forEach begin="${firstPage}" end="${lastPage}" var="i">
+                <c:choose>
+                    <c:when test="${currentPage eq i}">
+                        <li>
+                            <a href="" class="active">${i}</a>
+                        </li>
+                    </c:when>
+                    <c:otherwise>
+                        <li>
+                            <a href="blog?page=${i}">${i}</a>
+                        </li>
+                    </c:otherwise>
+                </c:choose>
+            </c:forEach>
+
+            <li>
+                <a href="blog?page=${nOfPages}">»</a>
+            </li>
+        </ul>
+    </div><!--wrapper-->
 </div>
 <!-- end: blog-list -->
 </body>

@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Tour</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/tour.css" />
@@ -42,7 +42,7 @@
             <div class="contents">
                 <h3>Description</h3>
                 <p>${thisTour.description}</p>
-                <div class="single-tour-description">
+                <%--<div class="single-tour-description">
                     <h4>Day-01</h4>
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
                 </div>
@@ -53,7 +53,7 @@
                 <div class="single-tour-description">
                     <h4>Day-03</h4>
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
-                </div>
+                </div>--%>
             </div>
 
         </div>

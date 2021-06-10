@@ -1,6 +1,7 @@
 package com.zeroToHero.FinalProject.models.beans;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 public class Blogs implements Serializable {
 
@@ -13,6 +14,18 @@ public class Blogs implements Serializable {
     private String title;
     private String date;
     private String month;
+
+    public Blogs(long blogId, String userId, Timestamp createdAt, Timestamp updatedAt, String content, String images, String title, String date, String month) {
+        this.blogId = blogId;
+        this.userId = userId;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.content = content;
+        this.images = images;
+        this.title = title;
+        this.date = date;
+        this.month = month;
+    }
 
     public String getDate(){
         return date;

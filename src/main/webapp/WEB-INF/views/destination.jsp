@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Du lịch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
@@ -156,7 +156,7 @@
                     <c:otherwise>
                         <div class="single-destination"  id = "tour${destination.tourId}" style="display: none">
                             <div class="thumb">
-                                <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
+                                <img src="${pageContext.request.contextPath}/resources/images/${destination.images}" alt="">
                                 <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"  id = "tour${destination.tourId}Price">${destination.price}</a>
                             </div>
                             <div class="destination-infor">

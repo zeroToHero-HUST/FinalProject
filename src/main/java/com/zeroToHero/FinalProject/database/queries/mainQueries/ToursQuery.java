@@ -8,7 +8,7 @@ public interface ToursQuery {
                 "AND destinations.city_id = cities.city_id " +
                 "AND cities.country_id = countries.country_id " +
         "GROUP BY tours.tour_id, countries.name " +
-        "LIMIT 6;";
+        "LIMIT 3;";
 
     String getToursByPage =
         "SELECT * FROM f_gettoursbypagenumberandsize(?, 10);";
