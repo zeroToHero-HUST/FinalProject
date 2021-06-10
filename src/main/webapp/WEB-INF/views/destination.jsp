@@ -160,7 +160,7 @@
                                 <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"  id = "tour${destination.tourId}Price">${destination.price}</a>
                             </div>
                             <div class="destination-infor">
-                                <a href=""><h3 class="title-des">${destination.title}</h3></a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"><h3 class="title-des">${destination.title}</h3></a>
                                 <p>${destination.countryName}</p>
                                 <div class="rate">
                             <span>

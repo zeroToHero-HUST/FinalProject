@@ -85,7 +85,15 @@
                 <span>${thisTour.price}</span>
             </div>
         </div>
-        <button type="submit">Submit</button>
+        <c:choose>
+            <c:when test="${login}">
+                <button type="submit">Đặt tour ngay</button>
+            </c:when>
+            <c:otherwise>
+                <button type="button"><a style="text-decoration: none; color: white" href="${pageContext.request.contextPath}/log-in">Vui lòng đăng nhập để đặt tour!</a> </button>
+            </c:otherwise>
+        </c:choose>
+
         </form>
     </div>
 
