@@ -3,27 +3,30 @@ version: "3.9"
 services:
     postgresql:
         image: postgres:13.3-alpine
+        volumes: 
+            -   ./postgresql-data:/var/lib/postgresql/data
+        container_name: zerotohero-postgresql
         environment:
-            POSTGRES_DB: ${DOCKER_PG_DB}
-            POSTGRES_USER: ${DOCKER_PG_USER}
-            POSTGRES_PASSWORD: ${DOCKER_PG_PASSWORD}
+            POSTGRES_DB: ${DOCKER_DB_DBNAME}
+            POSTGRES_USER: ${DOCKER_DB_USER}
+            POSTGRES_PASSWORD: ${DOCKER_DB_PASSWORD}
         ports:
             -   5432:5432
         restart: always
     web:
         build: .
+        container_name: zerotohero-web
         environment:
             # NGINX-PROXY ENVIRONMENT VARIABLES: UPDATE ME
-            - VIRTUAL_HOST=zerotohero.vietthai2512.digital
-            - VIRTUAL_PORT=8080
-            - LETSENCRYPT_HOST=zerotohero.vietthai2512.digital
-            - LETSENCRYPT_EMAIL=vietthai2512@gmail.com
+            VIRTUAL_HOST: ${DOCKER_VIRTUAL_HOST}
+            VIRTUAL_PORT: ${DOCKER_VIRTUAL_PORT}
+            LETSENCRYPT_HOST: ${DOCKER_LETSENCRYPT_HOST}
+            LETSENCRYPT_EMAIL: ${DOCKER_LETSENCRYPT_EMAIL}
             # END NGINX-PROXY ENVIRONMENT VARIABLES
         depends_on:
             -   postgresql
         ports:
             -   8080:8080
-            -   8443:8443
         restart: always
 networks:
     default:

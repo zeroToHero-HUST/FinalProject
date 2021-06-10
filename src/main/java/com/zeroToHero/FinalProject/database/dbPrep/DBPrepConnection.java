@@ -16,9 +16,9 @@ public class DBPrepConnection {
     private Properties prop = new LoadProperties("config.properties").getProp();
 
     public DBPrepConnection() throws SQLException {
-        this.dbURL = this.prop.getProperty("DB.URL.ROOT") + this.prop.getProperty("DB.HOST.PORT") + "/" + this.prop.getProperty("DB.DBNAME");
-        this.user = this.prop.getProperty("DB.USER");
-        this.password = this.prop.getProperty("DB.PASSWORD");
+        this.dbURL = this.prop.getProperty("DB_URL_ROOT") + this.prop.getProperty("DB_HOST_PORT") + "/" + this.prop.getProperty("DB_DBNAME");
+        this.user = this.prop.getProperty("DB_USER");
+        this.password = this.prop.getProperty("DB_PASSWORD");
         this.connection = DriverManager.getConnection(this.dbURL, this.user, this.password);
 
     }
