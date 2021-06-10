@@ -188,6 +188,28 @@ public interface CreateQuery {
         "LANGUAGE plpgsql;"
     );
 
+    StringBuilder createFnGetBlogsByPageNumberAndSize = new StringBuilder(
+        "CREATE OR REPLACE FUNCTION f_GetBlogsByPageNumberAndSize(PageNumber INTEGER = NULL, PageSize INTEGER = NULL)\n" +
+        "        RETURNS SETOF blogs\n" +
+        "        AS\n" +
+        "            $BODY$\n" +
+        "            DECLARE\n" +
+        "                PageOffset INTEGER :=0;\n" +
+        "            BEGIN\n" +
+        "\n" +
+        "                PageOffset := ((PageNumber-1) * PageSize);\n" +
+        "\n" +
+        "            RETURN QUERY\n" +
+        "                SELECT *\n" +
+        "                FROM blogs\n" +
+        "                ORDER BY blogs.updated_at\n" +
+        "                OFFSET PageOffset\n" +
+        "                FETCH NEXT PageSize ROWS ONLY;\n" +
+        "            END;\n" +
+        "            $BODY$\n" +
+        "        LANGUAGE plpgsql;"
+    );
+
     StringBuilder createAll = createType
         .append(createTBUsers)
         .append(createTBCountries)
@@ -200,5 +222,6 @@ public interface CreateQuery {
         .append(createTBDestinations)
         .append(createRelations)
         .append(createFnGetUsersByPageNumberAndSize)
-        .append(createFnGetToursByPageNumberAndSize);
+        .append(createFnGetToursByPageNumberAndSize)
+        .append(createFnGetBlogsByPageNumberAndSize);
 }

@@ -14,7 +14,7 @@ public interface UsersQuery {
         "SELECT * FROM users WHERE users.user_id = ?::uuid";
 
     String getUsersByPage =
-        "SELECT * FROM f_getusersbypagenumberandsize(?, 10);";
+        "SELECT * FROM f_GetUsersByPageNumberAndSize(?, 10);";
 
     String updateUserByAdmin =
         "UPDATE users SET (first_name, last_name, email, role, profile_image) = (?, ?, ?, ?::role_type, ?) WHERE user_id = ?::uuid;";

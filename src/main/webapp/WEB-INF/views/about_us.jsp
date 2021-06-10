@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Về chúng tôi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/responsive/header-resp.css" />
@@ -180,7 +180,7 @@
 
     <!-- Blog section -->
     <div class="blog">
-        <h3 class="blog-title text-align"Blogs</h3>
+        <h3 class="blog-title text-align"Blogs></h3>
 
         <div class="row blog-list">
             <div class="col col-third blog-item m-col-third s-col-full">

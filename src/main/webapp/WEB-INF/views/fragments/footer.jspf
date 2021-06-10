@@ -31,7 +31,7 @@
 <%--                </div>--%>
             </div>
 
-            <div class="col col-sixth footer-widget m-col-half s-col-full footer-company">
+            <%--<div class="col col-sixth footer-widget m-col-half s-col-full footer-company">
                 <h3 class="footer-title">Company</h3>
                 <ul class="footer-links">
                     <li><a href="#">Pricing</a></li>
@@ -39,7 +39,7 @@
                     <li><a href="#">Gallery</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-            </div>
+            </div>--%>
 
             <div class="col col-quater footer-widget m-col-half s-col-full footer-des">
                 <h3 class="footer-title">Chuyến du lịch</h3>

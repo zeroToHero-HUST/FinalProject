@@ -9,6 +9,7 @@ import java.sql.SQLException;
 public class DBPrepMain implements CreateQuery, PopulateQuery
 {
     public static void main(String[] args) throws SQLException {
+
         switch (args[0])
         {
             case "create-tables":

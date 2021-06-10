@@ -34,19 +34,7 @@
                     <div class="duration"><input type="text" name=""  placeholder="Duration"></div>
                     <div class="rating"><input type="text" name="" id="" placeholder="Rating"></div>
                     <div class="price"><input type="text" placeholder="Price"></div>
-                    <div class="img" ><input  type="file" accept="image/*"></div>
-                    <div id="list1" class="dropdown-check-list" tabindex="100">
-                        <span class="anchor">Select Fruits</span>
-                        <ul class="items">
-                            <li><input type="checkbox" />Apple </li>
-                            <li><input type="checkbox" />Orange</li>
-                            <li><input type="checkbox" />Grapes </li>
-                            <li><input type="checkbox" />Berry </li>
-                            <li><input type="checkbox" />Mango </li>
-                            <li><input type="checkbox" />Banana </li>
-                            <li><input type="checkbox" />Tomato</li>
-                        </ul>
-                    </div>
+
                     <button type="submit">Submit</button>
                 </form>
             </div>

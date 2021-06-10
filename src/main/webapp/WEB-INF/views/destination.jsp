@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Du lịch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/fragments/header.css" />
@@ -52,9 +52,9 @@
             <h3>Bạn muốn đi đâu ?</h3>
         </div>
         <div class="form-search">
-            <form action="" method="get">
+            <form id = "newForm" onsubmit="return false">
                 <div class="input-field">
-                    <input type="text" placeholder="Nơi bạn muốn đi?">
+                    <input type="text" placeholder="Nơi bạn muốn đi?" id = "search-text">
                 </div>
 <%--                <div class="input-field date">--%>
 <%--                    <input type="date" placeholder="Date">--%>
@@ -68,7 +68,7 @@
 <%--                    </select>--%>
 <%--                </div>--%>
                 <div class="search-btn">
-                    <button type="submit">Tìm kiếm</button>
+                    <button onclick="searchBar();">Tìm kiếm</button>
                 </div>
             </form>
         </div>
@@ -138,7 +138,7 @@
                                 <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}" id = "tour${destination.tourId}Price">${destination.price}</a>
                             </div>
                             <div class="destination-infor">
-                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"><h3>${destination.title}</h3></a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}" ><h3 class="title-des">${destination.title}</h3></a>
                                 <p>${destination.countryName}</p>
                                 <div class="rate">
                             <span>
@@ -156,11 +156,11 @@
                     <c:otherwise>
                         <div class="single-destination"  id = "tour${destination.tourId}" style="display: none">
                             <div class="thumb">
-                                <img src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp" alt="">
+                                <img src="${pageContext.request.contextPath}/resources/images/${destination.images}" alt="">
                                 <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"  id = "tour${destination.tourId}Price">${destination.price}</a>
                             </div>
                             <div class="destination-infor">
-                                <a href=""><h3>${destination.title}</h3></a>
+                                <a href="${pageContext.request.contextPath}/tour/TourServlet?TourId=${destination.tourId}"><h3 class="title-des">${destination.title}</h3></a>
                                 <p>${destination.countryName}</p>
                                 <div class="rate">
                             <span>
@@ -211,7 +211,6 @@
 <%--        <div class="clear"></div>--%>
 <%--    </div>--%>
 <%--</div>--%>
-  
 <script src="${pageContext.request.contextPath}/resources/javascripts/destination.js" ></script>
 <script src="${pageContext.request.contextPath}/resources/javascripts/header.js" ></script>
 <script>
@@ -224,9 +223,15 @@
         var range =  document.getElementById("sliderSearch").value;
         var i;
         for (i = 1; i <= ${numOfTours}; i++){
-            var t = document.getElementById("tour"+i+"Price").value;
-            document.getElementById("tour"+i+"Price").innerText = t;
-            if (parseInt(t) > 100000*parseInt(range)){
+            var t = document.getElementById("tour"+i+"Price").innerHTML;
+            // document.getElementById("tour"+i+"Price").innerText = (typeof t);
+            if (typeof t !== 'undefined'){
+                document.getElementById("tour"+i+"Price").innerText =${numOfTours};
+            }
+            t = t.replace(".","");
+            t = t.replace(".","");
+            t = t.replace(",","");
+            if (parseInt(t)/100 > 100000*parseInt(range)){
                 document.getElementById("tour"+i).style.display = "none";
             }
         }
@@ -234,18 +239,17 @@
     function morePlaces(){
         var i;
         var x = document.getElementById("more-button").innerText;
-        if (x === "More Places"){
-            document.getElementById("more-button").innerText = "Less Places";
+        if (x === "Mở rộng"){
+            document.getElementById("more-button").innerText = "Thu gọn";
             for (i = 4; i <= ${numOfTours}; i++){
                 var t = "tour"
                 t += i;
                 document.getElementById(t).style.display = "";
-
             }
         }
 
         else{
-            document.getElementById("more-button").innerText ="More Places";
+            document.getElementById("more-button").innerText ="Mở rộng";
             for (i = 5; i <= ${numOfTours}; i++){
                 var t = "tour"
                 t += i;
@@ -253,6 +257,27 @@
 
             }
 
+        }
+    }
+    function searchBar()
+    {
+        var input,filter, ul, li, a, i, txtValue;
+        input = document.getElementById("search-text");
+        filter = input.value.toUpperCase();
+        ul = document.getElementsByClassName("single-destination");
+        li = document.getElementsByClassName("title-des");
+        for (i = 0; i < li.length; i++)
+        {
+            txtValue = li[i].textContent || li[i].innerText;
+            document.getElementById("test").innerHTML = txtValue
+            if (txtValue.toUpperCase().indexOf(filter) > -1)
+            {
+                ul[i].style.display = "";
+            }
+            else
+            {
+                ul[i].style.display= "none";
+            }
         }
     }
 </script>

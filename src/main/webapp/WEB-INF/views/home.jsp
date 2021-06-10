@@ -328,7 +328,7 @@
         </div>
     </div>
     <!-- Blog section -->
-    <div class="blog">
+    <%--<div class="blog">
         <h3 class="blog-title text-align">Blogs</h3>
 
         <div class="row blog-list">
@@ -349,7 +349,7 @@
             </div>
 
         </div>
-    </div>
+    </div>--%>
 
 </div>
 <script src="${pageContext.request.contextPath}/resources/javascripts/home.js" ></script>

@@ -26,12 +26,6 @@ public class BookingsDAO {
             pst.setDate(4, newBooking.getEndDate());
             pst.setString(5, newBooking.getPrice());
 
-            System.out.println(newBooking.getUserId());
-            System.out.println(newBooking.getTourId());
-            System.out.println(newBooking.getStartDate());
-            System.out.println(newBooking.getEndDate());
-            System.out.println(newBooking.getPrice());
-
             pst.executeUpdate();
 
         } catch (SQLException | NamingException e) {

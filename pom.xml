@@ -6,7 +6,7 @@
 
     <groupId>com.zeroToHero</groupId>
     <artifactId>FinalProject</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1</version>
     <name>FinalProject</name>
     <packaging>war</packaging>
 
@@ -104,7 +104,7 @@
                 <configuration>
                     <webResources>
                         <resource>
-                            <directory>src/main/webapp/META-INF</directory>
+                            <directory>${basedir}/src/main/webapp/META-INF</directory>
                             <targetPath>META-INF</targetPath>
                             <filtering>true</filtering>
                         </resource>
@@ -128,7 +128,7 @@
             </plugin>
         </plugins>
         <filters>
-            <filter>src/main/resources/config.properties</filter>
+            <filter>${basedir}/src/main/resources/config.properties</filter>
         </filters>
     </build>
 
