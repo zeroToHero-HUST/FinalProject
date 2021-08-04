@@ -13,7 +13,13 @@ import java.util.ArrayList;
 public class SingleBlogServlet  extends  HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int index =Integer.parseInt(request.getParameter("blogId"));
-        int total = (int) request.getSession().getAttribute("totalBlogs");
+        int total;
+        try {
+            total = (int) request.getSession().getAttribute("totalBlogs");
+        } catch (Exception e) {
+            total = 1;
+        }
+
         int prev = 1, next = 1 ;
         BlogDAO ba = new BlogDAO();
 
